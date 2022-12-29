@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import 'variables/root';
+
+/* Подключение шрифтов */
+@import 'fonts/fonts';
+
+
+/* Общий сброс стилей браузера */
+@import 'reset/browsers/reset';
+
+
+/* Переменные цвета, градиенты, контейнеры, кнопки */
+@import 'variables/html-body';
+@import 'variables/h1-h6';
+
+
+/* Блоки хлебные крошки, галереи, отзывы и т.д. */
+@import 'blocks/header';
+@import 'blocks/footer';
+
+
+/* Блоки блога */
+
+/* Блоки магазина */
+
+/* Стили плагинов */
+
+/* Сброс стилей вебасиста */

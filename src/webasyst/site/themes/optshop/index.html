@@ -1,0 +1,70 @@
+{strip}
+
+    {include "{$wa->site->themePath(waRequest::getTheme())}/u-theme.html"}
+
+    <!DOCTYPE html>
+    <html lang="{call correct_lang}">
+    <head itemscope itemtype="http://schema.org/WPHeader">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title itemprop="headline">{$wa->title()|escape} {$wa->globals("globalHeader")}</title>
+
+        {* Ключевики мета и для разметки *}
+
+        {if !empty($wa->meta('keywords'))}
+            <meta name="keywords" content="{$wa->meta('keywords')|escape}">
+            <meta itemprop="keywords" content="{$wa->meta('keywords')|escape}">
+        {else}
+            <meta name="keywords" content="AOC,AOC-GAMING,AGON,AGON PRO,Игровые мониторы AOC,Геймерские аксессуары AOC,монитор,мониторы,монитор AOC,монитор AGON BY AOC,игровой монитор,монитор для дома,монитор для офиса,игровые мониторы">
+            <meta itemprop="keywords" content="AOC,AOC-GAMING,AGON,AGON PRO,Игровые мониторы AOC,Геймерские аксессуары AOC,монитор,мониторы,монитор AOC,монитор AGON BY AOC,игровой монитор,монитор для дома,монитор для офиса,игровые мониторы">
+        {/if}
+
+        {* META *}
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="keywords" content="{$wa->meta('keywords')|escape}" />
+        <meta name="description" content="{$wa->meta('description')|escape}" />
+        {* // Use it with css3 @media-queries
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        *}
+        <meta name="viewport" content="width=1024" />
+
+        {* FAVICON *}
+        {include file="favicon.html" inline}
+
+        {* CSS *}
+        <link href="{$wa_theme_url}css/dummy.css?v{$wa_theme_version}" rel="stylesheet" />
+        <!--plugins-css-->
+        {$wa->css()}
+        <!--end-plugins-css-->
+
+        {* JS *}
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js?v={$wa->version(true)}"></script>
+        <script src="{$wa_theme_url}js/dummy.js?v{$wa_theme_version}"></script>
+        <!--plugins-js-->
+        {$wa->js()}
+        <!--end-plugins-js-->
+        {include file="`$wa_active_theme_path`/head.html" inline}
+        {$wa->head()}
+    </head>
+    <body>
+        <div class="wrapper">
+        {*HEADER*}
+            <header>
+                {include file="header.html" inline}
+            </header>
+        {*END HEADER*}
+        {* CONTENT AREA *}
+            <main itemscope itemtype="http://schema.org/WebPage" role="main">
+                {* {include file="`$wa_active_theme_path`/main.html" inline} *}
+            </main>
+        {* END CONTENT AREA *}
+        {*FOOTER*}
+            <footer>
+                {include file="footer.html" inline}
+            </footer>
+        {*END FOOTER*}
+        </div>
+    </body>
+    </html>
+{/strip}
