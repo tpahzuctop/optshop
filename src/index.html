@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Slider + fancy-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 </head>
 <body>
 <div class="wrapper">
@@ -11,7 +15,7 @@
         @@include('html/blocks/footer.html')
     </header>
     <main>
-        #######
+        @@include('html/blocks/product-page__slider.html')
     </main>
     <footer>
         @@include('html/blocks/footer.html')
@@ -21,5 +25,35 @@
 <script src="js/site.min.js"></script>
 <script src="js/shop.min.js"></script>
 <script src="js/blog.min.js"></script>
+
+<!--Fancybox-->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: false,
+        direction: "vertical",
+        mousewheel: true,
+        spaceBetween: 15,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+</script>
+
 </body>
 </html>
