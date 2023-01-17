@@ -6,8 +6,8 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -18,8 +18,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -44,6 +44,11 @@ ol[class] {
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }

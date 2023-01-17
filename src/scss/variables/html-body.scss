@@ -1,17 +1,24 @@
 html,
 body {
-  min-width: 100vw;
-  width: 100%;
-  max-width: 100vw;
   font-family: 'Mulish', Mulish, Arial;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--dark);
   overflow-x: hidden;
-  @media (min-width: 768px) {
-    font-size: 16px;
-  }
+  box-sizing: border-box;
 }
 
 body {
   background: var(--white);
+}
+
+@media(min-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
 }

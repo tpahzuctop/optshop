@@ -12,12 +12,12 @@
     <!--search-->
     <form class="search">
         <div class="search__input-wrapper">
-            <input type="text" class="search__input">
+            <input type="text" class="search__input" placeholder="Поиск по названию или артикулу">
             <button class="search__btn"></button>
         </div>
 
         <!--search hint-->
-        <div class="search__hint">
+        <div class="search__hint search-hint">
 
             <!--products-->
             <ul class="search-hint__product search-hint-product">
@@ -63,78 +63,92 @@
 <!--Mobile user-panel-->
 <div class="mobile-user-panel">
 
-    <!--user-panel-->
-    <ul class="user-panel">
-        <li class="user-panel__item">
-            <a href="#">
-                <img class="user-panel__icon" src="" alt="">
-                <span class="user-panel__title">Избранное</span>
-            </a>
-        </li>
+    <div class="mobile-user-panel__wrapper">
 
-        <li class="user-panel__item">
-            <a href="#">
-                <img class="user-panel__icon" src="" alt="">
-                <span class="user-panel__title">Заказы</span>
-            </a>
-        </li>
+        <!--user-panel-->
+        <ul class="user-panel">
+            <li class="user-panel__item">
+                <a href="#">
+                    <img class="user-panel__icon" src="" alt="">
+                    <span class="user-panel__title">Избранное</span>
+                </a>
+            </li>
 
-        <li class="user-panel__item">
-            <a href="#">
-                <img class="user-panel__icon" src="" alt="">
-                <span class="user-panel__title">Корзина</span>
-            </a>
-        </li>
+            <li class="user-panel__item">
+                <a href="#">
+                    <img class="user-panel__icon" src="" alt="">
+                    <span class="user-panel__title">Заказы</span>
+                </a>
+            </li>
 
-        <li class="user-panel__item">
-            <a href="#">
-                <img class="user-panel__icon" src="" alt="">
-                <span class="user-panel__title">Профиль</span>
-            </a>
-        </li>
+            <li class="user-panel__item">
+                <a href="#">
+                    <img class="user-panel__icon" src="" alt="">
+                    <span class="user-panel__title">Корзина</span>
+                </a>
+            </li>
 
-    </ul>
+            <li class="user-panel__item">
+                <a href="#">
+                    <img class="user-panel__icon" src="" alt="">
+                    <span class="user-panel__title">Профиль</span>
+                </a>
+            </li>
 
-    <!--category button-->
-    <div class="mobile-user-panel__category-btn"></div>
+        </ul>
+
+        <!--category button-->
+        <div class="mobile-user-panel__category-btn"></div>
+
+    </div>
+
 </div>
 
 <!-- Mobile category-->
-<ul class="mobile-category mobile-category--active">
+<ul class="mobile-category">
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Автотовары</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Детям и мамам</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Дом и сад</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Зоотовары</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Красота и здоровье</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Спорт и туризм</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Творчество и хобби</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Праздники</a>
     </li>
 
     <li class="mobile-category__item">
+        <img src="" alt="">
         <a href="#">Канцтовары</a>
     </li>
 
@@ -148,7 +162,7 @@
 
         <!--Navigation-->
         <nav class="header-desktop__navigation header-desktop-navigation">
-            <ul>
+            <ul class="header-desktop-navigation__list">
                 <li class="header-desktop-navigation__item">
                     <a href="#">Доставка</a>
                 </li>
@@ -173,18 +187,18 @@
 
         <div class="header-desktop__category-btn-wrapper">
             <div class="logo"></div>
-            <div class="header-desktop__category-btn"></div>
+            <div class="header-desktop__category-btn">Каталог</div>
         </div>
 
         <!--search-->
         <form class="search">
             <div class="search__input-wrapper">
-                <input type="text" class="search__input">
+                <input type="text" class="search__input" placeholder="Поиск по названию или артикулу">
                 <button class="search__btn"></button>
             </div>
 
             <!--search hint-->
-            <div class="search__hint">
+            <div class="search__hint search-hint">
 
                 <!--products-->
                 <ul class="search-hint__product search-hint-product">
@@ -260,61 +274,3 @@
     </div>
 
 </header>
-
-<!--Desktop category-->
-<div class="desktop-category">
-
-    <!--main categories-->
-    <ul class="desktop-category__main desktop-category-main">
-
-        <li class="desktop-category-main__item">
-            <a href="#">Автотовары</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Детям и мамам</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Дом и сад</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Зоотовары</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Красота и здоровье</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Спорт и туризм</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Творчество и хобби</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Праздники</a>
-        </li>
-
-        <li class="desktop-category-main__item">
-            <a href="#">Канцтовары</a>
-        </li>
-
-    </ul>
-
-    <!--subcategory-->
-    <div class="desktop-category__subcategory desktop-category-subcategory">
-
-
-
-    </div>
-
-    <!--unpacking-->
-    <div class="desktop-category__unpacking desktop-category-unpacking">
-
-    </div>
-
-</div>
