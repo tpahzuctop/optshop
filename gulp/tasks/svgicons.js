@@ -1,6 +1,6 @@
 import svgIcons from "gulp-svg-sprite";
 
-export const svgicons = () => {
+export const svg_icons = () => {
     return app.gulp.src(`${app.path.src.svgicons}`, {})
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
@@ -12,11 +12,11 @@ export const svgicons = () => {
         .pipe(svgIcons({
             mode: {
                 stack: {
-                    sprite: `../img/icons/icons.svg`,
+                    sprite: `../svg/icons.svg`,
                     example: true
                 }
             },
         }
         ))
-        .pipe(app.gulp.dest(`${app.path.build.images}`));
+        .pipe(app.gulp.dest(`${app.path.build.svgicons}`));
 }

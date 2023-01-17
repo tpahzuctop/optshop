@@ -16,7 +16,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { javascript } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { svgicons } from "./gulp/tasks/svgicons.js";
+import { svg_icons } from "./gulp/tasks/svgicons.js";
 import { webasystSiteCss, webasystSiteJs, webasystShopJs, webasystBlogJs, webasystSiteFonts} from "./gulp/tasks/webasyst.js";
 
 function watcher() {
@@ -27,18 +27,18 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-export { svgicons }
-
+const svgicons = gulp.series(svg_icons);
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const js = gulp.series(javascript);
 const css = gulp.series(scss);
 
 
 const mainTasks = gulp.parallel(copy, html, scss, javascript, images);
-const dev = gulp.series(reset, fonts, mainTasks, gulp.parallel(watcher, server));
-const wa = gulp.series(reset, mainTasks, webasystSiteCss, webasystSiteJs, webasystShopJs, webasystBlogJs, webasystSiteFonts);
+const dev = gulp.series(reset, fonts, mainTasks, svgicons, gulp.parallel(watcher, server));
+const wa = gulp.series(reset, mainTasks, webasystSiteCss, webasystSiteJs, webasystShopJs, webasystBlogJs, webasystSiteFonts, svgicons);
 
 gulp.task('default', dev);
+gulp.task('svgicons', svgicons);
 gulp.task('fonts', fonts);
 gulp.task('js', js);
 gulp.task('css', css);
