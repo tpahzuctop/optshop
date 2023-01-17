@@ -1,0 +1,48 @@
+.main-product-pic {
+  width: 550px;
+  height: 500px;
+
+  & img {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+  }
+}
+
+.main-product {
+  max-width: 550px;
+  max-height: 500px;
+}
+
+.product-wrapper {
+  margin: 30px auto;
+  width: 700px;
+  display: flex;
+}
+
+.thumbs {
+  margin: 0;
+  width: 90px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  width: 90px;
+  max-height: 90px;
+  & img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.containerthumb {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.containermain {
+  margin-left: 0;
+  margin-right: 0;
+}
