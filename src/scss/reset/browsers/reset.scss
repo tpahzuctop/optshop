@@ -53,6 +53,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+address {
+  font-style: normal;
+}
+
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;

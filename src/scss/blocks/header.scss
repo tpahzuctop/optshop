@@ -45,7 +45,11 @@
     width: 100%;
     font-size: 1.2rem;
     border-radius: 8px;
-    border: 2px solid var(--primary);
+    outline: none;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    border-left: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
 
     &::placeholder {
       color: #CCD0D4;
@@ -58,13 +62,18 @@
 
   &__btn {
     width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--primary);
     border-radius: 0 8px 8px 0;
     border: none;
     cursor: pointer;
-    background-image: url("img/svgicons#search.svg");
-    background-repeat: no-repeat;
-    background-position: 50%;
+  }
+
+  &__btn-icon {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -320,7 +329,7 @@
 
 
   &__wrapper {
-    padding: 7px 15px;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -329,11 +338,21 @@
 
   &__category-btn {
     margin-left: calc(100% / 15);
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     background-color: var(--primary);
+
+    & svg {
+      width: 28px;
+      height: 28px;
+    }
   }
+
+
 }
 
 .user-panel {
@@ -351,9 +370,8 @@
   }
 
   &__icon {
-    width: 30px;
-    height: 30px;
-    background-color: aquamarine;
+    width: 28px;
+    height: 28px;
   }
 
   &__title {
@@ -370,7 +388,7 @@
     right: 15px;
 
     &__wrapper {
-      padding: 7px 20px;
+      padding: 10px 20px;
     }
 
     &__category-btn {
@@ -383,7 +401,7 @@
   .mobile-user-panel {
 
     &__wrapper {
-      padding: 7px 30px;
+      padding: 10px 30px;
     }
 
     &__category-btn {
@@ -402,16 +420,22 @@
     }
 
     &__category-btn {
-      width: 45px;
-      height: 45px;
-      margin-left: calc(100% / 7);
+      width: 48px;
+      height: 48px;
+      margin-left: calc(100% / 8);
+
+      & svg {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
   .user-panel {
 
-    &__title {
-      margin-top: 5px;
+    &__icon {
+      width: 33px;
+      height: 33px;
     }
   }
 }
@@ -425,7 +449,12 @@
     margin-left: 15px;
 
     & li:not(:first-child) {
-      margin-left: 5px;
+      margin-left: 10px;
+    }
+
+    &__icon {
+      width: 28px;
+      height: 28px;
     }
   }
 }
@@ -433,10 +462,6 @@
 @media (min-width: 1024px) {
   .user-panel {
     margin-left: 25px;
-
-    & li:not(:first-child) {
-      margin-left: 10px;
-    }
   }
 }
 
