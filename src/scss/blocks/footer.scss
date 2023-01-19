@@ -33,6 +33,10 @@
         font-size: 1.3rem;
         border-radius: 8px;
         border: 1px solid var(--dark-grey);
+
+        &:focus {
+            @include input-focus;
+        }
     }
 
     &__label {
@@ -51,6 +55,10 @@
         font-size: 1.3rem;
         border-radius: 8px;
         border: 1px solid var(--dark-grey);
+
+        &:focus {
+            @include input-focus;
+        }
     }
 
     &__btn {
@@ -139,19 +147,26 @@
         }
 
         &__label {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         &__input {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         &__textarea {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         &__btn {
             font-size: 1.2rem;
+        }
+    }
+
+    .footer-contacts {
+
+        &__item {
+            font-size: 1.3rem;
         }
     }
 
@@ -176,7 +191,7 @@
 
             & section:nth-child(2) {
                 flex: 1;
-                margin-left: 50px;
+                margin-left: 60px;
             }
         }
     }
@@ -224,7 +239,11 @@
             flex-wrap: nowrap;
 
             & section:nth-child(2) {
-                margin: 0 5%;
+                margin: 0 3%;
+            }
+
+            & section:last-child {
+                flex: 1.1;
             }
         }
 
@@ -242,14 +261,27 @@
 
         &__input {
             font-size: 1rem;
+
+            &:hover {
+                @include input-hover;
+            }
         }
 
         &__textarea {
             font-size: 1rem;
+
+            &:hover {
+                @include input-hover;
+            }
         }
 
         &__btn {
             font-size: 1rem;
+            transition: .2s;
+
+            &:hover {
+                @include hover-btn;
+            }
         }
     }
 
@@ -258,6 +290,10 @@
 
         &__item {
             font-size: 1.1rem;
+
+            &:hover {
+                @include hover-link;
+            }
         }
     }
 
@@ -275,6 +311,11 @@
 
         &__item {
             font-size: 1.1rem;
+            transition: .2s;
+
+            &:hover {
+                @include hover-link;
+            }
         }
     }
 }
@@ -282,21 +323,109 @@
 @media (min-width: 1280px) {
     .footer {
         margin: 0 auto;
-        max-width: 1300px;
+
+        &__title {
+            font-size: 1.6rem;
+        }
 
         &__container {
             margin: 0 40px;
+
+            & section:nth-child(2) {
+                margin: 0 3% 0 5%;
+            }
         }
     }
     .footer-form {
-        max-width: 475px;
+        max-width: 480px;
 
         &__input-wrapper {
             flex-direction: row;
 
+            & li {
+                margin-bottom: 20px;
+            }
+
             & li:first-child {
                 margin-right: 20px;
             }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer {
+
+        &__container {
+            margin: 0 60px;
+
+            & section:nth-child(2) {
+                margin: 0 3% 0 6%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1680px) {
+    .footer {
+
+        &__container {
+
+            & section:nth-child(2) {
+                margin: 0 3% 0 6%;
+            }
+
+            & section:last-child {
+                flex: 2;
+            }
+        }
+    }
+
+    .footer-navigation {
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-around;
+
+            & ul:last-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .footer {
+        max-width: 1990px;
+        padding: 0 80px;
+    }
+
+    .footer-form {
+
+        &__input {
+            width: 230px;
+        }
+
+        &__label {
+            font-size: 1.1rem;
+        }
+
+        &__btn {
+            font-size: 1.1rem;
+        }
+    }
+
+    .footer-contacts {
+
+        &__item {
+            font-size: 1.3rem;
+        }
+    }
+
+    .footer-navigation {
+
+        &__item {
+            font-size: 1.2rem;
         }
     }
 }

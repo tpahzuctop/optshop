@@ -6,6 +6,20 @@ body {
   color: var(--dark);
   overflow-x: hidden;
   box-sizing: border-box;
+  cursor: default;
+}
+
+a, input, button, textarea, address {
+  transition: .1s;
+  cursor: pointer;
+}
+
+input::placeholder {
+    color: #CCD0D4;
+}
+
+textarea::placeholder {
+  color: #CCD0D4;
 }
 
 body {

@@ -51,10 +51,6 @@
     border-left: 2px solid var(--primary);
     border-right: 2px solid var(--primary);
 
-    &::placeholder {
-      color: #CCD0D4;
-    }
-
     &:focus {
       outline: none;
     }
@@ -155,8 +151,7 @@
       transition: .2s;
 
       &:hover {
-        transition: .2s;
-        color: var(--primary);
+        @include hover-link;
       }
     }
 

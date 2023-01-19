@@ -1,0 +1,18 @@
+@mixin hover-link {
+  transition: .1s;
+  color: var(--primary);
+}
+
+@mixin input-hover {
+  border: 1px solid var(--primary);
+  transition: .1s;
+}
+
+@mixin input-focus {
+  outline-color: var(--primary);
+}
+
+@mixin hover-btn {
+  background-color: var(--dark);
+  transition: .2s;
+}
