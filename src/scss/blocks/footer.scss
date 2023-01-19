@@ -1,5 +1,5 @@
 .footer {
-    margin: 50px auto 100px;
+    margin: 500px auto 100px;
 
     &__container {
         margin: 0 10px;
@@ -322,7 +322,6 @@
 
 @media (min-width: 1280px) {
     .footer {
-        margin: 0 auto;
 
         &__title {
             font-size: 1.6rem;
@@ -418,7 +417,7 @@
     .footer-contacts {
 
         &__item {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
     }
 
