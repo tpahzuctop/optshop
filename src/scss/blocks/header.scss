@@ -548,10 +548,9 @@
     &__icon {
       width: 28px;
       height: 28px;
-
+      color: #0f7595;
       &:hover {
-        fill: #d8315b;
-        stroke: #cccccc;
+        color: #ea0d0d;
       }
     }
   }
