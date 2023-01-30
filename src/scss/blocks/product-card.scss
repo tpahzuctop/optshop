@@ -129,6 +129,7 @@
       width: 80px;
       height: 24px;
       font-size: 0.9rem;
+      line-height: 24px;
       border-radius: 15px;
     }
 
@@ -172,6 +173,7 @@
     height: 250px;
 
     &__picture {
+      margin: 5px 0 7px 0;
       width: 120px;
       height: 95px;
     }
@@ -219,9 +221,10 @@
     }
 
     &__tag {
-      left: 7px;
+      left: 12px;
       width: 73px;
       height: 22px;
+      line-height: 22px;
       font-size: 0.7rem;
     }
 
@@ -301,6 +304,216 @@
 
     &__btn {
       height: 30px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-card {
+    height: 260px;
+    border-radius: 25px;
+
+    &__list {
+      gap: 15px;
+      margin: 0 30px;
+    }
+
+    &__tag {
+      width: 90px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 0.75rem;
+    }
+
+    &__panel {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__picture {
+      margin: 8px 0;
+      width: 135px;
+      height: 110px;
+    }
+
+    &__descr {
+      min-height: 35px;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+
+    &__price-wrapper {
+      margin-bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__reviews {
+      margin-bottom: 7px;
+      padding-left: 27px;
+      background-size: 23px;
+    }
+
+    &__price {
+      padding-right: 15px;
+      font-size: 1.4rem;
+      background-size: 15px;
+      background-position: 100% 50%;
+
+      & span {
+        padding-right: 5px;
+      }
+    }
+
+    &__btn {
+      margin-bottom: 5px;
+      height: 35px;
+      width: 100px;
+      letter-spacing: 1px;
+      border-radius: 8px;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        @include hover-btn;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .product-card {
+    padding: 20px;
+    height: 330px;
+
+    &__list {
+      margin: 0 40px;
+      gap: 15px 20px;
+    }
+
+    &__tag {
+      top: 10px;
+      left: 20px;
+      width: 105px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 0.9rem;
+    }
+
+    &__picture {
+      margin: 0 0 10px 0;
+      width: 170px;
+      height: 145px;
+    }
+
+    &__descr {
+      margin-bottom: 15px;
+      min-height: 40px;
+      font-size: 1.1rem;
+      line-height: 1.2rem;
+    }
+
+    &__price-wrapper {
+      font-size: 1.4rem;
+    }
+
+    &__reviews {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      background-size: 24px;
+    }
+
+    &__price {
+      padding-right: 17px;
+      background-size: 17px;
+      background-position: 100% 55%;
+      font-size: 1.6rem;
+
+      & span {
+        padding-right: 7px;
+        font-size: 1.1rem;
+      }
+    }
+
+    &__btn {
+      height: 40px;
+      width: 120px;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .product-card {
+
+    &__list {
+      margin: 0 60px;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .product-card {
+    padding: 15px;
+    height: 280px;
+
+    &__list {
+      margin: 0 40px;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+
+    &__tag {
+      left: 15px;
+      width: 95px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 0.8rem;
+    }
+
+    &__picture {
+      width: 130px;
+      height: 110px;
+    }
+
+    &__descr {
+      min-height: 35px;
+      font-size: 1rem;
+      line-height: 1.1rem;
+    }
+
+    &__price-wrapper {
+      font-size: 1.2rem;
+    }
+
+    &__price {
+      background-size: 16px;
+      background-position: 100% 50%;
+      font-size: 1.4rem;
+
+      & span {
+        padding-right: 5px;
+        font-size: 1rem;
+      }
+    }
+
+    &__btn {
+      height: 35px;
+      width: 110px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .product-card {
+
+    &__list {
+      max-width: 1990px;
+      padding: 0 80px;
+      margin: 20px auto;
+      gap: 15px 20px;
     }
   }
 }
