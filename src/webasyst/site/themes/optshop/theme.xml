@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="optshop" system="0" app="site" vendor="labbb-website" author="labbb-website" version="1.0.0" >
+<theme id="optshop" system="0" app="site" vendor="rgbwebdotru" author="rgbwebdotru" version="1.0.0" >
     <name locale="en_US">OPT SHOP</name>
     <name locale="ru_RU">ОПТ МАГАЗИН</name>
     <files>
@@ -102,32 +102,6 @@
                     <name locale="en_US">Paginated lists (1 2 3 4)</name>
                 </option>
             </options>
-        </setting>
-        <setting var="additional_styles" control_type="text">
-            <value>a { color: #036; }</value>
-            <name locale="en_US">Additional styles (inline css)</name>
-            <name locale="ru_RU">Дополнительные стили (inline css)</name>
-        </setting>
-        <setting var="use_shop_schedule" control_type="checkbox">
-            <value>1</value>
-            <name locale="ru_RU">Показывать график работы магазина на текущую неделю из настроек Shop-Script</name>
-            <name locale="en_US">Show online store’s working schedule for current week from Shop-Script settings</name>
-            <description locale="ru_RU">При включении игнорируется настройка «Сокращенный график работы».</description>
-            <description locale="en_US">When enabled, “Brief working schedule” setting is ignored.</description>
-        </setting>
-        <setting var="manual_schedule" control_type="text">
-            <value></value>
-            <name locale="ru_RU">Сокращенный график работы</name>
-            <name locale="en_US">Brief working schedule</name>
-            <description locale="ru_RU">Например: Пн—Сб 08:00–18:00</description>
-            <description locale="en_US">Example: Mo—Sa 08:00–18:00</description>
-        </setting>
-        <setting var="show_cart" control_type="checkbox">
-            <value>1</value>
-            <name locale="ru_RU">Показывать корзину</name>
-            <name locale="en_US">Show cart</name>
-            <description locale="ru_RU">Корзина будет показана если есть хотя бы одно поселение магазина</description>
-            <description locale="en_US">The cart will be shown if there is at least one settlement of the store</description>
         </setting>
     </settings>
     <requirements>

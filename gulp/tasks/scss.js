@@ -28,8 +28,8 @@
                     }))
                     .pipe(autoprefixer({
                         grid: true,
-                        overrideBrowserslist: ['Firefox ESR, Firefox >= 2, iOS 7, not dead, > 0.5%, last 10 versions'],
                         flexbox: true,
+                        overrideBrowserslist: ['last 15 versions and not dead, Firefox > 51, Chrome > 84, Edge > 84, Opera > 70, Safari > 14.1, iOS > 10'],
                     }))
                     .pipe(app.gulp.dest(app.path.build.css))
                     .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))

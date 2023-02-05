@@ -59,7 +59,7 @@ export const fontsStyle = () => {
                             fontWeight = 300;
                         } else if (fontWeight.toLowerCase() === 'medium') {
                             fontWeight = 500;
-                        } else if (fontWeight.toLowerCase() === 'semibold') {
+                        } else if (fontWeight.toLowerCase() === 'samibold') {
                             fontWeight = 600;
                         } else if (fontWeight.toLowerCase() === 'bold') {
                             fontWeight = 700;
@@ -71,7 +71,11 @@ export const fontsStyle = () => {
                         } else {
                             fontWeight = 400;
                         }
-                        fs.appendFile(fontsFile, `@font-face {\n\tfont-family:${fontName};\n\tfont-display: swap;\n\tsrc: url("../files/fonts/${fontFileName}.woff2") format("woff2"), url("../files/fonts/${fontFileName}.woff") format("woff");\n\tfont-weight:${fontWeight};\n\tfont-style: normal;\n}\r\n`, cb);
+                        fs.appendFile(fontsFile, `@font-face {\n\tfont-family: 
+                    ${fontName};\n\tfont-display: swap;\n\tsrc: 
+               url("../files/fonts/${fontFileName}.woff2") format("woff2"), 
+               url("../files/fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: 
+               ${fontWeight};\n\tfont-style: normal;\n}\r\n`, cb);
                         newFileOnly = fontFileName;
                     }
                 }
