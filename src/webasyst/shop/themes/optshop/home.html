@@ -1,14 +1,4 @@
 {strip}
-
-{$wa->globals("hideSidebar", true)}
-{$wa->globals("isHomePage", true)}
-{$promocards = $wa->shop->promos('link', '900')}
-
-<div class="s-home-wrapper">
-
-    {* SLIDER *}
-    {$_show_promocards_slider = ( $theme_settings.slider_mode == "promos" )}
-    {$_show_products_slider = ( $theme_settings.slider_mode == "products" )}
     {if $_show_promocards_slider}
         {if !empty($promocards)}
             {include file="home.slider.html" _promocards=$promocards inline}
@@ -49,7 +39,4 @@
     {if !empty($_promos)}
         {include file="./products.html" products=$_promos}
     {/if}
-
-</div>
-
 {/strip}

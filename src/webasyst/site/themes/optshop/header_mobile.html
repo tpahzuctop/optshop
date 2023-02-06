@@ -3,7 +3,10 @@
 
     <div class="header-mobile__location-wrapper">
 
-        <div class="location">Москва</div>
+        <div class="location">
+            {* @event $frontend_header.%plugin_id% *}
+            {foreach $frontend_header as $_}{$_}{/foreach}
+        </div>
 
         <a href="#" class="logo"></a>
 
@@ -15,7 +18,7 @@
             <input type="text" class="search__input" placeholder="Поиск по названию или артикулу">
             <button class="search__btn">
                 <svg class="search__btn-icon">
-                    <use xlink:href="../img/svg/icons.svg#search"></use>
+                    <use xlink:href="{$wa_theme_url}img/svg/icons.svg#search"></use>
                 </svg>
             </button>
         </div>
@@ -75,7 +78,7 @@
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
-                        <use xlink:href="../img/svg/icons.svg#favorite"></use>
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#favorite"></use>
                     </svg>
                     <span class="user-panel__title">Избранное</span>
                 </a>
@@ -84,7 +87,7 @@
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
-                        <use xlink:href="../img/svg/icons.svg#order"></use>
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#order"></use>
                     </svg>
                     <span class="user-panel__title">Заказы</span>
                 </a>
@@ -93,7 +96,7 @@
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
-                        <use xlink:href="../img/svg/icons.svg#cart"></use>
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#cart"></use>
                     </svg>
                     <span class="user-panel__title">Корзина</span>
                 </a>
@@ -102,7 +105,7 @@
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
-                        <use xlink:href="../img/svg/icons.svg#user"></use>
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#user"></use>
                     </svg>
                     <span class="user-panel__title">Профиль</span>
                 </a>
@@ -113,7 +116,7 @@
         <!--category button-->
         <div class="mobile-user-panel__category-btn">
             <svg>
-                <use xlink:href="../img/svg/icons.svg#hamburger"></use>
+                <use xlink:href="{$wa_theme_url}img/svg/icons.svg#hamburger"></use>
             </svg>
         </div>
 

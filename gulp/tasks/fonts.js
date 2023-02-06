@@ -59,7 +59,7 @@ export const fontsStyle = () => {
                             fontWeight = 300;
                         } else if (fontWeight.toLowerCase() === 'medium') {
                             fontWeight = 500;
-                        } else if (fontWeight.toLowerCase() === 'samibold') {
+                        } else if (fontWeight.toLowerCase() === 'semibold') {
                             fontWeight = 600;
                         } else if (fontWeight.toLowerCase() === 'bold') {
                             fontWeight = 700;

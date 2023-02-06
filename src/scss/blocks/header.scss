@@ -7,7 +7,7 @@
 }
 
 .header-mobile {
-  margin: 10px;
+  margin: 10px 0;
 
   &__location-wrapper {
     display: flex;
@@ -25,15 +25,19 @@
 
 .location {
   font-size: 1.3rem;
-  padding-left: 20px;
+  padding-left: 25px;
   background: url("../img/svg/icons.svg#location") no-repeat;
   background-repeat: no-repeat;
   background-size: 17px;
   background-position: 0% 40%;
+  & > .b-cityselect__wrapper--header {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .search {
-  margin-top: 5px;
+  margin-top: 1rem;
 
   &__input-wrapper {
     display: flex;
@@ -77,14 +81,14 @@
 
 @media (min-width: 375px) {
   .header-mobile {
-    margin: 15px;
+    margin: 15px 0;
   }
 }
 
 @media (min-width: 640px) {
   .header-mobile {
     position: relative;
-    margin: 20px;
+    margin: 20px 0;
 
     &__location-wrapper {
       flex-direction: column;
@@ -125,7 +129,7 @@
 
   .header-desktop {
     display: block;
-    margin: 20px;
+    margin: 20px 0;
 
     &__location-wrapper {
       display: flex;
@@ -202,7 +206,7 @@
 
 @media (min-width: 1024px) {
   .header-desktop {
-    margin: 20px 30px;
+    margin: 20px 0;
 
     &__location-wrapper {
       margin-bottom: 5px;
@@ -266,7 +270,7 @@
 
 @media (min-width: 1280px) {
   .header-desktop {
-    margin: 20px 40px;
+    margin: 20px 0;
 
     &__category-btn {
       padding: 0px 17px;
@@ -319,7 +323,7 @@
 
 @media (min-width: 1440px) {
   .header-desktop {
-    margin: 20px 60px;
+    margin: 20px 0;
 
     &__category-btn {
       margin: 0 15px;
@@ -352,7 +356,7 @@
 
 @media (min-width: 1680px) {
   .header-desktop {
-    margin: 20px 40px;
+    margin: 20px 0;
 
     &__category-btn {
       padding: 0px 35px;
@@ -386,9 +390,7 @@
 
 @media (min-width: 1920px) {
   .header-desktop {
-    max-width: 1990px;
-    padding: 0 80px;
-    margin: 20px auto;
+    margin: 20px 0;
 
     &__category-btn {
       height: 65px;
@@ -407,6 +409,13 @@
     &__input-wrapper {
       height: 65px;
     }
+  }
+}
+
+@media (min-width: 2100px) {
+  .header-desktop {
+    max-width: 2000px;
+    margin: 20px 0;
   }
 }
 

@@ -23,10 +23,12 @@
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta name="keywords" content="{$wa->meta('keywords')|escape}" />
         <meta name="description" content="{$wa->meta('description')|escape}" />
-        {* // Use it with css3 @media-queries
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        *}
-        <meta name="viewport" content="width=1024" />
+
+        {if $wa->isMobile()}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        {else}
+        <meta name="viewport" content="height=device-height,width=720,user-scalable=yes" />
+        {/if}
 
         {* FAVICON *}
         {include file="favicon.html" inline}
@@ -50,19 +52,15 @@
     <body>
         <div class="wrapper">
         {*HEADER*}
-            <header>
                 {include file="header.html" inline}
-            </header>
         {*END HEADER*}
         {* CONTENT AREA *}
             <main itemscope itemtype="http://schema.org/WebPage" role="main">
-                {* {include file="`$wa_active_theme_path`/main.html" inline} *}
+                {include file="`$wa_active_theme_path`/main.html" inline}
             </main>
         {* END CONTENT AREA *}
         {*FOOTER*}
-            <footer>
                 {include file="footer.html" inline}
-            </footer>
         {*END FOOTER*}
         </div>
     </body>
