@@ -11,21 +11,14 @@
         <!--Navigation-->
         <nav class="header-desktop__navigation header-desktop-navigation">
             <ul class="header-desktop-navigation__list">
-                <li class="header-desktop-navigation__item">
-                    <a href="#">Доставка</a>
-                </li>
-
-                <li class="header-desktop-navigation__item">
-                    <a href="#">Оплата</a>
-                </li>
-
-                <li class="header-desktop-navigation__item">
-                    <a href="#">Распаковка</a>
-                </li>
-
-                <li class="header-desktop-navigation__item">
-                    <a href="#">Контакты</a>
-                </li>
+                {if $theme_settings.header_topbar_menu_number}
+                {$mainMenu_id = $wa->menu->get($theme_settings.header_topbar_menu_number)}
+                {else}
+                {$mainMenu_id = $wa->apps()}
+                {/if}
+                {foreach $mainMenu_id as $item}
+                <li class="header-desktop-navigation__item"><a href="{$item.url}" title="{$item.name}">{$item.name}</a></li>
+                {/foreach}
             </ul>
         </nav>
 
@@ -34,7 +27,11 @@
     <div class="header-desktop__container">
 
         <div class="header-desktop__category-btn-wrapper">
-            <div class="logo"></div>
+            <div class="logo">
+                <a href="/" target="_self" title="{$theme_settings.site-name|escape}">
+                    <img src="{$wa_theme_url}img/logo.png?v={$theme_settings.theme_version_images_reset}" alt="{$theme_settings.site-name|escape}" title="{$theme_settings.site-name|escape}">
+                </a>
+            </div>
             <div class="header-desktop__category-btn">
                 <svg class="header-desktop__hamburger-icon">
                     <use xlink:href="{$wa_theme_url}img/svg/icons.svg#hamburger"></use>
@@ -46,12 +43,15 @@
         <!--search-->
         <form class="search">
             <div class="search__input-wrapper">
-                <input type="text" class="search__input" placeholder="Поиск по названию или артикулу">
-                <button class="search__btn">
-                    <svg class="search__btn-icon">
-                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#search"></use>
-                    </svg>
-                </button>
+                <form method="get" action="{$wa->getUrl('shop/frontend/search')}">
+                    {$_query = $smarty.get.query|default:''|escape}
+                    <input type="text" name="query" value="{if !empty($_query)}{$_query}{/if}" placeholder="Поиск по названию или артикулу" class="search__input">
+                    <button class="search__btn">
+                        <svg class="search__btn-icon">
+                            <use xlink:href="{$wa_theme_url}img/svg/icons.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
 
             <!--search hint-->
@@ -98,6 +98,7 @@
 
         <!--user-panel-->
         <ul class="user-panel">
+            {* СПРЯТАНО ПОКА ПЛАГИН ИЗБРАННОЕ НЕ НАЙДЕТСЯ И НЕ УСТАНОВИТСЯ
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
@@ -106,9 +107,9 @@
                     <span class="user-panel__title">Избранное</span>
                 </a>
             </li>
-
+            *}
             <li class="user-panel__item">
-                <a href="#">
+                <a href="{$wa->getUrl('/frontend/myOrders')}" title="Заказы">
                     <svg class="user-panel__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#order"></use>
                     </svg>
@@ -125,14 +126,33 @@
                 </a>
             </li>
 
+            {if $wa->user()->isAuth()}
             <li class="user-panel__item">
-                <a href="#">
+                <a href="{$wa->getUrl('shop/frontend/my')}" title="Ваш профиль">
                     <svg class="user-panel__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#user"></use>
                     </svg>
                     <span class="user-panel__title">Профиль</span>
                 </a>
             </li>
+            <li class="user-panel__item">
+                <a href="?logout" title="Выход из профиля">
+                    <svg class="user-panel__icon">
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#logout"></use>
+                    </svg>
+                    <span class="user-panel__title">[`Logout`]</span>
+                </a>
+            </li>
+            {else}
+            <li class="user-panel__item">
+                <a href="{$wa->loginUrl()}" title="Регистрация / Вход">
+                    <svg class="user-panel__icon">
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#user"></use>
+                    </svg>
+                    <span class="user-panel__title">Войти</span>
+                </a>
+            </li>
+            {/if}
 
         </ul>
 

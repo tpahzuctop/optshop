@@ -11,7 +11,6 @@
   box-shadow: 0px 1px 8px 0px #2C302E30;
 
   &__list {
-    margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 5px;
@@ -38,13 +37,17 @@
     &--bestseller {
       background-color: var(--secondary);
     }
+
+    &--recomend {
+      background-color: var(--primary);
+      color: var(--white);
+    }
   }
 
   &__picture {
     margin: 5px 0;
     width: 105px;
     height: 80px;
-    background-color: #0f7595;
   }
 
   &__descr {
@@ -98,6 +101,8 @@
     color: var(--white);
     background-color: var(--primary);
     border-radius: 5px;
+    border:none;
+    outline: none;
   }
 }
 
@@ -105,7 +110,6 @@
   .product-card {
 
     &__list {
-      margin: 0 15px;
       gap: 10px;
     }
 
@@ -217,7 +221,6 @@
 
     &__list {
       grid-template-columns: repeat(4, 1fr);
-      margin: 0 20px;
     }
 
     &__tag {
@@ -315,7 +318,6 @@
 
     &__list {
       gap: 15px;
-      margin: 0 30px;
     }
 
     &__tag {
@@ -388,7 +390,6 @@
     height: 330px;
 
     &__list {
-      margin: 0 40px;
       gap: 15px 20px;
     }
 
@@ -444,22 +445,12 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .product-card {
-
-    &__list {
-      margin: 0 60px;
-    }
-  }
-}
-
 @media (min-width: 1680px) {
   .product-card {
     padding: 15px;
     height: 280px;
 
     &__list {
-      margin: 0 40px;
       grid-template-columns: repeat(6, 1fr);
       gap: 15px;
     }
@@ -511,7 +502,6 @@
 
     &__list {
       max-width: 1990px;
-      padding: 0 80px;
       margin: 20px auto;
       gap: 15px 20px;
     }

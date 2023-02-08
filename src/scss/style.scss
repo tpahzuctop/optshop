@@ -7,6 +7,7 @@
 
 /* Общий сброс стилей браузера */
 @import 'reset/browsers/reset';
+@import 'variables/error';
 
 
 /* Переменные цвета, градиенты, контейнеры, кнопки */
@@ -18,6 +19,7 @@
 /* Блоки хлебные крошки, галереи, отзывы и т.д. */
 @import 'blocks/header';
 @import 'blocks/footer';
+@import 'blocks/footer-form-callback';
 @import 'blocks/copyright';
 
 /* Блоки блога */
@@ -29,3 +31,8 @@
 /* Стили плагинов */
 
 /* Сброс стилей вебасиста */
+
+/* Отступы */
+
+@import 'variables/margin';
+@import 'variables/padding';

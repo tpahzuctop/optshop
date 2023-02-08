@@ -15,12 +15,15 @@
     <!--search-->
     <form class="search">
         <div class="search__input-wrapper">
-            <input type="text" class="search__input" placeholder="Поиск по названию или артикулу">
-            <button class="search__btn">
-                <svg class="search__btn-icon">
-                    <use xlink:href="{$wa_theme_url}img/svg/icons.svg#search"></use>
-                </svg>
-            </button>
+            <form method="get" action="{$wa->getUrl('shop/frontend/search')}">
+                {$_query = $smarty.get.query|default:''|escape}
+                <input type="text" name="query" value="{if !empty($_query)}{$_query}{/if}" placeholder="Поиск по названию или артикулу" class="search__input">
+                <button class="search__btn">
+                    <svg class="search__btn-icon">
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
         </div>
 
         <!--search hint-->
@@ -75,6 +78,7 @@
 
         <!--user-panel-->
         <ul class="user-panel">
+            {* СПРЯТАНО ПОКА ПЛАГИН ИЗБРАННОЕ НЕ НАЙДЕТСЯ И НЕ УСТАНОВИТСЯ
             <li class="user-panel__item">
                 <a href="#">
                     <svg class="user-panel__icon">
@@ -83,9 +87,9 @@
                     <span class="user-panel__title">Избранное</span>
                 </a>
             </li>
-
+            *}
             <li class="user-panel__item">
-                <a href="#">
+                <a href="{$wa->getUrl('/frontend/myOrders')}" title="Заказы">
                     <svg class="user-panel__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#order"></use>
                     </svg>
@@ -102,14 +106,34 @@
                 </a>
             </li>
 
+
+            {if $wa->user()->isAuth()}
             <li class="user-panel__item">
-                <a href="#">
+                <a href="{$wa->getUrl('shop/frontend/my')}" title="Ваш профиль">
                     <svg class="user-panel__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#user"></use>
                     </svg>
                     <span class="user-panel__title">Профиль</span>
                 </a>
             </li>
+            <li class="user-panel__item">
+                <a href="?logout" title="Выход из профиля">
+                    <svg class="user-panel__icon">
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#logout"></use>
+                    </svg>
+                    <span class="user-panel__title">[`Logout`]</span>
+                </a>
+            </li>
+            {else}
+            <li class="user-panel__item">
+                <a href="{$wa->loginUrl()}" title="Регистрация / Вход">
+                    <svg class="user-panel__icon">
+                        <use xlink:href="{$wa_theme_url}img/svg/icons.svg#user"></use>
+                    </svg>
+                    <span class="user-panel__title">Войти</span>
+                </a>
+            </li>
+            {/if}
 
         </ul>
 

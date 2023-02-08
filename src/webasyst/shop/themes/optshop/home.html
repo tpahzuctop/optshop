@@ -1,4 +1,5 @@
 {strip}
+{* ПРОМО КАРТОЧКИ НАДО РАЗОБРАТСЯ
     {if $_show_promocards_slider}
         {if !empty($promocards)}
             {include file="home.slider.html" _promocards=$promocards inline}
@@ -9,9 +10,9 @@
             {include file="home.slider.html" _products=$_bestsellers inline}
         {/if}
     {/if}
-
+*}
     {* PROMOCARDS *}
-
+{*
     {if !empty($promocards)}
         <section class="s-promos-wrapper">
             <ul class="s-promos-list">
@@ -30,13 +31,27 @@
             </ul>
         </section>
     {/if}
+*}
+
+{* РЕКОМЕНДУЕМ ПРОДУКТ ЛИСТ *}
+{$_recomend = $wa->shop->productSet("rekomenduem-6119")}
+{if !empty($_recomend)}
+{include file="./products.html" products=$_recomend badge_type='recomend'}
+{/if}
+
+{* БОЛЬШЕ ВСЕГО ПРОДАНО ПРОДУКТ ЛИСТ *}
+{$_hits = $wa->shop->productSet("khity-prodazh-6119")}
+{if !empty($_hits)}
+{include file="./products.html" products=$_hits badge_type='bestseller'}
+{/if}
+
+{* НОВИНКИ ПО ДАТЕ ДОБАВЛЕНИЯ *}
+{$_promos = $wa->shop->productSet("novinki-6119")}
+{if !empty($_promos)}
+    {include file="./products.html" products=$_promos badge_type='new'}
+{/if}
+
 
     {* @event frontend_homepage.%plugin_id% *}
     {foreach $frontend_homepage as $_}{$_}{/foreach}
-
-    {* PROMOS PRODUCT LIST *}
-    {$_promos = $wa->shop->productSet('promo')}
-    {if !empty($_promos)}
-        {include file="./products.html" products=$_promos}
-    {/if}
 {/strip}

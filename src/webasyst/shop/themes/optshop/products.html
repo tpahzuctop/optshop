@@ -22,13 +22,13 @@
         {/if}
     {/if}
 
-    <section class="s-products-wrapper" id="s-products-wrapper">
+    <section class="padding__medium-vertical">
 
         {if !empty($sorting)}
             {include file="./products.sorting.html" inline}
         {/if}
 
-        <ul class="s-products-list {$_type}">
+        <ul class="product-card__list {$_type}">
             {foreach $products as $product}
                 {$available = $wa->shop->settings('ignore_stock_count') || $product.count === null || $product.count > 0}
                 {$badge_html = $wa->shop->badgeHtml($product.badge)}
@@ -38,106 +38,84 @@
                     {$_product_image_src = "`$wa_theme_url`img/dummy200.png"}
                 {/if}
 
-                <li class="s-product-wrapper" data-product-id="{$product.id}" itemscope itemtype ="http://schema.org/Product">
 
-                    <div class="s-image-wrapper">
-                        <a href="{$product.frontend_url}" title="{$product.name}">
-                            <img src="{$_product_image_src}" alt="{$product.name}" itemprop="image">
-                        </a>
-                    </div>
-
-                    <div class="s-info-wrapper">
-                        <h5 class="s-product-header" itemprop="name">
-                            <a href="{$product.frontend_url}" title="{$product.name}">{$product.name}</a>
-                        </h5>
-
-                        {if $product.summary}
-                            <div class="s-product-description" itemprop="description">{strip_tags($product.summary)|truncate:100}</div>
+                <li class="product-card" data-product-id="{$product.id}" itemscope itemtype ="http://schema.org/Product">
+                    {if !empty($badge_html)}
+                    <div class="product-card__tag product-card__tag--new">{$badge_html}</div>
+                    {else}
+                        {if $badge_type == 'new'}
+                            <div class="product-card__tag product-card__tag--new">Новинка</div>
                         {/if}
-                    </div>
-
-                    <div class="s-offers-wrapper" itemprop="offers" class="offers" itemscope itemtype="http://schema.org/Offer">
-                        {if $available}
-                            <form class="add-to-cart" {if $product.sku_count > 1}data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                        {if $badge_type == 'bestseller'}
+                        <div class="product-card__tag product-card__tag--bestseller">Бестселлер</div>
                         {/if}
+                        {if $badge_type == 'recomend'}
+                        <div class="product-card__tag product-card__tag--recomend">Советуем</div>
+                        {/if}
+                    {/if}
+                    <div class="product-card__fav-btn"></div>
+                    <a href="{$product.frontend_url}" title="{$product.name}">
+                        <img src="{$_product_image_src}" alt="{$product.name}" itemprop="image" class="product-card__picture">
+                    </a>
 
-                            {if $available}
-                                <div class="s-pricing-wrapper">
-                                    <span class="s-price">{shop_currency_html($product.price)}</span>
-                                    {if $product.compare_price > 0}
-                                        <span class="s-compare"> {shop_currency_html($product.compare_price)}</span>
-                                    {/if}
+                    <p class="product-card__descr">
+                        <a href="{$product.frontend_url}" title="{$product.name}">{$product.name}</a>
+                    </p>
+
+                    <div class="product-card__panel">
+
+                        <div class="product-card__price-wrapper">
+
+                            <div class="product-card__reviews">
+                                {if $product.rating > 0}
+                                    {$product.rating}
+                                {else}
+                                    0
+                                {/if}
+                            </div>
+
+                                <div class="product-card__price">
+                                    <span>от</span>
+                                        {shop_currency_html($product.price)}
                                 </div>
 
+                        </div>
+
+
+                        <div class="s-offers-wrapper" itemprop="offers" class="offers" itemscope itemtype="http://schema.org/Offer">
+                            {if $available}
+                            <form class="add-to-cart" {if $product.sku_count > 1}data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                                {/if}
+
+                                {if $available}
                                 <input type="hidden" name="product_id" value="{$product.id}">
                                 <link itemprop="availability" href="http://schema.org/InStock" />
                                 <meta itemprop="price" content="{shop_currency($product.price, null, null, 0)}">
                                 <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
-                            {else}
-                                <div class="s-pricing-wrapper">
-                                    <span class="s-price">{shop_currency_html($product.price)}</span>
-                                </div>
-
-                                <div class="s-out-of-stock">
-                                    <strong>
-                                        {if $wa->shop->settings('ignore_stock_count')}
-                                            {_wd('shop', 'Pre-order only')}
-                                        {else}
-                                            {_wd('shop', 'Out of stock')}
-                                        {/if}
-                                    </strong>
-                                </div>
-
+                                {else}
                                 <meta itemprop="price" content="{shop_currency($product.price, null, null, 0)}">
                                 <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
                                 <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                            {/if}
-
-                            <div class="s-rating-wrapper">
-                                {if $product.rating > 0}
-                                    <span class="s-rating-block nowrap">{$wa->shop->ratingHtml($product.rating, 16)}</span>
-                                    <span class="s-rating-hint">{_w('%d review', '%d reviews', $product.rating_count)}</span>
-                                {else}
-                                    <span class="s-rating-block nowrap">
-                                        <i class="icon16 star-empty"></i>
-                                        <i class="icon16 star-empty"></i>
-                                        <i class="icon16 star-empty"></i>
-                                        <i class="icon16 star-empty"></i>
-                                        <i class="icon16 star-empty"></i>
-                                    </span>
-                                    <span class="s-rating-hint">[`No review's`]</span>
                                 {/if}
-                            </div>
 
-                            {if !($product.sku_count > 1)}
-                                <div class="s-quantity-wrapper">
-                                    <input class="minus-button decrease-volume" type="button" value="&minus;">
-                                    <input class="product-quantity-field" type="text" name="quantity" value="1" data-max-quantity="{$product.count}">
-                                    <input class="plus-button increase-volume" type="button" value="+">
-                                </div>
-                            {/if}
-
-                            {if empty($hide_buttons)}
+                                {if empty($hide_buttons)}
                                 <div class="s-buttons-wrapper">
                                     {if empty($disable_compare)}
-                                        <a class="s-button white s-compare-button" href="javascript:void(0);" data-product="{$product.id}" title="[`Compare`]">
-                                            <i class="icon16 compare {if $wa->shop->inComparison($product.id)}active{/if}"></i>
-                                        </a>
+                                    <a class="s-button white s-compare-button" href="javascript:void(0);" data-product="{$product.id}" title="[`Compare`]">
+                                        <i class="icon16 compare {if $wa->shop->inComparison($product.id)}active{/if}"></i>
+                                    </a>
                                     {/if}
                                     {if $available}
-                                        <input class="s-button s-add-button" type="submit" data-added-text="[`added`]" value="{$add2cart_label}">
+                                    <input class="s-button s-add-button product-card__btn" type="submit" data-added-text="[`added`]" value="{$add2cart_label}">
                                     {/if}
                                 </div>
-                            {/if}
+                                {/if}
 
-                        {if $available}
+                                {if $available}
                             </form>
-                        {/if}
+                            {/if}
+                        </div>
                     </div>
-
-                    {if !empty($badge_html)}
-                        <div class="s-badge-wrapper">{$badge_html}</div>
-                    {/if}
                 </li>
             {/foreach}
         </ul>

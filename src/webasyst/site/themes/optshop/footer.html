@@ -8,30 +8,8 @@
         <section class="footer__section">
 
             <h3 class="footer__title">Обратная связь</h3>
-
             <!--form-->
-            <form action="" class="footer__form footer-form">
-
-                <ul class="footer-form__input-wrapper">
-                    <li>
-                        <label class="footer-form__label" for="name">Как к Вам обращаться?</label>
-                        <input class="footer-form__input" type="text" id="name" placeholder="Ваше имя">
-                    </li>
-
-                    <li>
-                        <label class="footer-form__label" for="email">Укажите Ваш email</label>
-                        <input class="footer-form__input" type="text" id="email" placeholder="Ваш email">
-                    </li>
-                </ul>
-
-                <div class="footer-form__textarea-wrapper">
-                    <label class="footer-form__label" for="comment">Сформулируйте обращение</label>
-                    <textarea class="footer-form__textarea" id="comment" placeholder="Комментарий"></textarea>
-                </div>
-
-                <button class="footer-form__btn">Отправить запрос</button>
-
-            </form>
+            {$wa->wforms->getHtmlForm(9)}
 
         </section>
 

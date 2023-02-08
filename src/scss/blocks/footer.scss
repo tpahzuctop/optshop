@@ -1,5 +1,5 @@
 .footer {
-    margin: 500px 0 100px 0;
+    margin: 100px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -19,62 +19,6 @@
         margin: 0 0 20px 0;
         text-transform: uppercase;
         font-weight: 700;
-    }
-}
-
-.footer-form {
-    padding-top: 10px;
-
-    &__input-wrapper li {
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__input {
-        padding: 5px 15px;
-        height: 50px;
-        font-size: 1.3rem;
-        border-radius: 8px;
-        border: 1px solid var(--dark-grey);
-
-        &:focus {
-            @include input-focus;
-        }
-    }
-
-    &__label {
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-    }
-
-    &__textarea-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__textarea {
-        padding: 10px 15px;
-        height: 150px;
-        font-size: 1.3rem;
-        border-radius: 8px;
-        border: 1px solid var(--dark-grey);
-
-        &:focus {
-            @include input-focus;
-        }
-    }
-
-    &__btn {
-        margin-top: 15px;
-        width: 100%;
-        height: 50px;
-        color: var(--white);
-        font-size: 1.3rem;
-        letter-spacing: 1px;
-        background-color: var(--primary);
-        border: none;
-        border-radius: 8px;
     }
 }
 
@@ -116,6 +60,9 @@
 }
 
 @media (min-width: 375px) {
+    .footer {
+        margin: 150px 0 100px 0;
+    }
 }
 
 @media (min-width: 640px) {
@@ -127,37 +74,6 @@
 
         &__title {
             font-size: 1.4rem;
-        }
-    }
-
-    .footer-form {
-
-        &__input-wrapper {
-            display: flex;
-
-            & li {
-                flex: 1;
-            }
-
-            & li:first-child {
-                margin-right: 20px;
-            }
-        }
-
-        &__label {
-            font-size: 1.2rem;
-        }
-
-        &__input {
-            font-size: 1.1rem;
-        }
-
-        &__textarea {
-            font-size: 1.1rem;
-        }
-
-        &__btn {
-            font-size: 1.2rem;
         }
     }
 
@@ -178,7 +94,7 @@
 
 @media (min-width: 768px) {
     .footer {
-
+        margin: 250px 0 100px 0;
         &__container {
             flex-direction: row;
             flex-wrap: wrap;
@@ -193,16 +109,7 @@
             }
         }
     }
-    .footer-form {
 
-        &__input-wrapper {
-            flex-direction: column;
-
-            & li:first-child {
-                margin-right: 0;
-            }
-        }
-    }
     .footer-navigation {
 
         &__wrapper {
@@ -250,38 +157,6 @@
         }
     }
 
-    .footer-form {
-
-        &__label {
-            font-size: 1rem;
-        }
-
-        &__input {
-            font-size: 1rem;
-
-            &:hover {
-                @include input-hover;
-            }
-        }
-
-        &__textarea {
-            font-size: 1rem;
-
-            &:hover {
-                @include input-hover;
-            }
-        }
-
-        &__btn {
-            font-size: 1rem;
-            transition: .2s;
-
-            &:hover {
-                @include hover-btn;
-            }
-        }
-    }
-
     .footer-contacts {
         padding-top: 10px;
 
@@ -319,7 +194,6 @@
 
 @media (min-width: 1280px) {
     .footer {
-
         &__title {
             font-size: 1.6rem;
         }
@@ -349,7 +223,6 @@
 
 @media (min-width: 1440px) {
     .footer {
-
         &__container {
             & section:nth-child(2) {
                 margin: 0 3% 0 6%;
@@ -360,7 +233,6 @@
 
 @media (min-width: 1680px) {
     .footer {
-
         &__container {
             & section:nth-child(2) {
                 margin: 0 3% 0 6%;
@@ -373,7 +245,6 @@
     }
 
     .footer-navigation {
-
         &__wrapper {
             display: flex;
             justify-content: space-around;
@@ -386,21 +257,6 @@
 }
 
 @media (min-width: 1920px) {
-    .footer-form {
-
-        &__input {
-            width: 230px;
-        }
-
-        &__label {
-            font-size: 1.1rem;
-        }
-
-        &__btn {
-            font-size: 1.1rem;
-        }
-    }
-
     .footer-contacts {
 
         &__item {
