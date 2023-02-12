@@ -28,6 +28,7 @@
       font-size: 1.3rem;
       border-radius: 8px;
       border: 1px solid var(--dark-grey);
+      outline-width: 1px;
       &.error {
         border-color: var(--error);
       }
@@ -50,5 +51,10 @@
     background-color: var(--primary);
     border: none;
     border-radius: 8px;
+    outline: none;
+    &:hover, &:focus, &:active {
+      background-color: var(--dark);
+      outline: none;
+    }
   }
 }

@@ -79,16 +79,13 @@
   }
 
   &__price {
-    padding-right: 12px;
-    background: url("../img/svg/icons.svg#rub") no-repeat;
-    background-repeat: no-repeat;
-    background-size: 12px;
-    background-position: 100% 55%;
-
     & span {
       padding-right: 5px;
       font-size: 1rem;
       font-weight: 600;
+      &.ruble {
+        color: var(--dark-grey);
+      }
     }
   }
 

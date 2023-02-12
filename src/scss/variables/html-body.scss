@@ -91,3 +91,13 @@ body {
     margin: 0 auto;
   }
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: var(--primary);
+    fill: var(--primary);
+  }
+}

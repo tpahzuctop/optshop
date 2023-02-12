@@ -29,6 +29,17 @@
         {/if}
 
         <ul class="product-card__list {$_type}">
+            <li class="product-card__title">
+                {if $badge_type == 'new'}
+                <h2>Новинка</h2>
+                {/if}
+                {if $badge_type == 'bestseller'}
+                <h2>Бестселлер</h2>
+                {/if}
+                {if $badge_type == 'recomend'}
+                <h2>Советуем</h2>
+                {/if}
+            </li>
             {foreach $products as $product}
                 {$available = $wa->shop->settings('ignore_stock_count') || $product.count === null || $product.count > 0}
                 {$badge_html = $wa->shop->badgeHtml($product.badge)}

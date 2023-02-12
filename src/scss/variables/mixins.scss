@@ -10,6 +10,7 @@
 
 @mixin input-focus {
   outline-color: var(--primary);
+  border-color: var(--primary);
 }
 
 @mixin hover-btn {

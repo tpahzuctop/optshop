@@ -1,6 +1,6 @@
-.s-login-page {
+.s-signup-page {
   padding-top: 80px;
-  & .wa-login-form-wrapper {
+  & .wa-signup-form-wrapper {
     padding-top: 80px;
     width: 80%;
     margin: 0 auto;
@@ -10,7 +10,7 @@
     @media (min-width: 1680px) {
       width: 50%;
     }
-    & .wa-login-form-fields {
+    & .wa-signup-form-fields {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -27,6 +27,7 @@
         align-items: flex-start;
         padding: 0 0 20px 0;
         width: 100%;
+        margin: 0;
         @media (min-width: 768px) {
           width: calc(50% - 10px);
         }

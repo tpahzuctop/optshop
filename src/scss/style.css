@@ -216,6 +216,16 @@ body {
     margin: 0 auto;
   }
 }
+a {
+  outline: none;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  color: var(--primary);
+  fill: var(--primary);
+}
+
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   letter-spacing: 1px;
@@ -1015,12 +1025,14 @@ h6 {
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
+  outline-width: 1px;
 }
 #wforms-form-9 .field-value input.error, #wforms-form-9 .field-value textarea.error {
   border-color: var(--error);
 }
 #wforms-form-9 .field-value input:focus, #wforms-form-9 .field-value textarea:focus {
   outline-color: var(--primary);
+  border-color: var(--primary);
 }
 #wforms-form-9 .field-value textarea {
   padding: 10px 15px;
@@ -1036,6 +1048,11 @@ h6 {
   background-color: var(--primary);
   border: none;
   border-radius: 8px;
+  outline: none;
+}
+#wforms-form-9 input[type=submit]:hover, #wforms-form-9 input[type=submit]:focus, #wforms-form-9 input[type=submit]:active {
+  background-color: var(--dark);
+  outline: none;
 }
 
 .copyright {
@@ -1203,17 +1220,13 @@ h6 {
   background-size: 17px;
   background-position: 0% 50%;
 }
-.product-card__price {
-  padding-right: 12px;
-  background: url("../img/svg/icons.svg#rub") no-repeat;
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: 100% 55%;
-}
 .product-card__price span {
   padding-right: 5px;
   font-size: 1rem;
   font-weight: 600;
+}
+.product-card__price span.ruble {
+  color: var(--dark-grey);
 }
 .product-card__btn {
   height: 28px;
@@ -1556,6 +1569,279 @@ h6 {
     gap: 15px 20px;
   }
 }
+.s-login-page {
+  padding-top: 80px;
+}
+.s-login-page .wa-login-form-wrapper {
+  padding-top: 80px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 1440px) {
+  .s-login-page .wa-login-form-wrapper {
+    width: 60%;
+  }
+}
+@media (min-width: 1680px) {
+  .s-login-page .wa-login-form-wrapper {
+    width: 50%;
+  }
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field {
+    width: calc(50% - 10px);
+  }
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-name {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value {
+  width: 100%;
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value input, .s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value textarea {
+  padding: 5px 15px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-style: solid;
+  outline-width: 1px !important;
+  outline-color: transparent;
+  margin: 0;
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value input.wa-error, .s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value textarea.wa-error {
+  border-color: var(--error);
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value input:focus, .s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value textarea:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value .wa-login-forgotpassword-url {
+  margin: 10px 0 0 0;
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field .wa-value .wa-login-forgotpassword-url:hover {
+  transition: 0.1s;
+  color: var(--primary);
+}
+.s-login-page .wa-login-form-wrapper .wa-login-form-fields .wa-field-password {
+  margin: 0;
+}
+.s-login-page .wa-login-form-wrapper input[type=submit] {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+.s-login-page .wa-login-form-wrapper input[type=submit]:hover, .s-login-page .wa-login-form-wrapper input[type=submit]:focus, .s-login-page .wa-login-form-wrapper input[type=submit]:active {
+  background-color: var(--dark);
+  outline: none;
+}
+
+.s-forgot-password-page {
+  padding-top: 80px;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper {
+  padding-top: 80px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .s-forgot-password-page .wa-forgotpassword-form-wrapper {
+    width: 500px;
+  }
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-name {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value {
+  width: 100%;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input, .s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value textarea {
+  padding: 5px 15px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-style: solid;
+  outline-width: 1px !important;
+  outline-color: transparent;
+  margin: 0;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input.wa-error, .s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value textarea.wa-error {
+  border-color: var(--error);
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input:focus, .s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value textarea:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input[type=submit] {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input[type=submit]:hover, .s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input[type=submit]:focus, .s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field .wa-value input[type=submit]:active {
+  background-color: var(--dark);
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-form-fields .wa-field-password {
+  margin: 0;
+}
+.s-forgot-password-page .wa-forgotpassword-form-wrapper .wa-forgotpassword-button {
+  padding: 20px 0 0 0;
+}
+
+.s-signup-page {
+  padding-top: 80px;
+}
+.s-signup-page .wa-signup-form-wrapper {
+  padding-top: 80px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 1440px) {
+  .s-signup-page .wa-signup-form-wrapper {
+    width: 60%;
+  }
+}
+@media (min-width: 1680px) {
+  .s-signup-page .wa-signup-form-wrapper {
+    width: 50%;
+  }
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 0 20px 0;
+  width: 100%;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field {
+    width: calc(50% - 10px);
+  }
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-name {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value {
+  width: 100%;
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value input, .s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value textarea {
+  padding: 5px 15px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-style: solid;
+  outline-width: 1px !important;
+  outline-color: transparent;
+  margin: 0;
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value input.wa-error, .s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value textarea.wa-error {
+  border-color: var(--error);
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value input:focus, .s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value textarea:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value .wa-login-forgotpassword-url {
+  margin: 10px 0 0 0;
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field .wa-value .wa-login-forgotpassword-url:hover {
+  transition: 0.1s;
+  color: var(--primary);
+}
+.s-signup-page .wa-signup-form-wrapper .wa-signup-form-fields .wa-field-password {
+  margin: 0;
+}
+.s-signup-page .wa-signup-form-wrapper input[type=submit] {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+.s-signup-page .wa-signup-form-wrapper input[type=submit]:hover, .s-signup-page .wa-signup-form-wrapper input[type=submit]:focus, .s-signup-page .wa-signup-form-wrapper input[type=submit]:active {
+  background-color: var(--dark);
+  outline: none;
+}
+
 /* Стили плагинов */
 /* Сброс стилей вебасиста */
 /* Отступы */
