@@ -1,4 +1,19 @@
 {strip}
-    {include file="header_mobile.html" inline}
+
+
+{$_cart_total = $wa->shop->cart->total()}
+{$_cart_count = $wa->shop->cart->count()}
+{$_price_text = ""}
+{if !empty($_cart_total)}
+{$_price_text = wa_currency_html($_cart_total, $wa->shop->currency())}
+{/if}
+
+{$_cart_url = $wa->getUrl('shop/frontend/cart')}
+{if method_exists($wa->shop, 'checkout')}
+{$_cart_url = $wa->shop->checkout()->cartUrl()}
+{/if}
+
+
+{include file="header_mobile.html" inline}
     {include file="header_desktop.html" inline}
 {/strip}

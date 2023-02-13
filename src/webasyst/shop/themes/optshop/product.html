@@ -1,4 +1,76 @@
 {strip}
+<article class="product" itemscope itemtype="http://schema.org/Product">
+        <nav aria-label="Breadcrumb" class="product-breadcrumbs">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="{$wa_app_url}" itemprop="item"><span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="{counter}">
+                </li>
+                {if "/" != $wa->currentUrl()}
+                {if $product.name}
+                {$pageName=$product.name|escape}
+                {else}
+                {if $category.name}
+                {$pageName=$category.name}
+                {else}
+                {if $page.name}
+                {$pageName=$page.name}
+                {else}
+                {$pageName=$wa->title()}
+                {/if}
+                {/if}
+                {/if}
+                {if !empty($breadcrumbs)}
+                {foreach $breadcrumbs as $breadcrumb}
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="{$breadcrumb.url}" itemprop="item">
+                        <span itemprop="name">{$breadcrumb.name|escape}</span>
+                        <meta itemprop="position" content="{counter}">
+                    </a>
+                </li>
+                {/foreach}
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="{$wa->currentUrl()}" itemprop="item">
+                        <span itemprop="name">{$pageName|escape}</span>
+                        <meta itemprop="position" content="{counter}">
+                    </a>
+                </li>
+                {else}
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="{$wa->currentUrl()}" itemprop="item">
+                        <span itemprop="name">{$pageName|escape}</span>
+                        <meta itemprop="position" content="{counter}">
+                    </a>
+                </li>
+                {/if}
+                {/if}
+            </ul>
+        </nav>
+
+    <h1 class="product-title" itemprop="name">{$product.name|escape}</h1>
+    <div class="product-fastlinks">
+        Отзывы и т.д. здесь
+    </div>
+    <div class="product-images">
+        Картинки
+    </div>
+    <div class="product-images">
+        Картинки
+    </div>
+    <div class="product-cart">
+        Комплекты, цена, купить кнопки
+    </div>
+    <div class="product-description">
+        Описания, отзывы и т.д.
+    </div>
+    <div class="product-recomends">
+        Описания, отзывы и т.д.
+    </div>
+</article>
+
+
+
+
 
 {$wa->globals("hideSidebar", true)}
 {if empty($sku_features)}{$sku_features = []}{/if}
@@ -47,7 +119,7 @@
 {/foreach}
 
 {* PRODUCT PAGE *}
-<article class="s-product-page" id="js-product-page" itemscope itemtype="http://schema.org/Product">
+<article class="s-product-page" id="js-product-page" >
 
     <h1 class="s-product-header" itemprop="name">{$product.name|escape}</h1>
 

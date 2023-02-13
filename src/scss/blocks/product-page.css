@@ -1,0 +1,24 @@
+.product {
+  display: grid;
+  grid-template-areas: "product-breadcrumbs product-breadcrumbs product-breadcrumbs" "product-title product-title product-title" "product-fastlinks product-fastlinks product-fastlinks" "product-images product-images product-cart";
+  grid-template-columns: 50vw 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr 50px;
+}
+.product-breadcrumbs {
+  background: var(--dark);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 0;
+}
+.product-fastlinks {
+  background: var(--dark-grey);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=product-page.css.map */

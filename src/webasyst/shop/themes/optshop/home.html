@@ -33,10 +33,23 @@
     {/if}
 *}
 
-{* РЕКОМЕНДУЕМ ПРОДУКТ ЛИСТ *}
+
+
+
+{* РЕКОМЕНДУЕМ ПРОДУКТ ЛИСТ
+
 {$_recomend = $wa->shop->productSet("rekomenduem-6119")}
 {if !empty($_recomend)}
 {include file="./products.html" products=$_recomend badge_type='recomend'}
+{/if}
+
+*}
+
+
+{* СО СКИДКОЙ ПРОДУКТ ЛИСТ *}
+{$_sale = $wa->shop->productSet("tovary-so-skidkoy-6119")}
+{if !empty($_sale)}
+{include file="./products.html" products=$_sale badge_type='sale'}
 {/if}
 
 {* БОЛЬШЕ ВСЕГО ПРОДАНО ПРОДУКТ ЛИСТ *}

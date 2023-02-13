@@ -1,0 +1,83 @@
+.product {
+  display: grid;
+  grid-template-areas:
+            "product-breadcrumbs product-breadcrumbs product-breadcrumbs"
+            "product-title product-title product-title"
+            "product-fastlinks product-fastlinks product-fastlinks"
+            "product-images product-images product-cart"
+            "product-description product-description product-recomends";
+  grid-template-columns: 40vw 1fr 40vw;
+  grid-template-rows: auto auto auto 1fr 50px;
+  grid-gap: 20px;
+  &-breadcrumbs {
+    grid-area: product-breadcrumbs;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 0;
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 20px;
+      & li {
+        display: list-item;
+        padding-left: 20px;
+        &:first-of-type {
+          padding: 0;
+        }
+        &:nth-child(1)::marker {
+          content: '';
+        }
+        &::marker {
+          content: url(../img/svg/icons.svg#arrow-right);
+          font-size: 1rem;
+          background: hsl(200 20% 88%);
+          animation: color-change 3s ease-in-out infinite;
+        }
+      }
+    }
+  }
+  &-fastlinks {
+    grid-area: product-fastlinks;
+    background: var(--dark-grey);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+  &-title {
+    grid-area: product-title;
+    background: var(--light-ternary);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    @media (min-width: 1024px) {
+      font-size: 32px;
+    }
+    @media (min-width: 1680px) {
+      font-size: 42px;
+    }
+  }
+  &-images {
+    grid-area: product-images;
+    background: #006bd8;
+  }
+  &-cart {
+    grid-area: product-cart;
+    background: #fac829;
+  }
+  &-description {
+    grid-area: product-description;
+    background: grey;
+  }
+  &-recomends {
+    grid-area: product-recomends;
+    background: #4f4f4f;
+  }
+}

@@ -8,8 +8,11 @@
             {foreach $frontend_header as $_}{$_}{/foreach}
         </div>
 
-        <a href="#" class="logo"></a>
-
+        <div class="logo">
+            <a href="/" target="_self" title="{$theme_settings.site-name|escape}" class="logo">
+                <img src="{$wa_theme_url}img/logo.png?v={$theme_settings.theme_version_images_reset}" alt="{$theme_settings.site-name|escape}" title="{$theme_settings.site-name|escape}">
+            </a>
+        </div>
     </div>
 
     <!--search-->
@@ -98,7 +101,7 @@
             </li>
 
             <li class="user-panel__item">
-                <a href="#">
+                <a href="{$_cart_url}">
                     <svg class="user-panel__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#cart"></use>
                     </svg>

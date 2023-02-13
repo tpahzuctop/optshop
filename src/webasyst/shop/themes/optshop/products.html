@@ -29,17 +29,37 @@
         {/if}
 
         <ul class="product-card__list {$_type}">
-            <li class="product-card__title">
+
+            {if $badge_type == 'new' || $badge_type == 'bestseller' || $badge_type == 'recomend' || $badge_type == 'sale'}
+            <li class="product-card product-card__list-title {if $badge_type == 'new'}product-card__list-title--new{/if} {if $badge_type == 'bestseller'}product-card__list-title--bestseller{/if} {if $badge_type == 'recomend'}product-card__list-title--recomend{/if} {if $badge_type == 'sale'}product-card__list-title--sale{/if}">
+
                 {if $badge_type == 'new'}
-                <h2>Новинка</h2>
+                <h2>Новинки</h2>
                 {/if}
                 {if $badge_type == 'bestseller'}
-                <h2>Бестселлер</h2>
+                <h2>Бест селлеры</h2>
                 {/if}
                 {if $badge_type == 'recomend'}
                 <h2>Советуем</h2>
                 {/if}
+                {if $badge_type == 'sale'}
+                <h2>Товары со скидкой</h2>
+                {/if}
+
+                {if $badge_type == 'new'}
+                <img src="{$wa_theme_url}img/new.png?v={$theme_settings.theme_version_images_reset}" alt="Новинки" title="Новинки">
+                {/if}
+                {if $badge_type == 'bestseller'}
+                <img src="{$wa_theme_url}img/bestseller.png?v={$theme_settings.theme_version_images_reset}" alt="Бест селлеры" title="Бест селлеры">
+                {/if}
+                {if $badge_type == 'recomend'}
+                <img src="{$wa_theme_url}img/new.png?v={$theme_settings.theme_version_images_reset}" alt="Советуем" title="Советуем">
+                {/if}
+                {if $badge_type == 'sale'}
+                <img src="{$wa_theme_url}img/sale.png?v={$theme_settings.theme_version_images_reset}" alt="Товары со скидкой" title="Товары со скидкой">
+                {/if}
             </li>
+            {/if}
             {foreach $products as $product}
                 {$available = $wa->shop->settings('ignore_stock_count') || $product.count === null || $product.count > 0}
                 {$badge_html = $wa->shop->badgeHtml($product.badge)}

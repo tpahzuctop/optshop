@@ -672,6 +672,39 @@ h6 {
   box-shadow: 0px 1px 8px 0px rgba(44, 48, 46, 0.1882352941);
 }
 
+.product-card__list-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.product-card__list-title--new {
+  background-color: var(--ternary);
+}
+
+.product-card__list-title--bestseller {
+  background-color: var(--secondary);
+}
+
+.product-card__list-title--recomend,
+.product-card__list-title--sale {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.product-card__list-title h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.product-card__list-title img {
+  margin: 20px auto;
+}
+
 .product-card__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -701,7 +734,8 @@ h6 {
   background-color: var(--secondary);
 }
 
-.product-card__tag--recomend {
+.product-card__tag--recomend,
+.product-card__tag--sale {
   background-color: var(--primary);
   color: var(--white);
 }
@@ -717,6 +751,7 @@ h6 {
   margin-bottom: 10px;
   font-size: 1rem;
   line-height: 1rem;
+  overflow: hidden;
 }
 
 .product-card__panel {
@@ -740,10 +775,6 @@ h6 {
   background-position: 0% 50%;
 }
 
-.product-card__price {
-  padding-right: 12px;
-}
-
 .product-card__price span {
   padding-right: 5px;
   font-size: 1rem;
@@ -751,7 +782,7 @@ h6 {
 }
 
 .product-card__price span.ruble {
-  color: var(--light-grey);
+  color: var(--dark-grey);
 }
 
 .product-card__btn {
@@ -765,6 +796,111 @@ h6 {
   border-radius: 5px;
   border: none;
   outline: none;
+}
+
+.product {
+  display: grid;
+  grid-template-areas: "product-breadcrumbs product-breadcrumbs product-breadcrumbs" "product-title product-title product-title" "product-fastlinks product-fastlinks product-fastlinks" "product-images product-images product-cart" "product-description product-description product-recomends";
+  grid-template-columns: 40vw 1fr 40vw;
+  grid-template-rows: auto auto auto 1fr 50px;
+  grid-gap: 20px;
+}
+
+.product-breadcrumbs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: product-breadcrumbs;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 0;
+}
+
+.product-breadcrumbs ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 20px;
+}
+
+.product-breadcrumbs ul li {
+  display: list-item;
+  padding-left: 20px;
+}
+
+.product-breadcrumbs ul li:first-of-type {
+  padding: 0;
+}
+
+.product-breadcrumbs ul li:nth-child(1)::marker {
+  content: "";
+}
+
+.product-breadcrumbs ul li::marker {
+  content: url(../img/svg/icons.svg#arrow-right);
+  font-size: 1rem;
+  background: hsl(200deg, 20%, 88%);
+  -webkit-animation: color-change 3s ease-in-out infinite;
+          animation: color-change 3s ease-in-out infinite;
+}
+
+.product-fastlinks {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: product-fastlinks;
+  background: var(--dark-grey);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+.product-title {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: product-title;
+  background: var(--light-ternary);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.product-images {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: product-images;
+  background: #006bd8;
+}
+
+.product-cart {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+  grid-area: product-cart;
+  background: #fac829;
+}
+
+.product-description {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: product-description;
+  background: grey;
+}
+
+.product-recomends {
+  -ms-grid-row: 9;
+  -ms-grid-column: 5;
+  grid-area: product-recomends;
+  background: #4f4f4f;
 }
 
 .s-login-page {
@@ -1866,6 +2002,12 @@ h6 {
     padding: 0 30px;
   }
 
+  .product-card__list-title {
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: 1px;
+  }
+
   .product-card {
     height: 260px;
     border-radius: 25px;
@@ -1936,6 +2078,10 @@ h6 {
   .product-card__btn:hover {
     background-color: var(--dark);
     transition: 0.2s;
+  }
+
+  .product-title {
+    font-size: 32px;
   }
 }
 
@@ -2244,6 +2390,10 @@ h6 {
     height: 35px;
     width: 110px;
     font-size: 0.8rem;
+  }
+
+  .product-title {
+    font-size: 42px;
   }
 
   .s-login-page .wa-login-form-wrapper {
