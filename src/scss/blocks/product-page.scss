@@ -30,14 +30,12 @@
         &:first-of-type {
           padding: 0;
         }
-        &:nth-child(1)::marker {
-          content: '';
-        }
         &::marker {
           content: url(../img/svg/icons.svg#arrow-right);
-          font-size: 1rem;
-          background: hsl(200 20% 88%);
-          animation: color-change 3s ease-in-out infinite;
+          color: var(--dark);
+        }
+        &:nth-child(1)::marker {
+          content: '';
         }
       }
     }
@@ -53,7 +51,6 @@
   }
   &-title {
     grid-area: product-title;
-    background: var(--light-ternary);
     font-weight: 600;
     font-size: 22px;
     line-height: 100%;

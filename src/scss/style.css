@@ -1634,14 +1634,12 @@ h6 {
 .product-breadcrumbs ul li:first-of-type {
   padding: 0;
 }
-.product-breadcrumbs ul li:nth-child(1)::marker {
-  content: "";
-}
 .product-breadcrumbs ul li::marker {
   content: url(../img/svg/icons.svg#arrow-right);
-  font-size: 1rem;
-  background: hsl(200deg, 20%, 88%);
-  animation: color-change 3s ease-in-out infinite;
+  color: var(--dark);
+}
+.product-breadcrumbs ul li:nth-child(1)::marker {
+  content: "";
 }
 .product-fastlinks {
   grid-area: product-fastlinks;
@@ -1654,7 +1652,6 @@ h6 {
 }
 .product-title {
   grid-area: product-title;
-  background: var(--light-ternary);
   font-weight: 600;
   font-size: 22px;
   line-height: 100%;
