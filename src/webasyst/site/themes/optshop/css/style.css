@@ -1209,6 +1209,31 @@ h6 {
   outline: 0;
 }
 
+.s-delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.s-delete-icon {
+  margin-right: 20px;
+}
+
+.s-delete-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
 .s-forgot-password-page {
   padding-top: 80px;
 }
@@ -2359,6 +2384,7 @@ h6 {
   }
 
   #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+    width: 245px;
     transition: 0.1s;
   }
 
