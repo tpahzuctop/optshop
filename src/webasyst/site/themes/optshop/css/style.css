@@ -18,7 +18,7 @@
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Bold.woff2") format("woff2"), url("../files/fonts/Mulish-Bold.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Bold.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -26,7 +26,7 @@
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Medium.woff2") format("woff2"), url("../files/fonts/Mulish-Medium.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Medium.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -34,7 +34,7 @@
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Regular.woff2") format("woff2"), url("../files/fonts/Mulish-Regular.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Regular.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -42,7 +42,7 @@
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-SemiBold.woff2") format("woff2"), url("../files/fonts/Mulish-SemiBold.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-SemiBold.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -998,6 +998,217 @@ h6 {
   outline: none;
 }
 
+#wa-my-info-read-wrapper .wa-field {
+  margin-bottom: 15px;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-name {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-value {
+  font-size: 1.2rem;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+  display: block;
+  margin: 20px 0 35px 0;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+#wa-my-info-edit-wrapper .wa-field {
+  margin-bottom: 20px;
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-name {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text] {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text] {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text] {
+  display: block;
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > select {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > select > option {
+  overflow: hidden;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password] {
+  display: block;
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]::placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .errormsg {
+  color: var(--primary);
+}
+
+#wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+#wa-my-info-edit-wrapper .wa-value > input[type=button] {
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
 .s-forgot-password-page {
   padding-top: 80px;
 }
@@ -1877,6 +2088,73 @@ h6 {
     width: calc(50% - 10px);
   }
 
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+    width: 500px;
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper {
+    width: 500px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text] {
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field-firstname {
+    display: inline-block;
+    margin-right: 10px;
+    width: 245px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field-middlename {
+    display: inline-block;
+    width: 245px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text] {
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value p > .field > input[type=text] {
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value p > .field > select {
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value p > .field > select > option {
+    width: 240px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field-address-region {
+    display: inline-block !important;
+    margin-right: 10px;
+    width: 245px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field-address-country {
+    display: inline-block !important;
+    width: 245px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-field-address-zip {
+    width: 245px;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value p > .field > input[type=password] {
+    font-size: 1.2rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+    font-size: 1.1rem;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=button] {
+    font-size: 1.1rem;
+  }
+
   .s-forgot-password-page .wa-forgotpassword-form-wrapper {
     width: 500px;
   }
@@ -2078,6 +2356,40 @@ h6 {
 
   .product-title {
     font-size: 32px;
+  }
+
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+    transition: 0.1s;
+  }
+
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button]:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+    display: inline-block;
+    margin-right: 10px;
+    width: 245px;
+    transition: 0.1s;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit]:hover {
+    background-color: var(--dark);
+    transition: 0.2s;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=button] {
+    display: inline-block;
+    width: 245px;
+    transition: 0.1s;
+  }
+
+  #wa-my-info-edit-wrapper .wa-value > input[type=button]:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
   }
 }
 

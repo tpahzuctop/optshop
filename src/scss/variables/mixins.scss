@@ -17,3 +17,9 @@
   background-color: var(--dark);
   transition: .2s;
 }
+
+@mixin hover-btn-grey {
+  background-color: var(--dark);
+  color: var(--white);
+  transition: .2s;
+}
