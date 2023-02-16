@@ -215,8 +215,6 @@ a {
 
 a:hover {
   cursor: pointer;
-  color: var(--primary);
-  fill: var(--primary);
 }
 
 h1,
@@ -1042,13 +1040,13 @@ h6 {
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: 0.2s;
 }
 
 #wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]:focus {
+  transition: 0.1s;
   outline-color: var(--primary);
-  border-color: var(--primary);
 }
 
 #wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]::-webkit-input-placeholder {
@@ -1070,13 +1068,13 @@ h6 {
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: 0.2s;
 }
 
 #wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]:focus {
+  transition: 0.1s;
   outline-color: var(--primary);
-  border-color: var(--primary);
 }
 
 #wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]::-webkit-input-placeholder {
@@ -1110,13 +1108,13 @@ h6 {
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: 0.2s;
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]:focus {
+  transition: 0.1s;
   outline-color: var(--primary);
-  border-color: var(--primary);
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]::-webkit-input-placeholder {
@@ -1141,6 +1139,7 @@ h6 {
   border: 1px solid var(--dark-grey);
   outline-width: 1px;
   color: var(--dark);
+  cursor: pointer;
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > select > option {
@@ -1155,13 +1154,13 @@ h6 {
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: 0.2s;
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]:focus {
+  transition: 0.1s;
   outline-color: var(--primary);
-  border-color: var(--primary);
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]::-webkit-input-placeholder {
@@ -1210,6 +1209,7 @@ h6 {
 }
 
 .s-delete-button {
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1225,13 +1225,169 @@ h6 {
   outline: 0;
 }
 
-.s-delete-icon {
-  margin-right: 20px;
+.wa-order-cart-wrapper .s-delete-icon {
+  display: none;
 }
 
-.s-delete-icon svg {
-  width: 15px;
-  height: 15px;
+.top {
+  top: auto;
+  left: -20px;
+  bottom: 5px;
+}
+
+.wa-order-cart-wrapper .wa-column-details {
+  margin-bottom: 25px !important;
+}
+
+.wa-price-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-order-cart-wrapper .wa-icon {
+  display: none;
+}
+
+.wa-order-cart-wrapper .wa-button {
+  height: 40px !important;
+  width: 130px !important;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+.wa-order-cart-wrapper .wa-input {
+  padding: 10px !important;
+  height: 40px !important;
+  width: 140px !important;
+  border-radius: 5px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+.wa-order-cart-wrapper .wa-input::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-cart-wrapper .wa-input::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-cart-wrapper .wa-input::placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-cart-wrapper .wa-weight-section {
+  color: var(--dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-auth-section > .wa-section-header a.wa-tooltip {
+  margin-top: 10px;
+  color: var(--primary);
+}
+
+.s-back-link {
+  margin-top: 20px;
+}
+
+.wa-order-form-wrapper .wa-label {
+  font-size: 1.3rem !important;
+  color: var(--dark) !important;
+}
+
+.wa-order-form-wrapper .wa-label span {
+  left: 0 !important;
+}
+
+.wa-field-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text],
+.wa-order-form-wrapper .wa-field-wrapper > input[type=tel],
+.wa-order-form-wrapper .wa-field-wrapper > input[type=email],
+.wa-order-form-wrapper .wa-field-wrapper > select {
+  padding: 5px 15px;
+  height: 45px;
+  min-width: 140px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]:focus,
+.wa-order-form-wrapper .wa-field-wrapper > input[type=tel]:focus,
+.wa-order-form-wrapper .wa-field-wrapper > input[type=email]:focus,
+.wa-order-form-wrapper .wa-field-wrapper > select:focus {
+  outline-color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]::-webkit-input-placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=tel]::-webkit-input-placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=email]::-webkit-input-placeholder, .wa-order-form-wrapper .wa-field-wrapper > select::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]::-moz-placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=tel]::-moz-placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=email]::-moz-placeholder, .wa-order-form-wrapper .wa-field-wrapper > select::-moz-placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]::placeholder,
+.wa-order-form-wrapper .wa-field-wrapper > input[type=tel]::placeholder,
+.wa-order-form-wrapper .wa-field-wrapper > input[type=email]::placeholder,
+.wa-order-form-wrapper .wa-field-wrapper > select::placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-form-wrapper .wa-step-region-section .wa-required-text {
+  color: var(--dark) !important;
+}
+
+.wa-order-form-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-name {
+  color: var(--dark) !important;
+}
+
+.wa-item-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-shipping .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-price .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-order-form-wrapper .wa-submit-button {
+  height: 45px !important;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.wa-dropdown-toggle {
+  padding: 12px 28px 12px 15px !important;
+  height: 45px;
+  min-width: 100px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
 }
 
 .s-forgot-password-page {
@@ -2415,6 +2571,26 @@ h6 {
   #wa-my-info-edit-wrapper .wa-value > input[type=button]:hover {
     background-color: var(--dark);
     color: var(--white);
+    transition: 0.2s;
+  }
+
+  .s-delete-button {
+    width: 245px;
+    transition: 0.2s;
+  }
+
+  .s-delete-button:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
+  }
+
+  .wa-order-form-wrapper .wa-submit-button {
+    transition: 0.2s;
+  }
+
+  .wa-order-form-wrapper .wa-submit-button:hover {
+    background-color: var(--dark);
     transition: 0.2s;
   }
 }

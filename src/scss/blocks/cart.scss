@@ -1,4 +1,5 @@
 .s-delete-button {
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,11 +15,168 @@
   outline: 0;
 }
 
-.s-delete-icon {
-  margin-right: 20px;
+.wa-order-cart-wrapper .s-delete-icon {
+  display: none;
+}
 
-  & svg {
-    width: 15px;
-    height: 15px;
+.top {
+  top: auto;
+  left: -20px;
+  bottom: 5px;
+}
+
+//отступы снизу у описания товара
+.wa-order-cart-wrapper .wa-column-details {
+  margin-bottom: 25px!important;
+}
+
+//рубль
+.wa-price-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+//иконка перед удалить
+.wa-order-cart-wrapper .wa-icon {
+  display: none;
+}
+
+//кнопка купона
+.wa-order-cart-wrapper .wa-button {
+  height: 40px!important;
+  width: 130px!important;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+//инпут купона
+.wa-order-cart-wrapper .wa-input {
+  padding: 10px!important;
+  height: 40px!important;
+  width: 140px!important;
+  border-radius: 5px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+
+  &::placeholder {
+    color: var(--dark-grey);
+  }
+}
+
+//описание с весом
+.wa-order-cart-wrapper .wa-weight-section {
+  color: var(--dark)!important;
+}
+
+.wa-order-form-wrapper .wa-step-auth-section > .wa-section-header a.wa-tooltip {
+  margin-top: 10px;
+  color: var(--primary);
+}
+//назад
+.s-back-link {
+  margin-top: 20px;
+}
+
+//form
+.wa-order-form-wrapper .wa-label {
+  font-size: 1.3rem!important;
+  color: var(--dark)!important;
+
+  & span {
+    left: 0!important;
+  }
+}
+
+.wa-field-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text], .wa-order-form-wrapper .wa-field-wrapper > input[type=tel], .wa-order-form-wrapper .wa-field-wrapper > input[type=email], .wa-order-form-wrapper .wa-field-wrapper > select {
+  padding: 5px 15px;
+  height: 45px;
+  min-width: 140px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+
+  &:focus {
+    outline-color: var(--primary);
+  }
+
+  &::placeholder {
+    color: var(--dark-grey);
+  }
+}
+
+.wa-order-form-wrapper .wa-step-region-section .wa-required-text {
+  color: var(--dark)!important;
+}
+
+.wa-order-form-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-name {
+  color: var(--dark)!important;
+}
+
+.wa-item-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-shipping .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-price .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-order-form-wrapper .wa-submit-button{
+  height: 45px!important;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600!important;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.wa-dropdown-toggle {
+  padding: 12px 28px 12px 15px!important;
+  height: 45px;
+  min-width: 100px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+@media(min-width: 1024px)  {
+  .s-delete-button {
+    width: 245px;
+    transition: .2s;
+
+    &:hover {
+      @include hover-btn-grey;
+    }
+  }
+
+  .wa-order-form-wrapper .wa-submit-button {
+    transition: .2s;
+
+    &:hover {
+      @include hover-btn;
+    }
   }
 }

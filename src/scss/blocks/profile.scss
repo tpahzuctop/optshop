@@ -61,12 +61,12 @@
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: .2s;
 
   &:focus {
+    transition: .1s;
     outline-color: var(--primary);
-    border-color: var(--primary);
   }
 
   &::placeholder {
@@ -100,12 +100,12 @@
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: .2s;
 
   &:focus {
+    transition: .1s;
     outline-color: var(--primary);
-    border-color: var(--primary);
   }
 
   &::placeholder {
@@ -139,12 +139,12 @@
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: .2s;
 
   &:focus {
+    transition: .1s;
     outline-color: var(--primary);
-    border-color: var(--primary);
   }
 
   &::placeholder {
@@ -169,6 +169,7 @@
   border: 1px solid var(--dark-grey);
   outline-width: 1px;
   color: var(--dark);
+  cursor: pointer;
 }
 
 #wa-my-info-edit-wrapper .wa-value p > .field > select > option {
@@ -209,12 +210,12 @@
   font-size: 1.3rem;
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
-  outline-width: 1px;
   color: var(--dark);
+  transition: .2s;
 
   &:focus {
+    transition: .1s;
     outline-color: var(--primary);
-    border-color: var(--primary);
   }
 
   &::placeholder {
