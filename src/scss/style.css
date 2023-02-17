@@ -16,28 +16,28 @@
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Bold.woff2") format("woff2"), url("../files/fonts/Mulish-Bold.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Bold.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Medium.woff2") format("woff2"), url("../files/fonts/Mulish-Medium.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Medium.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-Regular.woff2") format("woff2"), url("../files/fonts/Mulish-Regular.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Regular.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Mulish;
   font-display: swap;
-  src: url("../files/fonts/Mulish-SemiBold.woff2") format("woff2"), url("../files/fonts/Mulish-SemiBold.woff") format("woff");
+  src: url("https://6119.ru/wa-data/public/site/FONTS/Mulish-SemiBold.woff2") format("woff2"), url("https://6119.ru/wa-data/public/site/FONTS/Mulish-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -222,8 +222,6 @@ a {
 }
 a:hover {
   cursor: pointer;
-  color: var(--primary);
-  fill: var(--primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1779,6 +1777,448 @@ h6 {
   outline: none;
 }
 
+#wa-my-info-read-wrapper .wa-field {
+  margin-bottom: 15px;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-name {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-value {
+  font-size: 1.2rem;
+}
+
+#wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+  display: block;
+  margin: 20px 0 35px 0;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+    width: 500px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button] {
+    width: 245px;
+    transition: 0.1s;
+  }
+  #wa-my-info-read-wrapper .wa-field .wa-value > input[type=button]:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
+  }
+}
+#wa-my-info-edit-wrapper .wa-field {
+  margin-bottom: 20px;
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-name {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text] {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+  transition: 0.2s;
+}
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]:focus {
+  transition: 0.1s;
+  outline-color: var(--primary);
+}
+#wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper {
+    width: 500px;
+  }
+  #wa-my-info-edit-wrapper .wa-field .wa-value > input[type=text] {
+    font-size: 1.2rem;
+  }
+  #wa-my-info-edit-wrapper .wa-field-firstname {
+    display: inline-block;
+    margin-right: 10px;
+    width: 245px;
+  }
+  #wa-my-info-edit-wrapper .wa-field-middlename {
+    display: inline-block;
+    width: 245px;
+  }
+}
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text] {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+  transition: 0.2s;
+}
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]:focus {
+  transition: 0.1s;
+  outline-color: var(--primary);
+}
+#wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper .wa-field .wa-value p > input[type=text] {
+    font-size: 1.2rem;
+  }
+}
+#wa-my-info-edit-wrapper .wa-value p > .field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text] {
+  display: block;
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+  transition: 0.2s;
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]:focus {
+  transition: 0.1s;
+  outline-color: var(--primary);
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=text]::placeholder {
+  color: var(--dark-grey);
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper .wa-value p > .field > input[type=text] {
+    font-size: 1.2rem;
+  }
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > select {
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+#wa-my-info-edit-wrapper .wa-value p > .field > select > option {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper .wa-value p > .field > select {
+    font-size: 1.2rem;
+  }
+  #wa-my-info-edit-wrapper .wa-value p > .field > select > option {
+    width: 240px;
+  }
+  #wa-my-info-edit-wrapper .wa-field-address-region {
+    display: inline-block !important;
+    margin-right: 10px;
+    width: 245px;
+  }
+  #wa-my-info-edit-wrapper .wa-field-address-country {
+    display: inline-block !important;
+    width: 245px;
+  }
+  #wa-my-info-edit-wrapper .wa-field-address-zip {
+    width: 245px;
+  }
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password] {
+  display: block;
+  padding: 5px 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+  transition: 0.2s;
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]:focus {
+  transition: 0.1s;
+  outline-color: var(--primary);
+}
+#wa-my-info-edit-wrapper .wa-value p > .field > input[type=password]::placeholder {
+  color: var(--dark-grey);
+}
+
+#wa-my-info-edit-wrapper .errormsg {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper .wa-value p > .field > input[type=password] {
+    font-size: 1.2rem;
+  }
+}
+#wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+#wa-my-info-edit-wrapper .wa-value > input[type=button] {
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 43px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+    font-size: 1.1rem;
+  }
+  #wa-my-info-edit-wrapper .wa-value > input[type=button] {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit] {
+    display: inline-block;
+    margin-right: 10px;
+    width: 245px;
+    transition: 0.1s;
+  }
+  #wa-my-info-edit-wrapper .wa-value > input[type=submit]:hover {
+    background-color: var(--dark);
+    transition: 0.2s;
+  }
+  #wa-my-info-edit-wrapper .wa-value > input[type=button] {
+    display: inline-block;
+    width: 245px;
+    transition: 0.1s;
+  }
+  #wa-my-info-edit-wrapper .wa-value > input[type=button]:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
+  }
+}
+.s-delete-button {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: var(--dark);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.wa-order-cart-wrapper .s-delete-icon {
+  display: none;
+}
+
+.top {
+  top: auto;
+  left: -20px;
+  bottom: 5px;
+}
+
+.wa-order-cart-wrapper .wa-column-details {
+  margin-bottom: 25px !important;
+}
+
+.wa-price-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-order-cart-wrapper .wa-icon {
+  display: none;
+}
+
+.wa-order-cart-wrapper .wa-button {
+  height: 40px !important;
+  width: 130px !important;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+.wa-order-cart-wrapper .wa-input {
+  padding: 10px !important;
+  height: 40px !important;
+  width: 140px !important;
+  border-radius: 5px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+.wa-order-cart-wrapper .wa-input::placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-cart-wrapper .wa-weight-section {
+  color: var(--dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-auth-section > .wa-section-header a.wa-tooltip {
+  margin-top: 10px;
+  color: var(--primary);
+}
+
+.s-back-link {
+  margin-top: 20px;
+}
+
+.wa-order-form-wrapper .wa-label {
+  font-size: 1.3rem !important;
+  color: var(--dark) !important;
+}
+.wa-order-form-wrapper .wa-label span {
+  left: 0 !important;
+}
+
+.wa-field-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text], .wa-order-form-wrapper .wa-field-wrapper > input[type=tel], .wa-order-form-wrapper .wa-field-wrapper > input[type=email], .wa-order-form-wrapper .wa-field-wrapper > select {
+  padding: 5px 15px;
+  height: 45px;
+  min-width: 140px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+}
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]:focus, .wa-order-form-wrapper .wa-field-wrapper > input[type=tel]:focus, .wa-order-form-wrapper .wa-field-wrapper > input[type=email]:focus, .wa-order-form-wrapper .wa-field-wrapper > select:focus {
+  outline-color: var(--primary);
+}
+.wa-order-form-wrapper .wa-field-wrapper > input[type=text]::placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=tel]::placeholder, .wa-order-form-wrapper .wa-field-wrapper > input[type=email]::placeholder, .wa-order-form-wrapper .wa-field-wrapper > select::placeholder {
+  color: var(--dark-grey);
+}
+
+.wa-order-form-wrapper .wa-step-region-section .wa-required-text {
+  color: var(--dark) !important;
+}
+
+.wa-order-form-wrapper .wa-required:before {
+  color: var(--primary);
+}
+
+.wa-order-form-wrapper .wa-name {
+  color: var(--dark) !important;
+}
+
+.wa-item-total .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-shipping .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-item-price .ruble {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.wa-order-form-wrapper .wa-submit-button {
+  height: 45px !important;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.wa-dropdown-toggle {
+  padding: 12px 28px 12px 15px !important;
+  height: 45px;
+  min-width: 100px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-grey);
+  outline-width: 1px;
+  color: var(--dark);
+}
+
+@media (min-width: 1024px) {
+  .s-delete-button {
+    width: 245px;
+    transition: 0.2s;
+  }
+  .s-delete-button:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    transition: 0.2s;
+  }
+  .wa-order-form-wrapper .wa-submit-button {
+    transition: 0.2s;
+  }
+  .wa-order-form-wrapper .wa-submit-button:hover {
+    background-color: var(--dark);
+    transition: 0.2s;
+  }
+}
 .s-forgot-password-page {
   padding-top: 80px;
 }

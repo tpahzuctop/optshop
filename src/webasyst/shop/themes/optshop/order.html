@@ -41,6 +41,7 @@
                 <div class="s-section-body">
                     {$wa->shop->checkout()->cart([
                         "DEBUG" => true,
+                        'include_css'=> false,
                         "wrapper" => "#js-order-cart"
                     ])}
                 </div>
@@ -68,6 +69,7 @@
             {capture assign="_cross_selling_html"}
                 {$wa->shop->checkout()->crossSelling([
                     "DEBUG" => true,
+                    'include_css'=> false,
                     "wrapper" => "#js-cross-selling-section"
                 ])}
             {/capture}
