@@ -713,12 +713,12 @@ h6 {
   position: absolute;
   top: 7px;
   left: 7px;
-  width: 70px;
+  width: 75px;
   height: 20px;
   display: flex;
   justify-content: center;
   font-size: 0.8rem;
-  line-height: 19px;
+  line-height: 20px;
   font-weight: bold;
   color: var(--dark);
   border-radius: 10px;
@@ -740,12 +740,12 @@ h6 {
 
 .product-card__picture {
   margin: 5px 0;
-  width: 105px;
   height: 80px;
 }
 
 .product-card__descr {
-  min-height: 25px;
+  min-height: 30px;
+  height: 30px;
   margin-bottom: 10px;
   font-size: 1rem;
   line-height: 1rem;
@@ -761,29 +761,32 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .product-card__reviews {
-  padding-left: 20px;
+  padding-left: 18px;
   background: url("../img/svg/icons.svg#star") no-repeat;
   background-repeat: no-repeat;
-  background-size: 17px;
-  background-position: 0% 50%;
+  background-size: 15px;
+  background-position: 0% 45%;
 }
 
 .product-card__price span {
   padding-right: 5px;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .product-card__price span.ruble {
+  font-size: inherit;
+  padding-right: 0;
   color: var(--dark-grey);
 }
 
 .product-card__btn {
+  width: 100%;
   height: 28px;
   display: flex;
   align-items: center;
@@ -1794,16 +1797,26 @@ h6 {
     padding: 0 15px;
   }
 
+  .product-card {
+    height: 210px;
+  }
+
   .product-card__list {
     gap: 10px;
   }
 
   .product-card__price-wrapper {
-    font-size: 1.4rem;
+    margin-bottom: 7px;
+    font-size: 1.3rem;
   }
 
-  .product-card__price {
-    background-position: 100% 60%;
+  .product-card__reviews {
+    padding-left: 22px;
+    background-size: 18px;
+  }
+
+  .product-card__btn {
+    height: 30px;
   }
 }
 
@@ -1818,7 +1831,7 @@ h6 {
 
   .product-card {
     padding: 7px 12px;
-    height: 220px;
+    height: 230px;
   }
 
   .product-card__tag {
@@ -1831,35 +1844,32 @@ h6 {
   }
 
   .product-card__picture {
-    width: 110px;
     height: 85px;
   }
 
   .product-card__descr {
-    margin-bottom: 13px;
-    min-height: 30px;
+    min-height: 40px;
+    height: 40px;
     font-size: 1.1rem;
-    line-height: 1.2rem;
-  }
-
-  .product-card__price-wrapper {
-    font-size: 1.6rem;
+    line-height: 1.4rem;
   }
 
   .product-card__reviews {
     padding-left: 25px;
-    background-size: 22px;
-    background-position: 0% 25%;
+    background-size: 20px;
+    background-position: 0 45%;
+  }
+
+  .product-card__price-wrapper {
+    font-size: 1.4rem;
   }
 
   .product-card__price {
-    padding-right: 14px;
     background-size: 14px;
     background-position: 100% 50%;
   }
 
   .product-card__price span {
-    padding-right: 7px;
     font-size: 1.1rem;
   }
 }
@@ -1871,37 +1881,28 @@ h6 {
 
   .product-card__picture {
     margin: 5px 0 7px 0;
-    width: 120px;
     height: 95px;
   }
 
   .product-card__descr {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
+    min-height: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   .product-card__price-wrapper {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 
   .product-card__reviews {
-    padding-left: 28px;
-    background-size: 24px;
-    background-position: 0% 30%;
-  }
-
-  .product-card__price {
-    padding-right: 16px;
-    background-size: 16px;
-  }
-
-  .product-card__price span {
-    font-size: 1.3rem;
+    padding-left: 27px;
+    background-size: 22px;
+    background-position: 0 40%;
   }
 
   .product-card__btn {
-    height: 33px;
+    height: 35px;
     font-size: 1.1rem;
   }
 }
@@ -1990,7 +1991,7 @@ h6 {
 
   .product-card {
     padding: 7px 7px;
-    height: 175px;
+    height: 190px;
   }
 
   .product-card__list {
@@ -2007,14 +2008,14 @@ h6 {
 
   .product-card__picture {
     margin: 3px 0;
-    width: 85px;
-    height: 65px;
+    height: 70px;
   }
 
   .product-card__descr {
-    margin-bottom: 5px;
-    font-size: 0.7rem;
-    line-height: 0.8rem;
+    min-height: 32px;
+    height: 32px;
+    font-size: 1rem;
+    line-height: 1.1rem;
   }
 
   .product-card__price-wrapper {
@@ -2023,22 +2024,21 @@ h6 {
 
   .product-card__reviews {
     padding-left: 20px;
-    background-size: 18px;
+    background-size: 16px;
+    background-position: 0 40%;
   }
 
   .product-card__price {
-    padding-right: 12px;
     background-size: 12px;
   }
 
   .product-card__price span {
-    padding-right: 5px;
     font-size: 0.8rem;
   }
 
   .product-card__btn {
-    height: 25px;
-    font-size: 0.8rem;
+    height: 28px;
+    font-size: 0.9rem;
   }
 }
 
@@ -2227,19 +2227,19 @@ h6 {
 
   .product-card {
     padding: 7px 12px;
-    height: 200px;
+    height: 210px;
   }
 
   .product-card__picture {
     margin: 3px 0 5px 0;
-    width: 95px;
     height: 75px;
   }
 
   .product-card__descr {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    min-height: 35px;
+    height: 35px;
     font-size: 0.9rem;
-    line-height: 0.9rem;
   }
 
   .product-card__price-wrapper {
@@ -2247,9 +2247,8 @@ h6 {
   }
 
   .product-card__reviews {
-    padding-left: 23px;
-    background-size: 20px;
-    background-position: 0% 35%;
+    padding-left: 22px;
+    background-size: 18px;
   }
 
   .product-card__price {
@@ -2487,14 +2486,14 @@ h6 {
 
   .product-card__picture {
     margin: 8px 0;
-    width: 135px;
     height: 110px;
   }
 
   .product-card__descr {
-    min-height: 35px;
-    font-size: 1rem;
-    line-height: 1rem;
+    min-height: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
   }
 
   .product-card__price-wrapper {
@@ -2505,13 +2504,11 @@ h6 {
 
   .product-card__reviews {
     margin-bottom: 7px;
-    padding-left: 27px;
+    padding-left: 30px;
     background-size: 23px;
   }
 
   .product-card__price {
-    padding-right: 15px;
-    font-size: 1.4rem;
     background-size: 15px;
     background-position: 100% 50%;
   }
@@ -2714,15 +2711,13 @@ h6 {
 
   .product-card__picture {
     margin: 0 0 10px 0;
-    width: 170px;
     height: 145px;
   }
 
   .product-card__descr {
-    margin-bottom: 15px;
-    min-height: 40px;
-    font-size: 1.1rem;
-    line-height: 1.2rem;
+    min-height: 52px;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
   }
 
   .product-card__price-wrapper {
@@ -2733,18 +2728,6 @@ h6 {
     margin-bottom: 10px;
     padding-left: 28px;
     background-size: 24px;
-  }
-
-  .product-card__price {
-    padding-right: 17px;
-    background-size: 17px;
-    background-position: 100% 55%;
-    font-size: 1.6rem;
-  }
-
-  .product-card__price span {
-    padding-right: 7px;
-    font-size: 1.1rem;
   }
 
   .product-card__btn {
@@ -2787,6 +2770,26 @@ h6 {
 
   .footer__container section:nth-child(2) {
     margin: 0 3% 0 6%;
+  }
+
+  .product-card__descr {
+    margin-bottom: 8px;
+  }
+
+  .product-card__price-wrapper {
+    font-size: 1.5rem;
+  }
+
+  .product-card__price {
+    padding-right: 8px;
+  }
+
+  .product-card__price span {
+    font-size: 1.1rem;
+  }
+
+  .product-card__reviews {
+    margin-bottom: 8px;
   }
 
   .s-login-page .wa-login-form-wrapper {
@@ -2871,7 +2874,6 @@ h6 {
   }
 
   .product-card__picture {
-    width: 130px;
     height: 110px;
   }
 
