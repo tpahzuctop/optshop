@@ -39,11 +39,16 @@
                     </a>
                 </div>
                 <div class="s-section-body">
-                    {$wa->shop->checkout()->cart([
+                    {$cart_html = $wa->shop->checkout()->cart([
                         "DEBUG" => true,
-                        'include_css'=> false,
-                        "wrapper" => "#js-order-cart"
+                        'wrapper' => '#js-order-cart'
                     ])}
+                    {$cart_html = $cart_html|replace:"{$wa_url}wa-content/css/jquery-ui/jquery-ui-1.7.2.custom.css?v={$wa->version(true)}":""}
+                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}css/frontend/order/ui.css?v={$wa->version()}":""}
+                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}css/frontend/order/cart.css?v={$wa->version()}":""}
+                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.min.js?v={$wa->version()}":""}
+                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.css?v={$wa->version()}":""}
+                    {$cart_html}
                 </div>
                 <div class="s-section-footer">
 
@@ -69,7 +74,6 @@
             {capture assign="_cross_selling_html"}
                 {$wa->shop->checkout()->crossSelling([
                     "DEBUG" => true,
-                    'include_css'=> false,
                     "wrapper" => "#js-cross-selling-section"
                 ])}
             {/capture}
@@ -94,15 +98,23 @@
                     <h2 class="s-header">{$config.order.block_name|default:"[`Checkout`]"|escape}</h2>
                 </div>
                 <div class="s-section-body">
-                    {$wa->shop->checkout()->form([
-                        "DEBUG" => true,
-                        "wrapper" => "#js-order-form"
+                    {$form_html = $wa->shop->checkout()->form([
+                    "DEBUG" => true,
+                    'wrapper' => '#js-order-checkout'
                     ])}
+                    {$form_html = $form_html|replace:"{$wa_url}wa-content/css/jquery-ui/jquery-ui-1.7.2.custom.css?v={$wa->version(true)}":""}
+                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/ui.css?v={$wa->version()}":""}
+                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/form.css?v={$wa->version()}":""}
+                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/form.css?v={$wa->version()}":""}
+                    {$form_html = $form_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.min.js?v={$wa->version()}":""}
+                    {$form_html = $form_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.css?v={$wa->version()}":""}
+                    {$form_html}
                 </div>
             </section>
 
         </div>
 
+        {*
         <script>
             ( function($) {
 
@@ -126,6 +138,7 @@
 
             })(jQuery);
         </script>
+        *}
     </div>
 {/if}
 

@@ -7,8 +7,10 @@
             "product-images product-images product-cart"
             "product-description product-description product-recomends";
   grid-template-columns: 40vw 1fr 40vw;
-  grid-template-rows: auto auto auto 1fr 50px;
   grid-gap: 20px;
+@media (min-width: 768px) {
+
+}
   &-breadcrumbs {
     grid-area: product-breadcrumbs;
     font-style: normal;
@@ -42,7 +44,6 @@
   }
   &-fastlinks {
     grid-area: product-fastlinks;
-    background: var(--dark-grey);
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -63,18 +64,21 @@
   }
   &-images {
     grid-area: product-images;
-    background: #006bd8;
   }
   &-cart {
     grid-area: product-cart;
-    background: #fac829;
   }
   &-description {
     grid-area: product-description;
-    background: grey;
+    & h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 1px;
+    }
   }
   &-recomends {
     grid-area: product-recomends;
-    background: #4f4f4f;
   }
 }
