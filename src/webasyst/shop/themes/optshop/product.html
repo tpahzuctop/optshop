@@ -57,9 +57,21 @@
     <div class="product-images">
         Картинки
     </div>
+
     <div class="product-cart">
-        Комплекты, цена, купить кнопки
+            {include file="product.cart.html" inline}
+
+            {if !empty($frontend_product)}
+            {* @event frontend_product.%plugin_id%.cart *}
+            {foreach $frontend_product as $_}{$_.cart}{/foreach}
+
+            {* @event frontend_product.%plugin_id%.block_aux *}
+            <div class="s-product-aux">
+                {foreach $frontend_product as $_}{$_.block_aux}{/foreach}
+            </div>
+            {/if}
     </div>
+
     <div class="product-description">
         {if $product.description}
         <h2>Описание</h2>
@@ -199,21 +211,7 @@
         </figure>
     {/if}
 
-    {* PRODUCT CART *}
-    <div class="s-cart-wrapper" id="s-cart-wrapper">
 
-        {include file="product.cart.html" inline}
-
-        {if !empty($frontend_product)}
-            {* @event frontend_product.%plugin_id%.cart *}
-            {foreach $frontend_product as $_}{$_.cart}{/foreach}
-
-            {* @event frontend_product.%plugin_id%.block_aux *}
-            <div class="s-product-aux">
-                {foreach $frontend_product as $_}{$_.block_aux}{/foreach}
-            </div>
-        {/if}
-    </div>
 
     <div class="s-product-info" id="s-product-info">
         {* TABS *}
@@ -241,9 +239,6 @@
             {* OVERVIEW *}
             <div class="s-tab-content is-shown" id="tab-content-1">
                 <div class="s-product-overview" id="overview">
-                    {if $product.description}
-                        <div class="s-product-desc" id="s-product-desc" itemprop="description">{$product.description}</div>
-                    {/if}
 
                     {* CATEGORIES *}
                     {if count($product.categories) > 1}
