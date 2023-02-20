@@ -1,0 +1,29 @@
+{$items = $wa->menu->get(148)}
+{wa_print_tree tree=$items elem='<a href=":url">:name</a>'}
+
+<div class="header-desktop__menu-wrapper">
+
+
+    <nav class="header-desktop__menu header-desktop-menu">
+        {foreach $items as $item}
+        <div class="header-desktop-menu__category">
+            <a class="" href="{$item.url}">{$item.name}</a>
+
+            {if !empty($item.childs)}
+            <div class="header-desktop-menu__subcategory">
+                {foreach $item.childs as $child}
+                <div class="menu-item-child">
+                    <a href="{$item.url}">{$item.name}</a>
+                </div>
+                {/foreach}
+            </div>
+            {/if}
+        </div>
+        {/foreach}
+    </nav>
+
+    <div class="header-desktop__unpacking">
+
+    </div>
+
+</div>
