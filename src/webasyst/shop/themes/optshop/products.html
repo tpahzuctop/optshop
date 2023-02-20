@@ -99,9 +99,15 @@
 
                             <div class="product-card__reviews">
                                 {if $product.rating > 0}
-                                    {$product.rating}
+                                <svg class="star-full">
+                                    <use xlink:href="/wa-apps/site/themes/optshop/img/svg/icons.svg#star"></use>
+                                </svg>
+                                    {$product.rating|string_format:"%d"}
                                 {else}
-                                    0
+                                <svg class="star-empty">
+                                    <use xlink:href="/wa-apps/site/themes/optshop/img/svg/icons.svg#star"></use>
+                                </svg>
+                                0
                                 {/if}
                             </div>
 
