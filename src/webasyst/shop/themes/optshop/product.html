@@ -307,14 +307,7 @@
 
 <script src="{$wa_theme_url}js/page.product.js?v={$wa_theme_version}"></script>
 
-
 {* PRODUCT PAGE *}
-<article class="s-product-page" id="js-product-page" >
-
-
-        </section>
-    </div>
-
     {* @event frontend_product.%plugin_id%.block *}
     {foreach $frontend_product as $_}{$_.block}{/foreach}
 
@@ -345,6 +338,4 @@
             });
         })(jQuery);
     </script>
-</article>
-
 {/strip}
