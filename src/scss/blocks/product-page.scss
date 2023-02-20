@@ -71,6 +71,18 @@
         align-content: center;
         justify-content: flex-start;
         align-items: center;
+        & .star {
+          & svg {
+            &.star-full {
+              color: var(--secondary);
+            }
+            &.star-empty {
+              color: var(--light-grey);
+            }
+            width: 18px;
+            height: 18px;
+          }
+        }
       }
     }
   }
@@ -88,6 +100,14 @@
   }
   &-images {
     grid-area: product-images;
+    & figure {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 40px;
+    }
   }
   &-cart {
     grid-area: product-cart;

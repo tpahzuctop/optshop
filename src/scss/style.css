@@ -1682,6 +1682,16 @@ h6 {
   justify-content: flex-start;
   align-items: center;
 }
+.product-fastlinks .reviews-link .stars .star svg {
+  width: 18px;
+  height: 18px;
+}
+.product-fastlinks .reviews-link .stars .star svg.star-full {
+  color: var(--secondary);
+}
+.product-fastlinks .reviews-link .stars .star svg.star-empty {
+  color: var(--light-grey);
+}
 .product-title {
   grid-area: product-title;
   font-weight: 600;
@@ -1700,6 +1710,14 @@ h6 {
 }
 .product-images {
   grid-area: product-images;
+}
+.product-images figure {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 40px;
 }
 .product-cart {
   grid-area: product-cart;

@@ -54,9 +54,13 @@
                 {for $foo=1 to 5}
                     <div class="star">
                         {if $product.rating|string_format:"%.2f" > $foo || $product.rating|string_format:"%d" == $foo}
-                        +
+                        <svg class="star-full">
+                            <use xlink:href="/wa-apps/site/themes/optshop/img/svg/icons.svg#star"></use>
+                        </svg>
                         {else}
-                        -
+                        <svg class="star-empty">
+                            <use xlink:href="/wa-apps/site/themes/optshop/img/svg/icons.svg#star"></use>
+                        </svg>
                         {/if}
                     </div>
                 {/for}
@@ -68,29 +72,10 @@
     <div class="product-images">
         {* IMAGE GALLERY *}
         {if $product.images}
-        {$video = $product->video}
-
-        <figure class="s-product-photos" id="s-product-photos">
+        <figure id="product-photos">
 
             {* MAIN IMAGE *}
             <div class="s-photo-main">
-                {if $video}
-                <div id="video-container" class="video-container" itemscope itemtype="http://schema.org/VideoObject">
-                    <div itemprop="embedHTML">
-                        <iframe src="{$video.url}" width="{$video.width}" height="{$video.height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-                    <meta itemprop="width" content="{$video.width}">
-                    <meta itemprop="height" content="{$video.height}">
-                    <meta itemprop="name" content="{$product.name|default:""|escape}">
-                    <meta itemprop="description" content="{$product.description|default:""|escape}">
-                    <meta itemprop="uploadDate" content="{$product.create_datetime|default:""|escape}">
-                    {if !empty($_video.images[0])}
-                    {$_thumb = $_video.images[0]}
-                    {$_absolute_thumb_uri = "{$wa->url(true)}{$_thumb|substr:1}"}
-                    <meta itemprop="thumbnailUrl" content="{$_absolute_thumb_uri|escape}" />
-                    {/if}
-                </div>
-                {/if}
                 <a class="{if $video}is-hidden{/if}" id="s-photo-main" href="{$wa->shop->productImgUrl($product, '970')}">
                     {$wa->shop->productImgHtml($product, '750', [ 'itemprop' => 'image', 'alt' => $product.name|escape ])}
                 </a>
@@ -121,7 +106,7 @@
             <script>
                 ( function($) {
                     new ProductPhotos({
-                        $wrapper: $("#s-product-photos")
+                        $wrapper: $("#product-photos")
                     });
                 })(jQuery);
             </script>
@@ -204,7 +189,25 @@
 
     </div>
     <div class="product-recomends">
-        Описания, отзывы и т.д.
+        {$video = $product->video}
+        {if $video}
+        <h3>Pаспаковка товара</h3>
+        <div id="video-container" class="video-container" itemscope itemtype="http://schema.org/VideoObject">
+            <div itemprop="embedHTML">
+                <iframe src="{$video.url}" width="{$video.width}" height="{$video.height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <meta itemprop="width" content="{$video.width}">
+            <meta itemprop="height" content="{$video.height}">
+            <meta itemprop="name" content="{$product.name|default:""|escape}">
+            <meta itemprop="description" content="{$product.description|default:""|escape}">
+            <meta itemprop="uploadDate" content="{$product.create_datetime|default:""|escape}">
+            {if !empty($_video.images[0])}
+            {$_thumb = $_video.images[0]}
+            {$_absolute_thumb_uri = "{$wa->url(true)}{$_thumb|substr:1}"}
+            <meta itemprop="thumbnailUrl" content="{$_absolute_thumb_uri|escape}" />
+            {/if}
+        </div>
+        {/if}
     </div>
 </article>
 
