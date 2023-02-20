@@ -6,14 +6,12 @@
     <nav class="header-desktop__menu header-desktop-menu">
         {foreach $items as $item}
         <div class="header-desktop-menu__category">
-            <a class="" href="{$item.url}">{$item.name}</a>
+            <a href="{$item.url}">{$item.name}</a>
 
             {if !empty($item.childs)}
-            <div class="header-desktop-menu__subcategory">
+            <div class="header-desktop-menu__subcategory-list">
                 {foreach $item.childs as $child}
-                <div class="menu-item-child">
-                    <a href="{$child.url}">{$child.name}</a>
-                </div>
+                    <a class="header-desktop-menu__subcategory" href="{$child.url}">{$child.name}</a>
                 {/foreach}
             </div>
             {/if}

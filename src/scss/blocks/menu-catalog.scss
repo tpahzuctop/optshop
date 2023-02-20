@@ -1,0 +1,60 @@
+.header-desktop {
+
+  &__menu-wrapper {
+    padding: 20px 30px;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px -5px #2C302E30;
+  }
+
+  &__unpacking {
+    margin: 10px 0;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #d8315b;
+  }
+}
+
+.header-desktop-menu {
+  flex: 2;
+  font-size: 1rem;
+
+  &__category {
+    position: relative;
+    display: flex;
+    height: 35px;
+    flex: 1;
+
+    & a {
+      width: 250px;
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &:hover > .header-desktop-menu__subcategory-list {
+      display: block;
+      color: var(--dark);
+    }
+  }
+
+  &__subcategory-list {
+    display: none;
+    position: fixed;
+    left: 25%;
+    top: 130px;
+    flex: 4;
+  }
+
+  &__subcategory {
+    display: block;
+    min-height: 35px;
+  }
+}
