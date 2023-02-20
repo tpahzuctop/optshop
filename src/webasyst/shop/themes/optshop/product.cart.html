@@ -4,8 +4,6 @@
 
 <div class="s-product-cart {if $_is_dialog}is-dialog{/if}">
     <form id="s-product-form{if $_is_dialog}-dialog{/if}" method="post" action="{$wa->getUrl('/frontendCart/add')}">
-
-        <h4>{sprintf('[`Buy %s`]',$product.name|escape)}</h4>
         {if $_is_dialog}
             {$wa->shop->productImgHtml($product, '96x96', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $product.name|escape ])}
         {/if}

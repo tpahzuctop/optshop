@@ -1,5 +1,4 @@
 {$items = $wa->menu->get(148)}
-{wa_print_tree tree=$items elem='<a href=":url">:name</a>'}
 
 <div class="header-desktop__menu-wrapper">
 
@@ -13,11 +12,12 @@
             <div class="header-desktop-menu__subcategory">
                 {foreach $item.childs as $child}
                 <div class="menu-item-child">
-                    <a href="{$item.url}">{$item.name}</a>
+                    <a href="{$child.url}">{$child.name}</a>
                 </div>
                 {/foreach}
             </div>
             {/if}
+
         </div>
         {/foreach}
     </nav>
