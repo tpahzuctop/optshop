@@ -1,2 +1,5 @@
 /node_modules/
 /dist/
+/gulp/version.json
+/src/webasyst/site/themes/optshop/css/style.css
+/src/webasyst/site/themes/optshop/css/style.min.css
