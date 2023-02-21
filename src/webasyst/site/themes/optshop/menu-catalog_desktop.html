@@ -6,7 +6,7 @@
     <nav class="header-desktop__menu header-desktop-menu">
         {foreach $items as $item}
         <div class="header-desktop-menu__category">
-            <a href="{$item.url}">{$item.name}</a>
+            <a class="header-desktop-menu__category-item href="{$item.url}">{$item.name}</a>
 
             {if !empty($item.childs)}
             <div class="header-desktop-menu__subcategory-list">
