@@ -1,17 +1,17 @@
-{$items = $wa->menu->get(148)}
+{$desktop_menu = $wa->menu->get(148)}
 
 <div class="header-desktop__menu-wrapper">
 
 
     <nav class="header-desktop__menu header-desktop-menu">
-        {foreach $items as $item}
+        {foreach $desktop_menu as $item}
         <div class="header-desktop-menu__category">
             <a class="header-desktop-menu__category-item href="{$item.url}">{$item.name}</a>
 
             {if !empty($item.childs)}
             <div class="header-desktop-menu__subcategory-list">
                 {foreach $item.childs as $child}
-                    <a class="header-desktop-menu__subcategory" href="{$child.url}">{$child.name}</a>
+                <a class="header-desktop-menu__subcategory" href="{$child.url}">{$child.name}</a>
                 {/foreach}
             </div>
             {/if}
