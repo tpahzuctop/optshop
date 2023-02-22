@@ -190,20 +190,24 @@
 
         <div class="s-product-info" id="s-product-info">
             {* TABS *}
+
+            {*
             <section class="s-tabs-wrapper">
-                <a class="s-tab-item" data-content-id="3" href="{$wa->shop->productUrl($product, 'reviews')}">[`Reviews`] ({$reviews_total_count})</a>
+                <a class="s-tab-item" data-content-id="3" href="{$wa->shop->productUrl($product, 'reviews')}">[`Reviews`]</a>
 
                 {foreach $product.pages as $page}
                 <a class="s-tab-item" href="{$wa->shop->productUrl($product, 'page', ['page_url' => $page.url])}">
                     {$page.name|escape}
                 </a>
                 {/foreach}
-
+                *}
                 {* @event frontend_product.%plugin_id%.menu *}
+                {*
                 {foreach $frontend_product as $_}{$_.menu}{/foreach}
             </section>
+            *}
 
-            {* PRODUCT REVIEWS *}
+            {* PRODUCT REVIEWS
             <div class="s-tab-content" id="tab-content-3">
                 <section class="s-product-reviews">
                     <h3>{sprintf('[`%s reviews`]', $product.name|escape)}</h3>
@@ -227,8 +231,9 @@
                         {foreach $rates as $_rate => $_count}
                         {$_total_count = $_total_count + $_count}
                         {/foreach}
-
+                        *}
                         {* foreach $rates as $_rate => $_count *}
+                        {*
                         {for $i = 5 to 0 step -1}
                         {if empty($rates[$i]) || !$rates[$i]}{$_count = 0}{else}{$_count = $rates[$i]}{/if}
                         {if $i || $_count}
@@ -274,6 +279,7 @@
                     </div>
                 </section>
             </div>
+            *}
         </div>
 
     </div>

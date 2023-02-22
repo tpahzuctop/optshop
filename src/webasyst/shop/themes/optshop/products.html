@@ -143,7 +143,9 @@
                                     </a>
                                     {/if}
                                     {if $available}
-                                    <input class="s-button s-add-button product-card__btn" type="submit" data-added-text="[`added`]" value="{$add2cart_label}">
+                                    <input class="product-card__btn" type="submit" data-added-text="[`added`]" value="{$add2cart_label}">
+                                    {else}
+                                    {shopArrivedPlugin::getListFormHtml($product)}
                                     {/if}
                                 </div>
                                 {/if}

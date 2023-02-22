@@ -1,16 +1,25 @@
 .product {
   display: grid;
   grid-template-areas:
+            "product-breadcrumbs"
+            "product-title"
+            "product-fastlinks"
+            "product-images"
+            "product-cart"
+            "product-description"
+            "product-recomends";
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  @media (min-width: 1024px) {
+    grid-template-areas:
             "product-breadcrumbs product-breadcrumbs product-breadcrumbs"
             "product-title product-title product-title"
             "product-fastlinks product-fastlinks product-fastlinks"
             "product-images product-images product-cart"
             "product-description product-description product-recomends";
-  grid-template-columns: 40vw 1fr 40vw;
-  grid-gap: 20px;
-@media (min-width: 768px) {
+    grid-template-columns: 40vw 1fr 40vw;
+  }
 
-}
   &-breadcrumbs {
     grid-area: product-breadcrumbs;
     font-style: normal;
@@ -91,6 +100,7 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 100%;
+    margin: 2.5rem 0 0 0;
     @media (min-width: 1024px) {
       font-size: 32px;
     }
@@ -102,11 +112,35 @@
     grid-area: product-images;
     & figure {
       display: flex;
-      flex-direction: row-reverse;
       flex-wrap: nowrap;
       justify-content: flex-end;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
       gap: 40px;
+      @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+      }
+      & .s-photos-list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        & .s-photo-thumb {
+          & img {
+            width: 48px;
+            @media (min-width: 1024px) {
+              width: 64px;
+            }
+            @media (min-width: 1680px) {
+              width: 92px;
+            }
+          }
+        }
+        @media (min-width: 768px) {
+          flex-direction: column;
+        }
+      }
     }
   }
   &-cart {

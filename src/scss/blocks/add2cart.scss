@@ -1,6 +1,15 @@
 .add2cart {
   padding: 20px 0;
   & .add-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    @media (min-width: 1024px) {
+      align-items: flex-start;
+    }
     & .quantity-wrapper {
       display: flex;
       flex-direction: row;
