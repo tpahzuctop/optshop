@@ -14,21 +14,22 @@ export function isWebp() {
 
 export function categoryMenu() {
 // show/hide mobile category menu
-    const mobileСategoryShowBtn = document.querySelector('.mobile-user-panel__category-btn');
-    const mobileCategoryMenu = document.querySelector('.header-mobile__menu-wrapper');
 
-    mobileСategoryShowBtn.addEventListener('click', function (e) {
-        e.preventDefault();
+
+    const mobileСategoryShowBtn = document.getElementById('mobile-menu-btn');
+    const mobileCategoryMenu = document.getElementById('header-mobile-menu');
+        mobileСategoryShowBtn.addEventListener('click', function () {
         mobileCategoryMenu.classList.toggle('header-mobile__menu-wrapper--active');
     })
 
-// show/hide desktop category menu
 
-    const desktopСategoryShowBtn = document.querySelector('.header-desktop__category-btn');
-    const desktopCategoryMenu = document.querySelector('.header-desktop__menu-wrapper');
+//show/hide desktop category menu
 
-    desktopСategoryShowBtn.addEventListener('click', function (e) {
-        e.preventDefault();
+    const desktopСategoryShowBtn = document.getElementById('header-desktop-menu-btn');
+    const desktopCategoryMenu = document.getElementById('header-desktop-menu');
+
+    desktopСategoryShowBtn.addEventListener('click', function () {
+
         desktopCategoryMenu.classList.toggle('header-desktop__menu-wrapper--active');
     })
 }

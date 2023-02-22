@@ -161,22 +161,24 @@
       padding: 3px 8px 0 8px;
       width: 100px;
       height: 45px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-transform: uppercase;
+      line-height: 40px;
+      text-align: right;
       font-size: 0.8rem;
       color: var(--white);
       background-color: var(--primary);
       border-radius: 8px;
       cursor: pointer;
+      background-image: url("../img/svg/icons.svg#hamburger");
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 8% 50%;
     }
 
-    &__hamburger-icon {
-      display: inline-block;
-      width: 23px;
-      height: 23px;
-    }
+    //&__hamburger-icon {
+    //  display: inline-block;
+    //  width: 23px;
+    //  height: 23px;
+    //}
   }
 
   .header-desktop-navigation {
@@ -229,8 +231,11 @@
       padding: 0 11px;
       width: 120px;
       height: 50px;
+      line-height: 50px;
       font-size: 0.9rem;
       transition: .2s;
+      user-select: none;
+      background-position: 13% 50%;
 
       &:hover {
         @include hover-btn;
@@ -267,6 +272,7 @@
     &__category-btn {
       padding: 0 15px;
       width: 130px;
+      background-size: 24px;
     }
   }
 
@@ -282,13 +288,16 @@
       padding: 0px 17px;
       width: 150px;
       height: 55px;
+      line-height: 55px;
       font-size: 1rem;
+      background-size: 26px;
+      background-position: 15% 50%;
     }
 
-    &__hamburger-icon {
-      width: 29px;
-      height: 29px;
-    }
+    //&__hamburger-icon {
+    //  width: 29px;
+    //  height: 29px;
+    //}
   }
 
   .search {
@@ -333,6 +342,8 @@
       margin: 0 15px;
       padding: 0px 30px;
       width: 180px;
+      background-size: 28px;
+      background-position: 20% 50%;
     }
 
     &__location-wrapper {
@@ -364,7 +375,9 @@
       padding: 0px 35px;
       width: 200px;
       height: 60px;
+      line-height: 60px;
       font-size: 1.1rem;
+      background-size: 30px;
     }
   }
   .search {
@@ -395,7 +408,9 @@
     &__category-btn {
       height: 65px;
       padding: 0 30px;
+      line-height: 65px;
       font-size: 1.2rem;
+      background-size: 32px;
     }
 
     &__hamburger-icon {
@@ -445,6 +460,7 @@
     justify-content: center;
     border-radius: 8px;
     background-color: var(--primary);
+    user-select: none;
 
     & svg {
       width: 28px;
