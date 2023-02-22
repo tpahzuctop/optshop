@@ -37,6 +37,12 @@ body {
   margin: 0 10px;
 }
 
+.hint {
+  display: block;
+  padding: 10px 0;
+  color: var(--dark-grey);
+}
+
 @media (min-width: 375px) {
   .wrapper {
     margin: 0 15px;

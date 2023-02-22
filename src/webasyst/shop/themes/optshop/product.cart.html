@@ -1,14 +1,10 @@
 {strip}
-
-{$_is_dialog = $wa->get('cart')}
-
-<div class="s-product-cart {if $_is_dialog}is-dialog{/if}">
     <form id="s-product-form{if $_is_dialog}-dialog{/if}" method="post" action="{$wa->getUrl('/frontendCart/add')}">
         {if $_is_dialog}
             {$wa->shop->productImgHtml($product, '96x96', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $product.name|escape ])}
         {/if}
         {if $product.summary}
-            <p>{$product.summary|truncate:512}</p>
+            <p>{$product.summary|truncate:512}<br><br></p>
         {/if}
 
         {if $product.sku_type}
@@ -78,7 +74,7 @@
                                     {if $sku.id == $product.sku_id}checked="checked"{/if}
                                     {if $sku.image_id} data-image-id="{$sku.image_id}"{/if}>
                                 <span itemprop="name">{$sku.name|escape}</span>
-                                {if $sku.sku}<span class="hint">{$sku.sku|escape}</span>{/if}
+                                {* {if $sku.sku}<span class="hint">{$sku.sku|escape}</span>{/if} *}
                                 <meta itemprop="price" content="{shop_currency($sku.price, $product.currency, null, 0)}">
                                 <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
                                 <span class="price tiny nowrap">{shop_currency_html($sku.price, $product.currency)}</span>
@@ -98,7 +94,7 @@
                 {* in case there is only one SKU, don't display the selector *}
                 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     {$sku = $product.skus[$product.sku_id]}
-                    {if $sku.sku}<span class="hint">{$sku.sku|escape}</span>{/if}
+                    {* {if $sku.sku}<span class="hint">{$sku.sku|escape}</span>{/if} *}
                     {if $sku.name}<meta itemprop="name" content="{$sku.name|escape}">{/if}
                     <meta itemprop="price" content="{shop_currency($sku.price, $product.currency, null, 0)}">
                     <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
@@ -185,6 +181,10 @@
             <div class="add2cart">
 
                 <div class="add-form-wrapper">
+                    <div class="price-wrapper">
+                        <span class="compare-at-price nowrap {if !($product.compare_price > 0)}is-hidden{/if}" data-compare-price="{shop_currency_html($product.compare_price, null, null, 0)}" > {shop_currency_html($product.compare_price)} </span>
+                        <span data-price="{shop_currency($product.price, null, null, 0)}" class="price nowrap">{shop_currency_html($product.price)}</span>
+                    </div>
 
                     <div class="quantity-wrapper">
                         <div class="volume-buttons">
@@ -196,16 +196,9 @@
                         </div>
                     </div>
 
-                    <div class="price-wrapper">
-                        <span class="compare-at-price nowrap {if !($product.compare_price > 0)}is-hidden{/if}" data-compare-price="{shop_currency_html($product.compare_price, null, null, 0)}" > {shop_currency_html($product.compare_price)} </span>
-                        <span data-price="{shop_currency($product.price, null, null, 0)}" class="price nowrap">{shop_currency_html($product.price)}</span>
-                    </div>
 
                     <div class="submit-wrapper">
-                        {if $_is_dialog}
-                            <input class="s-button white s-close-dialog" type="button" value="[`Cancel`]">
-                        {/if}
-                        <input type="submit" value="{if $wa->shop->cart->total() > 0}[`Add to cart`]{else}[`Buy now`]{/if}" {if !$product_available}disabled="disabled"{/if}>
+                        <input type="submit" class="product-card__btn" value="{if $wa->shop->cart->total() > 0}[`Add to cart`]{else}[`Buy now`]{/if}" {if !$product_available}disabled="disabled"{/if}>
                     </div>
                 </div>
 
@@ -223,7 +216,6 @@
             </div>
         </div>
     </form>
-</div>
 
 <script>
 ( function($) {

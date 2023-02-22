@@ -150,6 +150,15 @@
     border-radius: 5px;
     border:none;
     outline: none;
+    &:disabled {
+      background: var(--dark-grey);
+      color: var(--dark);
+      cursor: not-allowed;
+      &:hover, &:focus{
+        background: var(--dark-grey);
+        color: var(--dark);
+      }
+    }
   }
 }
 
