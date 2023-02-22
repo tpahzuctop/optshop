@@ -29,7 +29,7 @@ export function categoryMenu() {
     const desktopCategoryMenu = document.getElementById('header-desktop-menu');
 
     desktopСategoryShowBtn.addEventListener('click', function () {
-
         desktopCategoryMenu.classList.toggle('header-desktop__menu-wrapper--active');
+        desktopСategoryShowBtn.classList.toggle('header-desktop__category-btn--active');
     })
 }
