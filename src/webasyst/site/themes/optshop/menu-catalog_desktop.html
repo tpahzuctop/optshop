@@ -1,5 +1,10 @@
 {strip}
-{$desktop_menu = $wa->menu->get(148)}
+
+{if $theme_settings.header_main_menu_number}
+    {$desktop_menu = $wa->menu->get($theme_settings.header_main_menu_number)}
+{else}
+    {$desktop_menu = $wa->apps()}
+{/if}
 
 <div class="header-desktop__menu-wrapper" id="header-desktop-menu">
 

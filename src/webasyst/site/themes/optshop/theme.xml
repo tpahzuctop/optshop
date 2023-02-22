@@ -92,23 +92,6 @@
                 Описание о сайте коротко. Используется как текст-заглушка в логотипах, пустых описаниях и т.д.
             </name>
         </setting>
-        <setting var="pagination" control_type="select">
-            <value>lazyloading</value>
-            <name locale="en_US">Displaying of long product lists</name>
-            <name locale="ru_RU">Отображение длинных списков товаров</name>
-            <description locale="ru_RU">Применяется к спискам товаров в категориях и результатах поиска.</description>
-            <description locale="en_US">For category-listing pages and search results.</description>
-            <options>
-                <option value="lazyloading">
-                    <name locale="ru_RU">Автоматически загружать содержимое при прокручивании страницы</name>
-                    <name locale="en_US">Automatically load content on page scrolling</name>
-                </option>
-                <option value="paging">
-                    <name locale="ru_RU">Постраничная навигация (1 2 3 4)</name>
-                    <name locale="en_US">Paginated lists (1 2 3 4)</name>
-                </option>
-            </options>
-        </setting>
         <setting var="header" control_type="group_divider">
             <value>header</value>
             <name locale="ru_RU">Настройки шапки</name>
@@ -117,6 +100,12 @@
             <value>137</value>
             <name locale="ru_RU">
                 ID меню в топбаре шапки сайта из приложения "Управление меню"
+            </name>
+        </setting>
+        <setting var="header_main_menu_number" control_type="text">
+            <value>148</value>
+            <name locale="ru_RU">
+                ID меню главного меню сайта из приложения "Управление меню"
             </name>
         </setting>
     </settings>
