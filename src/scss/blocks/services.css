@@ -1,0 +1,31 @@
+.services {
+  padding: 20px 0;
+}
+
+.service-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.service-item {
+  color: var(--dark);
+}
+.service-item input {
+  margin: 0;
+  padding: 0;
+}
+.service-item label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/*# sourceMappingURL=services.css.map */

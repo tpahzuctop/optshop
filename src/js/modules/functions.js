@@ -17,8 +17,6 @@ export function categoryMenu() {
     const mobileСategoryShowBtn = document.querySelector('.mobile-user-panel__category-btn');
     const mobileCategoryMenu = document.querySelector('.header-mobile__menu-wrapper');
 
-    console.log(mobileСategoryShowBtn);
-
     mobileСategoryShowBtn.addEventListener('click', function (e) {
         e.preventDefault();
         mobileCategoryMenu.classList.toggle('header-mobile__menu-wrapper--active');
