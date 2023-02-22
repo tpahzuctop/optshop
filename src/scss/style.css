@@ -2815,16 +2815,17 @@ h6 {
   float: right;
   cursor: pointer;
   height: 1.25rem;
-  background: url("../img/icons/close.png") no-repeat top left;
-  background-size: contain !important;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48cGF0aCBmaWxsPSIjMmMzMDJlIiBkPSJNMTguODA3IDYuNjA3YTEgMSAwIDAgMC0xLjQxNC0xLjQxNEwxMiAxMC41ODYgNi42MDcgNS4xOTNhMSAxIDAgMSAwLTEuNDE0IDEuNDE0TDEwLjU4NiAxMmwtNS4zOTMgNS4zOTNhMSAxIDAgMSAwIDEuNDE0IDEuNDE0TDEyIDEzLjQxNGw1LjM5MyA1LjM5M2ExIDEgMCAwIDAgMS40MTQtMS40MTRMMTMuNDE0IDEyeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 1.25rem;
   position: absolute;
   top: 1.65rem;
   right: 0.8rem;
   margin: 0;
 }
-
 .plugin_arrived-header .plugin_arrived-close:hover {
-  background: url("../img/icons/close-hover.png") no-repeat top left;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48cGF0aCBmaWxsPSIjZDgzMTViIiBkPSJNMTguODA3IDYuNjA3YTEgMSAwIDAgMC0xLjQxNC0xLjQxNEwxMiAxMC41ODYgNi42MDcgNS4xOTNhMSAxIDAgMSAwLTEuNDE0IDEuNDE0TDEwLjU4NiAxMmwtNS4zOTMgNS4zOTNhMSAxIDAgMSAwIDEuNDE0IDEuNDE0TDEyIDEzLjQxNGw1LjM5MyA1LjM5M2ExIDEgMCAwIDAgMS40MTQtMS40MTRMMTMuNDE0IDEyeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=);
 }
 
 .plugin_arrived-body .errormsg {
@@ -2837,7 +2838,7 @@ h6 {
   margin-bottom: 15px;
 }
 
-.plugin_arrived-value input, .quickorder-value select, .quickorder-value textarea {
+.plugin_arrived-value input, .plugin_arrived-value select, .plugin_arrived-value textarea {
   padding: 5px 15px;
   height: 50px;
   width: 100%;
@@ -2845,6 +2846,10 @@ h6 {
   border-radius: 8px;
   border: 1px solid var(--dark-grey);
   outline-width: 1px;
+}
+.plugin_arrived-value input:focus, .plugin_arrived-value select:focus, .plugin_arrived-value textarea:focus {
+  outline-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .plugin_arrived-value.submit {
