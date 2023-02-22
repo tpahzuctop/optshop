@@ -1,0 +1,37 @@
+.pagination {
+  padding-top: 50px;
+  & ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    & li {
+      & span {
+        color: var(--dark-grey);
+      }
+      &.selected {
+        background: var(--primary);
+        border-radius: 10px;
+        color:var(--white);
+      }
+      & a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        &:hover {
+          color:var(--primary);
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    padding-top: 100px;
+  }
+  @media (min-width: 1680px) {
+    padding-top: 150px;
+  }
+}

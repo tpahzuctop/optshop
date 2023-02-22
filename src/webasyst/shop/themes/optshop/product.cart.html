@@ -207,9 +207,9 @@
                     <div class="">{sprintf('[`%s is now in your shopping cart`]', $product.name|escape, $wa->getUrl('shop/frontend/cart'))}</div>
                     <div class="button-block">
                         {if $_is_dialog}
-                            <a class="product-card__btn s-button white s-close-dialog" href="javascript:void(0);">[`Back to the store`]</a>
+                            <a class="s-button white s-close-dialog" href="javascript:void(0);">[`Back to the store`]</a>
                         {/if}
-                        <a class="product-card__btn s-button" href="{$wa->getUrl('shop/frontend/cart')}">[`Go to shopping cart`]</a>
+                        <a class="product-card__btn-order" href="{$wa->getUrl('shop/frontend/order')}">[`Go to shopping cart`]</a>
                     </div>
                 </div>
 

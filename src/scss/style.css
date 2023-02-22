@@ -2781,6 +2781,65 @@ h6 {
   display: none;
 }
 
+.product-card__btn-order {
+  display: block;
+  margin-top: 15px;
+  width: 250px;
+  height: 50px;
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+  text-align: center;
+  line-height: 48px;
+}
+.product-card__btn-order:hover {
+  background: var(--dark);
+}
+
+.pagination {
+  padding-top: 50px;
+}
+.pagination ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.pagination ul li span {
+  color: var(--dark-grey);
+}
+.pagination ul li.selected {
+  background: var(--primary);
+  border-radius: 10px;
+  color: var(--white);
+}
+.pagination ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.pagination ul li a:hover {
+  color: var(--primary);
+}
+@media (min-width: 1024px) {
+  .pagination {
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1680px) {
+  .pagination {
+    padding-top: 150px;
+  }
+}
+
 /* Стили плагинов */
 .plugin_arrived-popup {
   display: flex;
