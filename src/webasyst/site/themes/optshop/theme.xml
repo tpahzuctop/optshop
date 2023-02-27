@@ -92,9 +92,9 @@
                 Описание о сайте коротко. Используется как текст-заглушка в логотипах, пустых описаниях и т.д.
             </name>
         </setting>
-        <setting var="header" control_type="group_divider">
-            <value>header</value>
-            <name locale="ru_RU">Настройки шапки</name>
+        <setting var="menus" control_type="group_divider">
+            <value>menus</value>
+            <name locale="ru_RU">Настройки менюшек</name>
         </setting>
         <setting var="header_topbar_menu_number" control_type="text">
             <value>137</value>
@@ -106,6 +106,50 @@
             <value>148</value>
             <name locale="ru_RU">
                 ID меню главного меню сайта из приложения "Управление меню"
+            </name>
+        </setting>
+        <setting var="footer_users_menu_number" control_type="text">
+            <value>143</value>
+            <name locale="ru_RU">
+                ID меню в топбаре шапки сайта из приложения "Управление меню"
+            </name>
+        </setting>
+        <setting var="footer_company_menu_number" control_type="text">
+            <value>142</value>
+            <name locale="ru_RU">
+                ID меню главного меню сайта из приложения "Управление меню"
+            </name>
+        </setting>
+        <setting var="contacts" control_type="group_divider">
+            <value>contacts</value>
+            <name locale="ru_RU">Контакты</name>
+        </setting>
+        <setting var="phone" control_type="text">
+            <value>8 (800) 350-88-45</value>
+            <name locale="ru_RU">
+                Контактный телефон
+            </name>
+        </setting>
+        <setting var="email" control_type="text">
+            <value>info@6119.ru</value>
+            <name locale="ru_RU">
+                Контактный е-майл
+            </name>
+        </setting>
+        <setting var="address" control_type="text">
+            <value>г.Москва, улица Космонавта Волкова, 10</value>
+            <name locale="ru_RU">
+                Адрес офиса
+            </name>
+        </setting>
+        <setting var="copyright" control_type="group_divider">
+            <value>copyright</value>
+            <name locale="ru_RU">Копирайты</name>
+        </setting>
+        <setting var="copyrights" control_type="text">
+            <value>(C) 2022-2023 ООО "ОПТОВЫЙ МАРКЕТПЛЕЙС"</value>
+            <name locale="ru_RU">
+                Текст копирайтов внизу сайта
             </name>
         </setting>
     </settings>

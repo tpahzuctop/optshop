@@ -37,7 +37,7 @@
                 <h2>Новинки</h2>
                 {/if}
                 {if $badge_type == 'bestseller'}
-                <h2>Бест селлеры</h2>
+                <h2>Бестселлеры</h2>
                 {/if}
                 {if $badge_type == 'recomend'}
                 <h2>Советуем</h2>
@@ -50,7 +50,7 @@
                 <img src="{$wa_theme_url}img/new.png?v={$theme_settings.theme_version_images_reset}" alt="Новинки" title="Новинки">
                 {/if}
                 {if $badge_type == 'bestseller'}
-                <img src="{$wa_theme_url}img/bestseller.png?v={$theme_settings.theme_version_images_reset}" alt="Бест селлеры" title="Бест селлеры">
+                <img src="{$wa_theme_url}img/bestseller.png?v={$theme_settings.theme_version_images_reset}" alt="Бестселлеры" title="Бестселлеры">
                 {/if}
                 {if $badge_type == 'recomend'}
                 <img src="{$wa_theme_url}img/new.png?v={$theme_settings.theme_version_images_reset}" alt="Советуем" title="Советуем">
@@ -78,7 +78,7 @@
                             <div class="product-card__tag product-card__tag--new">Новинка</div>
                         {/if}
                         {if $badge_type == 'bestseller'}
-                        <div class="product-card__tag product-card__tag--bestseller">Бестселлер</div>
+                        <div class="product-card__tag product-card__tag--bestseller">Бестселлеры</div>
                         {/if}
                         {if $badge_type == 'recomend'}
                         <div class="product-card__tag product-card__tag--recomend">Советуем</div>
@@ -121,7 +121,7 @@
 
                         <div class="s-offers-wrapper" itemprop="offers" class="offers" itemscope itemtype="http://schema.org/Offer">
                             {if $available}
-                            <form class="add-to-cart" {if $product.sku_count > 1}data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                            <form class="add-to-cart" {if $product.sku_count > 1}data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('shop/frontendCart/add')}">
                                 {/if}
 
                                 {if $available}

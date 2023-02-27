@@ -39,16 +39,10 @@
                     </a>
                 </div>
                 <div class="s-section-body">
-                    {$cart_html = $wa->shop->checkout()->cart([
-                        "DEBUG" => true,
-                        'wrapper' => '#js-order-cart'
+                    {$wa->shop->checkout()->cart([
+                    "DEBUG" => true,
+                    "wrapper" => "#js-order-cart"
                     ])}
-                    {$cart_html = $cart_html|replace:"{$wa_url}wa-content/css/jquery-ui/jquery-ui-1.7.2.custom.css?v={$wa->version(true)}":""}
-                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}css/frontend/order/ui.css?v={$wa->version()}":""}
-                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}css/frontend/order/cart.css?v={$wa->version()}":""}
-                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.min.js?v={$wa->version()}":""}
-                    {$cart_html = $cart_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.css?v={$wa->version()}":""}
-                    {$cart_html}
                 </div>
                 <div class="s-section-footer">
 
@@ -98,17 +92,10 @@
                     <h2 class="s-header">{$config.order.block_name|default:"[`Checkout`]"|escape}</h2>
                 </div>
                 <div class="s-section-body">
-                    {$form_html = $wa->shop->checkout()->form([
+                    {$wa->shop->checkout()->form([
                     "DEBUG" => true,
-                    'wrapper' => '#js-order-checkout'
+                    "wrapper" => "#js-order-form"
                     ])}
-                    {$form_html = $form_html|replace:"{$wa_url}wa-content/css/jquery-ui/jquery-ui-1.7.2.custom.css?v={$wa->version(true)}":""}
-                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/ui.css?v={$wa->version()}":""}
-                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/form.css?v={$wa->version()}":""}
-                    {$form_html = $form_html|replace:"{$wa_app_static_url}css/frontend/order/form.css?v={$wa->version()}":""}
-                    {$form_html = $form_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.min.js?v={$wa->version()}":""}
-                    {$form_html = $form_html|replace:"{$wa_app_static_url}js/frontend/order/jquery-ui/jquery-ui.css?v={$wa->version()}":""}
-                    {$form_html}
                 </div>
             </section>
 

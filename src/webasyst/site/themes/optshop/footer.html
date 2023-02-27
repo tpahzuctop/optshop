@@ -25,14 +25,14 @@
                     <svg class="footer-contacts__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#phone"></use>
                     </svg>
-                    <a href="tel:+78001232323">8 800 123 23 23</a>
+                    <a href="tel:{$theme_settings.phone}">{$theme_settings.phone}</a>
                 </li>
 
                 <li class="footer-contacts__item">
                     <svg class="footer-contacts__icon">
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#location"></use>
                     </svg>
-                    <address>г Москва ул Длинная дом 12</address>
+                    <address>{$theme_settings.address}</address>
                 </li>
 
                 <li class="footer-contacts__item">
@@ -40,7 +40,7 @@
                         <use xlink:href="{$wa_theme_url}img/svg/icons.svg#mail"></use>
                     </svg>
 
-                    <a href="mailto:Адрес-элпочты@gmail.com">Адрес-элпочты@gmail.com</a>
+                    <a href="mailto:{$theme_settings.email}">{$theme_settings.email}</a>
                 </li>
 
             </ul>
@@ -55,21 +55,17 @@
 
                     <h3 class="footer__title">Компания</h3>
 
-                    <li class="footer-navigation__item">
-                        <a href="#">О компании</a>
-                    </li>
+                    {if $theme_settings.footer_company_menu_number}
+                        {$company_menu = $wa->menu->get($theme_settings.footer_company_menu_number)}
+                    {else}
+                        {$company_menu = $wa->apps()}
+                    {/if}
 
-                    <li class="footer-navigation__item">
-                        <a href="#">Новости</a>
-                    </li>
-
-                    <li class="footer-navigation__item">
-                        <a href="#">Политика конфиденциальности</a>
-                    </li>
-
-                    <li class="footer-navigation__item">
-                        <a href="#">Пользовательское соглашение</a>
-                    </li>
+                    {foreach $company_menu as $item}
+                        <li class="footer-navigation__item">
+                            <a href="{$item.url}" title="{$item.name}">{$item.name}</a>
+                        </li>
+                    {/foreach}
 
                 </ul>
 
@@ -77,21 +73,18 @@
 
                     <h3 class="footer__title">Покупателям</h3>
 
-                    <li class="footer-navigation__item">
-                        <a href="#">Как оформить заказ</a>
-                    </li>
+                    {if $theme_settings.footer_users_menu_number}
+                    {$users_menu = $wa->menu->get($theme_settings.footer_users_menu_number)}
+                    {else}
+                    {$users_menu = $wa->apps()}
+                    {/if}
 
+                    {foreach $users_menu as $item}
                     <li class="footer-navigation__item">
-                        <a href="#">Оплата товара</a>
+                        <a href="{$item.url}" title="{$item.name}">{$item.name}</a>
                     </li>
+                    {/foreach}
 
-                    <li class="footer-navigation__item">
-                        <a href="#">Доставка товара</a>
-                    </li>
-
-                    <li class="footer-navigation__item">
-                        <a href="#">Поддержка</a>
-                    </li>
                 </ul>
 
             </div>
@@ -100,6 +93,6 @@
     </div>
 </footer>
 <div class="copyright">
-    ⓒ 2023 ооо “оптовый маркетплейс”
+    {$theme_settings.copyrights}
 </div>
 {/strip}

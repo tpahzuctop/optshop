@@ -177,6 +177,10 @@ body {
   color: var(--dark-grey);
 }
 
+.is-hidden {
+  display: none;
+}
+
 @media (min-width: 375px) {
   .wrapper {
     margin: 0 15px;
@@ -442,14 +446,15 @@ h6 {
     background-color: var(--primary);
     border-radius: 8px;
     cursor: pointer;
-    background-image: url("../img/svg/icons.svg#cross1");
+    background-image: url("../img/svg/icons.svg#hamburger");
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 8% 50%;
   }
   .header-desktop__category-btn--active {
-    background-image: url("../img/svg/icons.svg#cross1");
-    color: var(--white);
+    background-image: url("../img/svg/icons.svg#cross");
+    background-size: 15px;
+    background-position: 13% 50%;
   }
   .header-desktop-navigation__list {
     display: flex;
@@ -496,6 +501,9 @@ h6 {
     user-select: none;
     background-position: 13% 50%;
   }
+  .header-desktop__category-btn--active {
+    background-position: 17% 50%;
+  }
   .header-desktop__category-btn:hover {
     background-color: var(--dark);
     transition: 0.2s;
@@ -522,6 +530,9 @@ h6 {
     width: 130px;
     background-size: 24px;
   }
+  .header-desktop__category-btn--active {
+    background-size: 18px;
+  }
   .logo {
     width: 110px;
     height: 50px;
@@ -536,6 +547,10 @@ h6 {
     font-size: 1rem;
     background-size: 26px;
     background-position: 15% 50%;
+  }
+  .header-desktop__category-btn--active {
+    background-size: 20px;
+    background-position: 20% 50%;
   }
   .search__input-wrapper {
     height: 55px;
@@ -569,6 +584,10 @@ h6 {
     background-size: 28px;
     background-position: 20% 50%;
   }
+  .header-desktop__category-btn--active {
+    background-size: 22px;
+    background-position: 25% 50%;
+  }
   .header-desktop__location-wrapper {
     margin-bottom: 10px;
   }
@@ -591,6 +610,10 @@ h6 {
     font-size: 1.1rem;
     background-size: 30px;
   }
+  .header-desktop__category-btn--active {
+    background-size: 23px;
+    background-position: 25% 50%;
+  }
   .search__input-wrapper {
     height: 60px;
   }
@@ -611,6 +634,9 @@ h6 {
     line-height: 65px;
     font-size: 1.2rem;
     background-size: 32px;
+  }
+  .header-desktop__category-btn--active {
+    background-size: 25px;
   }
   .header-desktop__hamburger-icon {
     width: 35px;
@@ -3161,8 +3187,8 @@ h6 {
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-  color: var(--white);
-  background-color: var(--dark);
+  color: var(--dark);
+  background-color: var(--dark-grey);
   border-radius: 5px;
   border: none;
   outline: none;
@@ -3172,13 +3198,13 @@ h6 {
   cursor: pointer;
 }
 .s-buttons-wrapper > .plugin_arrived-button a:disabled {
-  background: var(--dark-grey);
-  color: var(--dark);
+  background: var(--light-grey);
+  color: var(--dark-grey);
   cursor: not-allowed;
 }
 .s-buttons-wrapper > .plugin_arrived-button a:disabled:hover, .s-buttons-wrapper > .plugin_arrived-button a:disabled:focus {
-  background: var(--dark-grey);
-  color: var(--dark);
+  background: var(--light-grey);
+  color: var(--dark-grey);
 }
 .s-buttons-wrapper > .plugin_arrived-button a:hover, .s-buttons-wrapper > .plugin_arrived-button a:focus {
   background: var(--primary);
