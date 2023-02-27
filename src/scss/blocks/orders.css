@@ -1,3 +1,18 @@
+.s-cart-empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.s-cart-empty-wrapper .s-image-wrapper img {
+  width: 200px;
+}
 
+@media (min-width: 1440px) {
+  .s-cart-empty-wrapper .s-image-wrapper img {
+    width: 350px;
+  }
+}
 
 /*# sourceMappingURL=orders.css.map */

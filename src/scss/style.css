@@ -292,6 +292,42 @@ h6 {
     font-size: 1.125rem;
   }
 }
+.button {
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  outline: 0;
+  padding: 0 10px;
+}
+.button:disabled {
+  background: var(--dark-grey);
+  color: var(--dark);
+  cursor: not-allowed;
+}
+.button:disabled:hover, .button:disabled:focus {
+  background: var(--dark-grey);
+  color: var(--dark);
+}
+.button:hover {
+  background-color: var(--dark);
+  transition: 0.2s;
+}
+
+@media (min-width: 375px) {
+  .button {
+    font-size: 1.3rem;
+    padding: 0 15px;
+  }
+}
 /* Блоки хлебные крошки, галереи, отзывы и т.д. */
 .header-desktop {
   display: none;
@@ -2871,6 +2907,38 @@ h6 {
   }
 }
 
+.s-cart-empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 100px 0 0 0;
+}
+.s-cart-empty-wrapper .s-image-wrapper img {
+  width: 200px;
+}
+.s-cart-empty-wrapper .s-description {
+  color: var(--error);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 6rem;
+}
+
+@media (min-width: 375px) {
+  .s-cart-empty-wrapper .s-description {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  .s-cart-empty-wrapper {
+    margin: 150px 0 0 0;
+  }
+  .s-cart-empty-wrapper .s-image-wrapper img {
+    width: 350px;
+  }
+}
 /* Стили плагинов */
 .plugin_arrived-popup {
   display: flex;
