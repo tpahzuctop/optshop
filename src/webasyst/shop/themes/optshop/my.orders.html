@@ -1,39 +1,38 @@
 {strip}
 
-<div class="s-orders-wrapper">
+<div class="s-orders-wrapper orders-page">
 
     <h1 class="s-orders-header">[`My orders`]</h1>
 
-    <div class="s-orders-list">
+    <div class="s-orders-list orders-page__wrapper">
         {foreach $orders as $o}
-            <div class="s-order-item {$o.state_id}" id="order-{$o.id}">
+            <div class="orders-page__order {$o.state_id}" id="order-{$o.id}">
 
-                <a href="{$o.url}" class="s-order-header" style="{$o.state->getStyle(1)}">
-                    <span class="left-column">{$o.id_str}</span>
-                    <span class="right-column">
-                        <span class="nowrap order-status">{$o.state->getName()}</span>
-                    </span>
+                <a href="{$o.url}" class="s-order-header">
+                    <span class="orders-page__id">Заказ:&nbsp;{$o.id_str}</span>
+                    <span class="order-status orders-page__status" style="{$o.state->getStyle(1)}">{$o.state->getName()}</span>
                 </a>
 
-                <div class="s-order-details">
+                <div class="orders-page__date">{$o.create_datetime|wa_datetime:'humandatetime'}</div>
+
+                <div class="s-order-details orders-page__details">
                     {if !empty($o.items)}
                         <div class="s-order-list">
-                            <span class="label">{$o.create_datetime|wa_datetime:'humandatetime'}:</span>
-                            <ul class="goods-list">
+                            <ul class="goods-list orders-page__items">
                                 {foreach $o.items as $i}
-                                    <li>{$i.name|escape} &times; {$i.quantity}</li>
+                                    <li class="orders-page__item">{$i.name|escape}<br> Кол-во:&nbsp;&nbsp;{$i.quantity} шт.</li>
                                 {/foreach}
                             </ul>
                         </div>
                     {/if}
-                    <div class="s-order-shipping">
-                        <span class="label">[`Shipping`]:</span>
+                    <div class="s-order-shipping orders-page__shipping">
+                        <div>[`Shipping`]:&nbsp;&nbsp;</div>
                         {if $o.shipping_name}
                             {$o.shipping_name|escape}
                         {/if}
                     </div>
-                    <div class="s-order-payment">
-                        <span class="label">[`Payment`]:</span>
+                    <div class="s-order-payment orders-page__payment">
+                        <div>[`Payment`]:&nbsp;&nbsp;</div>
                         {if $o.payment_name}
                             {$o.payment_name|escape}
                         {/if}

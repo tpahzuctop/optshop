@@ -1,6 +1,6 @@
 {strip}
 
-<div class="s-order-wrapper">
+<div class="s-order-wrapper order-page">
     {if !empty($pin_required)}
         <h1 class="s-order-header">
             [`Order`] {$encoded_order_id}
@@ -19,35 +19,37 @@
             </div>
         </form>
     {else}
-        <h1 class="s-order-header" style="{$order.state->getStyle(1)}">
+        <h1 class="s-order-header order-page__title">
             [`Order`]
             {$order.id_str}
-            &mdash;&nbsp;<span class="order-status">{$order.state->getName()}</span>
+            <span class="order-status order-page__status"  style="{$order.state->getStyle(1)}">{$order.state->getName()}</span>
         </h1>
 
-        <p class="s-order-date">{$order.create_datetime|wa_date:'humandatetime'}</p>
+        <p class="s-order-date order-page__date">{$order.create_datetime|wa_date:'humandatetime'}</p>
 
         <div class="s-contacts-wrapper">
             <div class="s-contact-wrapper">
                 <h4 class="s-contact-header">[`Ship to`]</h4>
-                <div class="s-contact-block">
-                    <img class="s-userpic" src="{$contact->getPhoto("28")}" alt="{$contact.name|escape}">
-                    <span class="s-user-name">{$contact.name|escape}</span>
-                    {if $shipping_address}
-                        <div class="s-address-wrapper">
+                <div class="s-contact-block order-page__customer order-page-customer">
+                    <img class="s-userpic order-page-customer__pic" src="{$contact->getPhoto("28")}" alt="{$contact.name|escape}">
+                    <div class="order-page-customer__wrapper">
+                        <span class="s-user-name order-page-customer__name">{$contact.name|escape}</span>
+                        {if $shipping_address}
+                        <div class="s-address-wrapper order-page-customer__address">
                             {$shipping_address}
                         </div>
-                    {/if}
+                        {/if}
+                    </div>
                 </div>
             </div>
 
             {if $billing_address}
                 <div class="s-contact-wrapper">
                     <h4 class="s-contact-header">[`Bill to`]</h4>
-                    <div class="s-contact-block">
-                        <img class="s-userpic" src="{$contact->getPhoto("28")}" alt="{$contact.name|escape}">
-                        <span class="s-user-name">{$contact.name|escape}</span>
-                        <div class="s-address-wrapper">
+                    <div class="s-contact-block order-page-customer">
+                        <img class="s-userpic order-page-customer__pic" src="{$contact->getPhoto("28")}" alt="{$contact.name|escape}">
+                        <span class="s-user-name order-page-customer__name">{$contact.name|escape}</span>
+                        <div class="s-address-wrapper order-page-customer__address">
                             {$billing_address}
                         </div>
                     </div>
@@ -55,11 +57,12 @@
             {/if}
         </div>
 
-        <h3>[`Shipping`]
+        <div class="order-page__short-info">[`Shipping`]
             {if $order.shipping_name}
-                &mdash; <strong>{$order.shipping_name}</strong>
+            <br>
+                <span>{$order.shipping_name}</span>
             {/if}
-        </h3>
+        </div>
 
         {if !empty($order.params.tracking_number)}
             <p>[`Shipment tracking number`]: {$order.params.tracking_number}</p>
@@ -70,11 +73,12 @@
         {/if}
 
         <!-- billing -->
-        <h3>[`Payment`]
+        <div class="order-page__short-info">[`Payment`]
             {if $order.payment_name}
-                &mdash; <strong>{$order.payment_name}</strong>
+            <br>
+                <span>{$order.payment_name}</span>
             {/if}
-        </h3>
+        </div>
 
         <!-- payment plugin output -->
         {if !empty($payment)}
@@ -91,7 +95,7 @@
         {/if}
 
         <div class="s-list-wrapper">
-            <table class="s-order-list">
+            <table class="s-order-list order-page__table">
                 <tr>
                     <th></th>
                     <th>[`Quantity`]</th>
@@ -101,38 +105,38 @@
                     <tr{if $item.type == 'service'} class="service"{/if}>
                         <td>{if $item.type == 'service'}+ {/if}{$item.name}
                             {if $item.type == 'product' && !empty($item.download_link)}<a href="{$item.download_link}"><strong>[`Download`]</strong></a>{/if}</td>
-                        <td class="align-right"><span class="gray">{wa_currency_html($item.price, $order.currency)} x</span> {$item.quantity}</td>
-                        <td class="align-right">{wa_currency_html($item.price * $item.quantity, $order.currency)}</td>
+                        <td class="align-right order-page__right-td"><span class="gray">{wa_currency_html($item.price, $order.currency)} x</span> {$item.quantity}</td>
+                        <td class="align-right order-page__right-td">{wa_currency_html($item.price * $item.quantity, $order.currency)}</td>
                     </tr>
                 {/foreach}
                 <tr class="">
                     <td colspan="2">[`Subtotal`]</td>
-                    <td class="align-right">{wa_currency_html($subtotal, $order.currency)}</td>
+                    <td class="align-right order-page__right-td">{wa_currency_html($subtotal, $order.currency)}</td>
                 </tr>
                 <tr class="">
                     <td colspan="2">[`Discount`]</td>
-                    <td class="align-right">&minus; {wa_currency_html($order.discount, $order.currency)}</td>
+                    <td class="align-right order-page__right-td">&minus; {wa_currency_html($order.discount, $order.currency)}</td>
                 </tr>
                 <tr class="">
                     <td colspan="2">
                         <div class="">
-                            [`Shipping`]:
+                            [`Shipping`]:<br>
                             {if !empty($order.params.shipping_name)}
-                                <strong>{$order.params.shipping_name}</strong>
+                                {$order.params.shipping_name}
                             {/if}
                         </div>
                     </td>
-                    <td class="align-right">{wa_currency_html($order.shipping, $order.currency)}</td>
+                    <td class="align-right order-page__right-td">{wa_currency_html($order.shipping, $order.currency)}</td>
                 </tr>
                 {if $order.tax > 0}
                     <tr>
-                        <td colspan="2" class="align-right">[`Tax`]</td>
-                        <td class="align-right">{wa_currency_html($order.tax, $order.currency)}</td>
+                        <td colspan="2">[`Tax`]</td>
+                        <td class="align-right order-page__right-td">{wa_currency_html($order.tax, $order.currency)}</td>
                     </tr>
                 {/if}
                 <tr class="total-sum">
                     <td>[`Total`]</td>
-                    <td colspan="2" class="align-right">{wa_currency_html($order.total, $order.currency)}</td>
+                    <td colspan="2" class="align-right order-page__right-td order-page__total">{wa_currency_html($order.total, $order.currency)}</td>
                 </tr>
             </table>
         </div>
