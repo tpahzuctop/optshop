@@ -387,10 +387,19 @@ select.wa-select {
 .wa-quantity-cart-section .wa-field-wrapper .wa-field {
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #ccd0d4;
+  margin: 0;
+  padding: 4px;
+  width: 60px;
+  height: 40px !important;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--dark) !important;
+  border: 1px solid var(--dark-grey) !important;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  text-align: right;
+  text-align: center !important;
 }
 
 .wa-quantity-cart-section .wa-field-wrapper .wa-unit {
@@ -421,9 +430,17 @@ select.wa-select {
   padding: 0;
   margin: 0;
   border: 0;
-  background: transparent;
+  background: var(--light-grey) !important;
   border-color: transparent;
+  color: var(--dark) !important;
+  width: 50px !important;
 }
+
+.wa-quantity-cart-section .wa-button-wrapper .wa-button:hover {
+    background: var(--dark) !important;
+    color: var(--white) !important;
+}
+
 
 .wa-quantity-cart-section .wa-button-wrapper .wa-button:not(.is-locked) .wa-text {
   display: none;

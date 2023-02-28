@@ -42,7 +42,11 @@
 
 /* Стили плагинов */
 @import 'reset/plugins/plugin_arrived';
+
 /* Сброс стилей вебасиста */
+@import 'reset/webasyst/ui';
+@import 'reset/webasyst/cart';
+@import 'reset/webasyst/form';
 
 /* Отступы */
 @import 'variables/margin';
