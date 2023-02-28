@@ -228,20 +228,24 @@
             <name locale="en_US">Successful payment message</name>
             <name locale="ru_RU">Сообщение после завершения оплаты заказа</name>
         </setting>
-        <setting var="related_category_banner" control_type="text">
+    </settings>
+    <settings>
+        <setting var="shop_divider_2" control_type="group_divider">
+            <value></value>
+            <name locale="en_US">Category banner</name>
+            <name locale="ru_RU">Баннер рекомендованных категорий</name>
+        </setting>
+        <setting var="related_category_banner_picture" control_type="image">
+            <value>img/banner/category-banner1.jpg</value>
+            <filename>img/banner/category-banner1.*</filename>
+            <name locale="en_US">Banner picture</name>
+            <name locale="ru_RU">Картинка баннера</name>
+        </setting>
+        <setting var="related_category_banner_text" control_type="text">
             <value locale="en_US">Related category for you.</value>
             <value locale="ru_RU">Рекомендуемые категории для Вас.</value>
             <name locale="en_US">Banner text</name>
             <name locale="ru_RU">Текст баннера</name>
-            <value>img/category-banner/01.jpg</value>
-            <name locale="en_US">Background image</name>
-            <name locale="ru_RU">Фоновое изображение</name>
-            <options>
-                <option value="img/category-banner/01.jpg" />
-                <option value="img/category-banner/02.jpg" />
-                <option value="img/category-banner/03.jpg" />
-                <option value="img/category-banner/04.jpg" />
-            </options>
         </setting>
     </settings>
     <thumbs>
