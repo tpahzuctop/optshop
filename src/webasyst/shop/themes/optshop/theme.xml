@@ -228,8 +228,6 @@
             <name locale="en_US">Successful payment message</name>
             <name locale="ru_RU">Сообщение после завершения оплаты заказа</name>
         </setting>
-    </settings>
-    <settings>
         <setting var="shop_divider_2" control_type="group_divider">
             <value></value>
             <name locale="en_US">Category banner</name>
