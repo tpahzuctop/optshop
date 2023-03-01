@@ -12,7 +12,7 @@
     {/if}
 *}
     {* PROMOCARDS *}
-{*
+
     {if !empty($promocards)}
         <section class="s-promos-wrapper">
             <ul class="s-promos-list">
@@ -31,7 +31,6 @@
             </ul>
         </section>
     {/if}
-*}
 
 
 
@@ -65,7 +64,7 @@
 {/if}
 
 {* РЕКОМЕНДОВАННЫЕ КАТЕГОРИИ *}
-{include file="./related-category.html"}
+{include file="./related-category.html" inline}
 
     {* @event frontend_homepage.%plugin_id% *}
     {foreach $frontend_homepage as $_}{$_}{/foreach}
