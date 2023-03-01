@@ -155,6 +155,9 @@
       line-height: 20px;
       letter-spacing: 1px;
     }
+    & p, & figure {
+      padding: 0 0 50px 0;
+    }
   }
   &-recomends {
     grid-area: product-recomends;
