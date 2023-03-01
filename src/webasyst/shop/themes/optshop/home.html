@@ -1,17 +1,47 @@
 {strip}
-{* ПРОМО КАРТОЧКИ НАДО РАЗОБРАТСЯ
-    {if $_show_promocards_slider}
-        {if !empty($promocards)}
-            {include file="home.slider.html" _promocards=$promocards inline}
-        {/if}
-    {elseif $_show_products_slider}
-        {$_bestsellers = $wa->shop->productSet('bestsellers')}
-        {if !empty($_bestsellers)}
-            {include file="home.slider.html" _products=$_bestsellers inline}
-        {/if}
-    {/if}
-*}
-    {* PROMOCARDS *}
+{* PROMOCARDS *}
+
+{if $promocards = $wa->shop->promos()}
+<section class="promos">
+    <div class="slider-promos">
+        <div class="swiper-wrapper promos-list-flex">
+            {foreach $promocards as $promo}
+            <article id="promo-{$promo.id}" class="swiper-slide">
+
+                    <div class="promo-content" style="background-image: url('{$promo.image}');">
+                        {if !empty($promo.title)}<h2
+                            class="{if $promo.color=='agon'}agon{elseif $promo.color=='agonpro'}agonpro{else}{if $promo.background_color=='newyear'} newyear{else} aoc-gaming{/if}{/if}">
+                        {$promo.title}</h2>{/if}
+                        {if !empty($promo.body)}
+                        <div class="sub-header{if $promo.color=='agon'} agon{elseif $promo.color=='agonpro'} agonpro{else}{if $promo.background_color=='newyear'} newyear{else} aoc-gaming{/if}{/if}">
+                            {$promo.body}
+                        </div>
+                        {/if}
+                        <a href="{$promo.link|escape}" alt="{$promo.title}">Купить</a>
+                    </div>
+
+            </article>
+            {/foreach}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+            <svg class="icon">
+                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
+            </svg>
+        </div>
+        <div class="swiper-button-next">
+            <svg class="icon">
+                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
+                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
+            </svg>
+        </div>
+    </div>
+</section>
+{/if}
+
 
     {if !empty($promocards)}
         <section class="s-promos-wrapper">
@@ -57,14 +87,14 @@
 {include file="./products.html" products=$_hits badge_type='bestseller'}
 {/if}
 
+{* РЕКОМЕНДОВАННЫЕ КАТЕГОРИИ *}
+{include file="./related-category.html" inline}
+
 {* НОВИНКИ ПО ДАТЕ ДОБАВЛЕНИЯ *}
 {$_promos = $wa->shop->productSet("novinki-6119")}
 {if !empty($_promos)}
     {include file="./products.html" products=$_promos badge_type='new'}
 {/if}
-
-{* РЕКОМЕНДОВАННЫЕ КАТЕГОРИИ *}
-{include file="./related-category.html" inline}
 
     {* @event frontend_homepage.%plugin_id% *}
     {foreach $frontend_homepage as $_}{$_}{/foreach}
