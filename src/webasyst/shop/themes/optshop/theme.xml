@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="optshop" app="shop" vendor="rgbwebdotru" author="rgbwebdotru" parent_theme_id="site:optshop" version="1.0.0">
+<theme id="optshop" app="shop" vendor="rgbwebdotru" author="rgbwebdotru" parent_theme_id="site:optshop" version="1.0.1">
     <name locale="en_US">OPT SHOP</name>
     <name locale="ru_RU">ОПТ МАГАЗИН</name>
     <files>
@@ -241,7 +241,7 @@
         </setting>
         <setting var="related_category_banner_text" control_type="text">
             <value locale="en_US">Related category for you.</value>
-            <value locale="ru_RU">Рекомендуемые категории для Вас.</value>
+            <value locale="ru_RU">Товары для уютного рождества</value>
             <name locale="en_US">Banner text</name>
             <name locale="ru_RU">Текст баннера</name>
         </setting>
