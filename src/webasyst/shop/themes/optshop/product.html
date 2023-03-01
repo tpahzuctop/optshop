@@ -132,7 +132,8 @@
         {if $product.description}
         <h2>Описание</h2>
             <div itemprop="description">
-                {$product.description}
+                {assign "find" array('<br>', '<br/>', '<p></p>')}
+                {$product.description|replace:$find:''}
             </div>
         {/if}
 
