@@ -7,29 +7,16 @@
         <div class="swiper-wrapper promos-list-flex">
             {foreach $promocards as $promo}
             <article id="promo-{$promo.id}" class="swiper-slide">
-                    <div class="promo-content" style="background-image: url('{$promo.image}');">
-                        {if !empty($promo.title)}<h2 class="promo-title">{$promo.title|escape}</h2>{/if}
-                        {if !empty($promo.body)}<div class="promo-description">{$promo.body|escape}</div>{/if}
-                        <a href="{$promo.link|escape}" alt="{$promo.title|escape}">Купить</a>
+                    <div class="promo" style="background-image: url('{$promo.image}');">
+                        {if !empty($promo.title)}<h2 class="promo__title">{$promo.title|escape}</h2>{/if}
+                        {if !empty($promo.body)}<div class="promo__description">{$promo.body|escape}</div>{/if}
+                        <a class="promo__btn" href="{$promo.link|escape}" alt="{$promo.title|escape}">Купить</a>
                     </div>
             </article>
             {/foreach}
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev">
-            <svg class="icon">
-                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
-            </svg>
-        </div>
-        <div class="swiper-button-next">
-            <svg class="icon">
-                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
-                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#arrow-right"></use>
-            </svg>
-        </div>
     </div>
 </section>
 {/if}
