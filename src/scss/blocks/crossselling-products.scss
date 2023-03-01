@@ -1,0 +1,36 @@
+.crossselling-products {
+  .product-card__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .crossselling-products {
+    .product-card__list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .crossselling-products {
+    .product-card__list {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .crossselling-products {
+    .product-card__list {
+      grid-template-columns: 90%;
+      grid-template-rows: auto;
+      justify-items: center;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+}

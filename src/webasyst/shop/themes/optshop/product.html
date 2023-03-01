@@ -289,7 +289,7 @@
         {if $video}
         <h3>Pаспаковка товара</h3>
         <div id="video-container" class="video-container" itemscope itemtype="http://schema.org/VideoObject">
-            <div itemprop="embedHTML">
+            <div itemprop="embedHTML" class="video-container-inner">
                 <iframe src="{$video.url}" width="{$video.width}" height="{$video.height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             <meta itemprop="width" content="{$video.width}">
@@ -304,6 +304,13 @@
             {/if}
         </div>
         {/if}
+        {$crossselling = $product->crossSelling(4)}
+        {if !empty($crossselling)}
+        <section class="crossselling-products">
+            <h3>Может понравиться</h3>
+            {include file="./products.html" products=$crossselling inline}
+        </section>
+        {/if}
     </div>
 </article>
 
@@ -317,15 +324,6 @@
 {* PRODUCT PAGE *}
     {* @event frontend_product.%plugin_id%.block *}
     {foreach $frontend_product as $_}{$_.block}{/foreach}
-
-    {* RELATED PRODUCTS *}
-    {$crossselling = $product->crossSelling(12)}
-    {if !empty($crossselling)}
-        <section class="s-related-products">
-            <h3 class="s-related-header">{sprintf('[`Customers who bought %s also bought`]', $product.name|escape)}</h3>
-            {include file="./products.html" products=$crossselling inline}
-        </section>
-    {/if}
 
     {* RELATED PRODUCTS *}
     {$upselling = $product->upSelling(12)}
