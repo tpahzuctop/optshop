@@ -11,14 +11,14 @@
 
   &__title {
     margin: 5px 0 0 0;
-    max-width: 50%;
+    max-width: 45%;
     font-size: 1.3rem;
     line-height: 1.1rem;
     font-weight: 700;
   }
 
   &__description {
-    max-width: 55%;
+    max-width: 60%;
     margin-top: 8px;
     font-size: 0.8rem;
     line-height: 0.7rem;
@@ -46,27 +46,199 @@
     &__description {
       line-height: 0.8rem;
     }
-
-    &__btn {
-      margin-top: 15px;
-    }
   }
 }
 
 @media(min-width: 425px) {
   .promo {
     padding: 20px 25px;
+
+    &__title {
+      max-width: 180px;
+    }
+
+    &__description {
+      max-width: 190px;
+    }
   }
 }
 
 @media(min-width: 640px) {
   .promo {
-    height: 210px;
+    height: 220px;
     padding: 20px 25px;
 
     &__title {
+      font-size: 1.8rem;
+      line-height: 1.5rem;
+    }
+
+    &__description {
+      margin: 10px 0 15px 0;
+      max-width: 230px;
+      font-size: 1rem;
+      line-height: 0.9rem;
+    }
+
+    &__btn {
+      height: 35px;
+      width: 110px;
+      font-size: 1.1rem;
+      line-height: 34px;
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .promo {
+    padding: 25px 30px;
+    height: 290px;
+    border-radius: 25px;
+
+    &__title {
+      max-width: 240px;
       font-size: 2rem;
-      line-height: 1.9rem;
+      line-height: 1.8rem;
+    }
+
+    &__description {
+      margin: 10px 0 0 0;
+      height: 70px;
+      max-width: 300px;
+      font-size: 1.1rem;
+      line-height: 1rem;
+    }
+
+    &__btn {
+      margin: 10px 0;
+      height: 45px;
+      width: 140px;
+      font-size: 1.1rem;
+      line-height: 43px;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .promo {
+    padding: 30px 45px;
+    height: 370px;
+
+    &__title {
+      max-width: 350px;
+      font-size: 2.7rem;
+      line-height: 2.3rem;
+    }
+
+    &__description {
+      max-width: 390px;
+      font-size: 1.1rem;
+      line-height: 1.2rem;
+    }
+
+    &__btn {
+      margin: 20px 0;
+      height: 50px;
+      width: 170px;
+      font-size: 1.2rem;
+      line-height: 49px;
+      transition: .2s;
+
+      &:hover {
+        @include hover-btn;
+      }
+    }
+  }
+}
+
+@media(min-width: 1280px) {
+  .promo {
+    padding: 45px 60px;
+    height: 430px;
+    border-radius: 35px;
+
+    &__title {
+      max-width: 400px;
+      font-size: 3.5rem;
+      line-height: 3rem;
+    }
+
+    &__btn {
+      width: 180px;
+    }
+  }
+}
+
+@media(min-width: 1440px) {
+  .promo {
+    height: 480px;
+    border-radius: 45px;
+
+    &__description {
+      height: 90px;
+      max-width: 500px;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+    }
+
+    &__btn {
+      width: 220px;
+      height: 60px;
+      font-size: 1.3rem;
+      line-height: 58px;
+      border-radius: 60px;
+    }
+  }
+}
+
+@media(min-width: 1680px) {
+  .promo {
+    padding: 60px 75px;
+    height: 580px;
+
+    &__title {
+      max-width: 480px;
+      font-size: 4rem;
+      line-height: 3.3rem;
+    }
+
+    &__description {
+      margin: 20px 0 0 0;
+      height: 100px;
+      max-width: 540px;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    &__btn {
+      margin: 30px 0;
+    }
+  }
+}
+
+@media(min-width: 1920px) {
+  .promo {
+    padding: 75px 100px;
+    height: 650px;
+
+    &__title {
+      font-size: 4.8rem;
+      line-height: 4.2rem;
+    }
+
+    &__description {
+      height: 110px;
+      max-width: 570px;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+
+    &__btn {
+      margin: 35px 0;
+      width: 250px;
+      height: 70px;
+      font-size: 1.5rem;
+      line-height: 69px;
     }
   }
 }
