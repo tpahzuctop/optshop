@@ -5,7 +5,7 @@
   &__text {
     position: absolute;
     z-index: 1;
-    left: 25px;
+    left: 8%;
     top: 20px;
     margin: 0;
     max-width: 250px;
@@ -18,7 +18,7 @@
   &__btn {
     position: absolute;
     z-index: 1;
-    left: 25px;
+    left: 8%;
     bottom: 20px;
     height: 30px;
     width: 90px;
@@ -26,6 +26,7 @@
     text-align: center;
     line-height: 28px;
     font-weight: bold;
+    text-transform: capitalize;
     color: var(--dark);
     background-color: var(--white);
     border-radius: 25px;
@@ -36,7 +37,7 @@
     z-index: 0;
     height: 100%;
     width: 100%;
-    object-position: 60%;
+    object-position: 80%;
     object-fit: cover;
     border-radius: 15px;
   }
@@ -46,15 +47,147 @@
   .category-banner {
 
     &__text {
-      left: 40px;
+      left: 10%;
+    }
+    &__btn {
+      left: 10%;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .category-banner {
+    height: 160px;
+
+    &__text {
+      max-width: 55%;
+      font-size: 2rem;
+      line-height: 2.2rem;
     }
 
     &__btn {
-      left: 40px;
+      bottom: 30px;
+      height: 35px;
+      width: 110px;
+      font-size: 1.1rem;
+      line-height: 34px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .category-banner {
+    height: 200px;
+
+    &__text {
+      font-size: 2.2rem;
+      line-height: 2.5rem;
+    }
+
+    &__btn {
+      height: 45px;
+      width: 140px;
+      font-size: 1.1rem;
+      line-height: 43px;
+    }
+    &__pic {
+      object-position: unset;
+      border-radius: 25px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-banner {
+    height: 250px;
+
+    &__text {
+      left: 13%;
+      top: 30px;
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+
+    &__btn {
+      left: 13%;
+      bottom: 40px;
+      height: 50px;
+      width: 170px;
+      font-size: 1.2rem;
+      line-height: 49px;
+      transition: .2s;
+
+      &:hover {
+        @include hover-banner-btn;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .category-banner {
+    height: 280px;
+
+    &__text {
+      left: 15%;
+      top: 40px;
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+
+    &__btn {
+      left: 15%;
+      bottom: 50px;
+      width: 180px;
     }
 
     &__pic {
-      object-position: 80%;
+      border-radius: 35px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-banner {
+    height: 320px;
+
+    &__text {
+      font-size: 3.7rem;
+      line-height: 3.7rem;
+    }
+
+    &__btn {
+      bottom: 55px;
+      width: 220px;
+      height: 60px;
+      font-size: 1.3rem;
+      line-height: 58px;
+      border-radius: 60px;
+    }
+
+    &__pic {
+      border-radius: 45px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .category-banner {
+    height: 400px;
+
+    &__text {
+      top: 70px;
+      max-width: 45%;
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    &__btn {
+      bottom: 70px;
+      width: 250px;
+      height: 70px;
+      font-size: 1.5rem;
+      line-height: 69px;
     }
   }
 }

@@ -241,7 +241,7 @@
         </setting>
         <setting var="related_category_banner_text" control_type="text">
             <value locale="en_US">Related category for you.</value>
-            <value locale="ru_RU">Товары для уютного рождества</value>
+            <value locale="ru_RU">Товары для уютного Pождества</value>
             <name locale="en_US">Banner text</name>
             <name locale="ru_RU">Текст баннера</name>
         </setting>

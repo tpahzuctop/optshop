@@ -23,3 +23,9 @@
   color: var(--white);
   transition: .2s;
 }
+
+@mixin hover-banner-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  transition: .2s;
+}
