@@ -252,8 +252,8 @@
             <name locale="ru_RU">Текст кнопки</name>
         </setting>
         <setting var="related_category_banner_btn-link" control_type="text">
-            <value locale="en_US"></value>
-            <value locale="ru_RU"></value>
+            <value locale="en_US">#</value>
+            <value locale="ru_RU">#</value>
             <name locale="en_US">Button link</name>
             <name locale="ru_RU">Ссылка кнопки</name>
         </setting>
