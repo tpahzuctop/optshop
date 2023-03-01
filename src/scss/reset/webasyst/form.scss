@@ -360,11 +360,6 @@
 
 @media screen and (min-width: 761px) {
   .wa-order-form-wrapper.with-adaptive .wa-step-shipping-section .wa-delivery-types-section .wa-types-list {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
   }
   .wa-order-form-wrapper.with-adaptive .wa-step-shipping-section .wa-delivery-types-section .wa-types-list > * {
@@ -871,15 +866,19 @@
 
 .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper {
   padding: 1.071428571428571em;
-  background: #fcfcfc;
+  background: var(--white) !important;
   margin-bottom: -1px;
-  border: 1px solid #c8c8c8;
+  border: 1px solid var(--dark-grey) !important;
   -webkit-transition: background 200ms linear, border 200ms linear;
   -moz-transition: background 200ms linear, border 200ms linear;
   -o-transition: background 200ms linear, border 200ms linear;
   -ms-transition: background 200ms linear, border 200ms linear;
   transition: background 200ms linear, border 200ms linear;
   cursor: pointer;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:hover {
+  background: var(--light-grey) !important;
 }
 
 .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:after {
@@ -905,7 +904,7 @@
 }
 
 .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:hover, .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active {
-  border-color: rgba(0, 128, 255, 0.2);
+  border-color: var(--dark-grey) !important;
   z-index: 1;
 }
 
@@ -914,15 +913,9 @@
 }
 
 .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active {
-  -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2), inset 0 -2px 3px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2), inset 0 -2px 3px 0 rgba(255, 255, 255, 0.5);
-  background: #d9ecff -webkit-linear-gradient(top, #d9ecff, #e6f2ff);
-  background: #d9ecff -moz-linear-gradient(top, #d9ecff, #e6f2ff);
-  background: #d9ecff -o-linear-gradient(top, #d9ecff, #e6f2ff);
-  background: #d9ecff -ms-linear-gradient(top, #d9ecff, #e6f2ff);
-  background: #d9ecff linear-gradient(to bottom, #d9ecff, #e6f2ff);
-  border-top-color: rgba(0, 128, 255, 0.3);
-  cursor: default
+  box-shadow: none !important;
+  background: var(--dark-grey) !important;
+  border-top-color: var(--dark-grey) !important;
 }
 
 .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-checkbox-wrapper {
@@ -1011,11 +1004,6 @@
 }
 
 .wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .wa-total-section .wa-item {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
   display: flex;
   margin: .7142857142857143em 0 0;
 }
@@ -1105,11 +1093,6 @@
 
 @media screen and (min-width: 1201px) {
   .wa-order-form-wrapper.with-adaptive .wa-step-confirm-section .wa-section-body .wa-flex-wrapper {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
@@ -1298,11 +1281,6 @@
 }
 
 .wa-order-dialog.wa-shipping-pickup-dialog .wa-content-section .wa-variant-details-section.is-shown {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
   display: flex;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
@@ -1492,11 +1470,6 @@
 @media screen and (max-width: 760px) {
   .wa-order-dialog.wa-shipping-pickup-dialog .wa-dialog-body {
     height: calc(100% - 30px);
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -1534,11 +1507,6 @@
     height: 100%
   }
   .wa-order-dialog.wa-shipping-pickup-dialog .wa-content-section .wa-sidebar-section .wa-variants-section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -1554,11 +1522,6 @@
     display: none
   }
   .wa-order-dialog.wa-shipping-pickup-dialog .wa-content-section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
   }
   .wa-order-dialog.wa-shipping-pickup-dialog .wa-content-section > * {
@@ -1591,11 +1554,6 @@
     flex: 1 3 100%;
   }
   .wa-order-dialog.wa-shipping-pickup-dialog .wa-content-section .wa-sidebar-section .wa-variants-section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
     display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
