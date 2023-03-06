@@ -22,6 +22,7 @@
         {/if}
     {/if}
 
+
     <section class="padding__medium-vertical">
 
         {if !empty($sorting)}
@@ -69,7 +70,6 @@
                     {$_product_image_src = "`$wa_theme_url`img/dummy200.png"}
                 {/if}
 
-
                 <li class="product-card" data-product-id="{$product.id}" itemscope itemtype ="http://schema.org/Product">
                     {if !empty($badge_html)}
                     <div class="product-card__tag product-card__tag--new">{$badge_html}</div>
@@ -112,6 +112,9 @@
                             </div>
 
                                 <div class="product-card__price">
+                                    {if $product.compare_price > $product.price }
+                                        <div class="product-card__compare-price">{shop_currency_html($product.compare_price)}</div>
+                                    {/if}
                                     <span>от</span>
                                         {shop_currency_html($product.price)}
                                 </div>
