@@ -37,12 +37,12 @@
       gap: 20px;
       & li {
         display: list-item;
-        padding-left: 20px;
+        padding-left: 10px;
         &:first-of-type {
           padding: 0;
         }
         &::marker {
-          content: url(../img/svg/icons.svg#arrow-right);
+          content: ">";
           color: var(--dark);
         }
         &:nth-child(1)::marker {
@@ -147,6 +147,12 @@
     grid-area: product-cart;
     display: flex;
     align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 640px) {
+      justify-content: flex-start;
+    }
   }
   &-description {
     grid-area: product-description;
