@@ -1,0 +1,187 @@
+.company {
+
+  &__descr {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    & span {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+  }
+
+  &__advantages {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.company-advantage {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: block;
+    width: 80px;
+    height: 65px;
+  }
+
+  &__descr {
+    margin-left: 20px;
+    width: 175px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 375px) {
+  .company-advantage {
+
+    &__descr {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .company {
+
+    &__advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 10px;
+    }
+  }
+
+  .company-advantage {
+    margin-bottom: 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .company {
+
+    &__advantages {
+      margin: 80px auto;
+    }
+  }
+  .company-advantage {
+
+    &__icon {
+      width: 105px;
+      height: 90px;
+    }
+
+    &__descr {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .company {
+
+    &__descr-wrapper {
+      width: 95%;
+    }
+
+    &__descr {
+      font-size: 1.1rem;
+
+      & span {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__advantages {
+      margin: 100px auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px 15px;
+    }
+
+    &__pic {
+      margin: 0 auto;
+      padding: 50px;
+    }
+  }
+
+  .company-advantage {
+
+    &__descr {
+      margin-left: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .company {
+
+    &__descr {
+      font-size: 1.2rem;
+
+      & span {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__advantages {
+      margin: 120px auto;
+    }
+  }
+
+  .company-advantage {
+
+    &__icon {
+      width: 125px;
+      height: 110px;
+    }
+
+    &__descr {
+      margin-left: 40px;
+      width: 200px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .company {
+
+    &__descr {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+
+      & span {
+        font-size: 1.6rem;
+        color: var(--primary);
+      }
+    }
+
+    &__pic {
+      padding: 80px;
+    }
+
+    &__advantages {
+      padding: 0 50px;
+    }
+  }
+
+  .company-advantage {
+
+    &__icon {
+      width: 145px;
+      height: 130px;
+    }
+
+    &__descr {
+      width: 235px;
+      font-size: 1.2rem;
+    }
+  }
+}

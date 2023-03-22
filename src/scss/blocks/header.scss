@@ -18,7 +18,7 @@
 
 .logo {
   width: 80px;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   & a {
     width: 100%;
@@ -90,19 +90,23 @@
 
 @media (min-width: 375px) {
   .header-mobile {
-    margin: 15px 0 30px 0;
+    margin: 15px 0 0 0;
   }
 }
 
 @media (min-width: 640px) {
   .header-mobile {
     position: relative;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 0 0;
 
     &__location-wrapper {
       flex-direction: column;
       align-items: baseline;
     }
+  }
+
+  .logo {
+    margin-top: 7px;
   }
 
   .search {
@@ -136,10 +140,14 @@
     background-position: 0% 50%;
   }
 
+  .logo {
+    margin-top: 0;
+  }
+
   .header-desktop {
     position: relative;
     display: block;
-    margin: 20px 0 60px 0;
+    margin: 20px 0 0 0;
 
     &__location-wrapper {
       display: flex;
@@ -190,7 +198,7 @@
     }
 
     &__item {
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: .2s;
 
       &:hover {
@@ -247,6 +255,12 @@
       }
     }
   }
+
+  .logo {
+    width: 95px;
+    height: 40px;
+  }
+
   .search {
 
     &__btn {
@@ -283,11 +297,6 @@
         background-size: 18px;
       }
     }
-  }
-
-  .logo {
-    width: 110px;
-    height: 50px;
   }
 }
 
@@ -340,15 +349,15 @@
   }
 
   .logo {
-    width: 130px;
-    height: 55px;
+    width: 110px;
+    height: 45px;
   }
 }
 
 @media (min-width: 1440px) {
   .header-desktop {
     &__category-btn {
-      margin: 0 15px;
+      margin: 0 15px 0 20px;
       padding: 0px 30px;
       width: 180px;
       background-size: 28px;
@@ -376,6 +385,10 @@
   }
 
   .header-desktop-navigation {
+
+    &__item {
+      font-size: 1.1rem;
+    }
 
     &__item:not(:first-child) {
       margin-left: 40px;
@@ -407,7 +420,8 @@
   }
 
   .logo {
-    width: 170px;
+    width: 130px;
+    height: 50px;
   }
 
   .location {
@@ -440,6 +454,11 @@
       width: 35px;
       height: 35px;
     }
+  }
+
+  .logo {
+    width: 150px;
+    height: 55px;
   }
 
   .search {
