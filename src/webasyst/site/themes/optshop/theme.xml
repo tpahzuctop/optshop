@@ -152,12 +152,6 @@
                 Текст копирайтов внизу сайта
             </name>
         </setting>
-        <setting var="copyrights" control_type="text">
-            <value>(C) 2022-2023 ООО "ОПТОВЫЙ МАРКЕТПЛЕЙС"</value>
-            <name locale="ru_RU">
-                Текст копирайтов внизу сайта
-            </name>
-        </setting>
     </settings>
     <requirements>
         <requirement property="app.installer" value=">=1.13" strict="true"></requirement><!-- 1.13 added support for gettext files for theme locale -->

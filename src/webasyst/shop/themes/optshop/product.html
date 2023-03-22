@@ -113,6 +113,74 @@
 
         </figure>
         {/if}
+
+        {if empty($sku_features)}{$sku_features = []}{/if}
+
+        <div class="links-marketplace">
+
+            {foreach $product.skus as $_sku}
+                {if !empty($_sku.features.ssylka_na_tovar_na_ozon)}
+                    <div class="link-marketplace ozon">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_ozon}" title="Этот товар на Ozon">
+                            Этот товар на Ozon
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+                {if !empty($_sku.features.ssylka_na_tovar_na_aliexpress)}
+                    <div class="link-marketplace aliexpress">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_aliexpress}" title="Этот товар на AliExpress">
+                            Этот товар на AliExpress
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+                {if !empty($_sku.features.ssylka_na_tovar_na_wildberries)}
+                    <div class="link-marketplace wb">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_wildberries}" title="Этот товар на Wildberries">
+                            Этот товар на Wildberries
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+                {if !empty($_sku.features.ssylka_na_tovar_na_yandex_market)}
+                    <div class="link-marketplace ym">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_yandex_market}" title="Этот товар на Яндекс Маркет">
+                            Этот товар на Яндекс Маркет
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+                {if !empty($_sku.features.ssylka_na_tovar_na_sbermegamarket)}
+                    <div class="link-marketplace smm">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_sbermegamarket}" title="Этот товар на CБЕРМЕГАМАРКЕТ">
+                            Этот товар на CБЕРМЕГАМАРКЕТ
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+                {if !empty($_sku.features.ssylka_na_tovar_na_avito)}
+                    <div class="link-marketplace avito">
+                        <a href="{$_sku.features.ssylka_na_tovar_na_avito}" title="Этот товар на Avito">
+                            Этот товар на Avito
+                            <svg class="link-marketplace__icon">
+                                <use xlink:href="{$wa_parent_theme_url}img/svg/icons.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                {/if}
+            {/foreach}
+        </div>
     </div>
     <div class="product-cart">
             {include file="product.cart.html" inline}
@@ -136,8 +204,6 @@
                 {$product.description|replace:$find:''}
             </div>
         {/if}
-
-        {if empty($sku_features)}{$sku_features = []}{/if}
 
         {function name="_render_sku_features" _features=[]}
         <table class="s-features-wrapper" id="s-product-features">
