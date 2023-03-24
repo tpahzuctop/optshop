@@ -1,4 +1,5 @@
 .promo {
+  margin: 30px auto;
   padding: 20px;
   height: 175px;
   display: flex;
@@ -91,6 +92,7 @@
 
 @media(min-width: 768px) {
   .promo {
+    margin: 50px auto;
     padding: 25px 30px;
     height: 290px;
     border-radius: 25px;
@@ -121,6 +123,7 @@
 
 @media(min-width: 1024px) {
   .promo {
+    margin: 70px auto;
     padding: 30px 45px;
     height: 370px;
 

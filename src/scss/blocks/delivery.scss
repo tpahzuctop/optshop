@@ -1,0 +1,151 @@
+.delivery {
+
+  &__descr {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__advantages {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__company-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.delivery-advantage {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: block;
+    width: 80px;
+    height: 65px;
+  }
+
+  &__descr {
+    margin-left: 20px;
+    width: 175px;
+    font-weight: 700;
+  }
+}
+
+.payment {
+
+  &__descr {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.payment-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: block;
+    width: 80px;
+    height: 65px;
+  }
+
+  &__descr {
+    margin-left: 20px;
+    width: 175px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 375px) {
+  .delivery-advantage {
+
+    &__descr {
+      margin-left: 30px;
+    }
+  }
+
+  .payment-item {
+
+    &__descr {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .delivery-advantage {
+
+    &__descr {
+      width: 210px;
+    }
+  }
+
+  .payment-item {
+
+    &__descr {
+      width: 210px;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .delivery {
+
+    &__advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 10px;
+    }
+
+    &__company-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .delivery-advantage {
+    margin-bottom: 0;
+    justify-content: center;
+
+    &__descr {
+      width: 175px;
+    }
+  }
+
+  .payment {
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 10px;
+    }
+  }
+
+  .payment-item {
+    margin-bottom: 0;
+    justify-content: center;
+
+    &__descr {
+      width: 175px;
+    }
+  }
+}
