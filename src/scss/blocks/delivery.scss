@@ -149,3 +149,235 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .delivery {
+
+    &__subtitle {
+      margin: 3rem 0 2.5rem 0;
+    }
+  }
+  .delivery-advantage {
+
+    &__icon {
+      width: 105px;
+      height: 90px;
+    }
+  }
+
+  .payment-item {
+
+    &__icon {
+      width: 105px;
+      height: 90px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .delivery {
+
+    &__descr {
+      width: 95%;
+      font-size: 1.1rem;
+    }
+
+    &__advantages {
+      margin: 70px auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    &__company-list {
+      display: flex;
+    }
+
+    &__company {
+      width: 230px;
+    }
+  }
+
+  .delivery-advantage {
+
+    &__descr {
+      width: 220px;
+      margin-left: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+
+      &--pickup {
+        position: relative;
+        width: 315px;
+      }
+    }
+  }
+
+  .payment {
+
+    &__descr {
+      width: 95%;
+      font-size: 1.1rem;
+    }
+
+    &__list {
+      margin: 70px auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  .payment-item {
+
+    &__descr {
+      margin-left: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .delivery {
+
+    &__descr {
+      font-size: 1.2rem;
+    }
+
+    &__subtitle {
+      margin: 4rem 0 2.5rem 0;
+    }
+
+    &__advantages {
+      margin: 80px auto;
+      grid-gap: 30px;
+    }
+
+    &__company {
+      margin-right: 10px;
+      width: 260px;
+    }
+  }
+
+  .delivery-advantage {
+
+    &__icon {
+      width: 125px;
+      height: 110px;
+    }
+
+    &__descr {
+      font-size: 1rem;
+
+      &--pickup {
+        width: 360px;
+      }
+    }
+  }
+
+  .payment {
+
+    &__list {
+      margin: 80px auto;
+      grid-gap: 30px;
+    }
+
+    &__descr {
+      font-size: 1.2rem;
+    }
+  }
+
+  .payment-item {
+
+    &__icon {
+      width: 125px;
+      height: 110px;
+    }
+
+    &__descr {
+      width: 260px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .delivery {
+
+    &__subtitle {
+      font-size: 1.4rem;
+    }
+
+    &__descr {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    &__advantages {
+      margin: 100px auto;
+      grid-gap: 70px;
+    }
+
+    &__company {
+      margin-right: 15px;
+      width: 280px;
+    }
+  }
+
+  .delivery-advantage {
+
+
+    &__icon {
+      width: 145px;
+      height: 130px;
+    }
+
+    &__descr {
+      margin-left: 30px;
+      width: 300px;
+      font-size: 1.2rem;
+
+      &--pickup {
+        width: 420px;
+      }
+    }
+  }
+
+  .payment {
+
+    &__list {
+      margin: 100px auto;
+    }
+  }
+
+  .payment-item {
+
+    &__icon {
+      width: 145px;
+      height: 130px;
+    }
+
+    &__descr {
+      margin-left: 30px;
+      width: 300px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .delivery-advantage {
+
+    &__icon {
+      width: 145px;
+      height: 130px;
+    }
+  }
+
+  .payment-item {
+
+    &__icon {
+      width: 145px;
+      height: 130px;
+    }
+  }
+}
