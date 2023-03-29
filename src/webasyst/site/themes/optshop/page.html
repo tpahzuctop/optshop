@@ -3,9 +3,11 @@
 {* POST PAGE *}
 <article class="s-post-wrapper">
 
+    {if $wa->currentUrl(0,1) != '/dostavka-tovara-iz-kitaya/'}
     <header>
         <h1 class="s-page-header">{$page.title}</h1>
     </header>
+    {/if}
 
     {* POST CONTENT *}
     <div class="s-text-wrapper s-user-content">

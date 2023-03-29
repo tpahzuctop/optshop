@@ -18,9 +18,20 @@
     align-items: center;
   }
 
+  &__company {
+    position: relative;
+  }
+
   &__company-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  &__company-link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -194,6 +205,12 @@
 
     &__company {
       width: 230px;
+      transition: .7s;
+
+      &:hover {
+        transition: .7s;
+        transform: scale(1.05);
+      }
     }
   }
 
