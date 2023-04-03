@@ -44,8 +44,8 @@
 {include file="./products.html" products=$_hits badge_type='bestseller'}
 {/if}
 
-{* РЕКОМЕНДОВАННЫЕ КАТЕГОРИИ *}
-{include file="./related-category.html" inline}
+{* ДОСТАВКА ИЗ КИТАЯ БАННЕР *}
+{include file="./delivery-china.html" inline}
 
 {* НОВИНКИ ПО ДАТЕ ДОБАВЛЕНИЯ *}
 {$_promos = $wa->shop->productSet("novinki-6119")}
@@ -53,9 +53,10 @@
     {include file="./products.html" products=$_promos badge_type='new'}
 {/if}
 
-{* ДОСТАВКА ИЗ КИТАЯ БАННЕР *}
-{include file="./delivery-china.html" inline}
+{* РЕКОМЕНДОВАННЫЕ КАТЕГОРИИ *}
+{include file="./related-category.html" inline}
 
     {* @event frontend_homepage.%plugin_id% *}
     {foreach $frontend_homepage as $_}{$_}{/foreach}
+
 {/strip}

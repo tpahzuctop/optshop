@@ -6,22 +6,22 @@
   flex-direction: column;
   justify-content: space-between;
   background-size: cover;
-  background-position: 50%;
+  background-position: 25%;
   background-repeat: no-repeat;
   border-radius: 15px;
 
   &__title {
     margin: 5px 0 0 0;
-    max-width: 45%;
-    font-size: 1.3rem;
+    max-width: 57%;
+    font-size: 1.2rem;
     line-height: 1.1rem;
     font-weight: 700;
   }
 
   &__description {
-    max-width: 60%;
+    max-width: 55%;
     margin-top: 8px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     line-height: 0.7rem;
     font-weight: bold;
   }
@@ -36,13 +36,18 @@
     line-height: 28px;
     font-weight: 700;
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--dark);
     border-radius: 25px;
   }
 }
 
 @media(min-width: 375px) {
   .promo {
+    background-position: 3%;
+
+    &__title {
+      max-width: 50%;
+    }
 
     &__description {
       line-height: 0.8rem;
@@ -53,13 +58,15 @@
 @media(min-width: 425px) {
   .promo {
     padding: 20px 25px;
+    background-position: 80%;
 
     &__title {
-      max-width: 180px;
+      max-width: 155px;
     }
 
     &__description {
-      max-width: 190px;
+      max-width: 170px;
+      font-size: .6rem;
     }
   }
 }
@@ -70,13 +77,14 @@
     padding: 20px 25px;
 
     &__title {
+      max-width: 220px;
       font-size: 1.8rem;
       line-height: 1.5rem;
     }
 
     &__description {
       margin: 10px 0 15px 0;
-      max-width: 230px;
+      max-width: 245px;
       font-size: 1rem;
       line-height: 0.9rem;
     }
@@ -95,10 +103,11 @@
     margin: 50px auto;
     padding: 25px 30px;
     height: 290px;
+    background-position: 60%;
     border-radius: 25px;
 
     &__title {
-      max-width: 240px;
+      max-width: 280px;
       font-size: 2rem;
       line-height: 1.8rem;
     }
@@ -128,13 +137,13 @@
     height: 370px;
 
     &__title {
-      max-width: 350px;
+      max-width: 365px;
       font-size: 2.7rem;
       line-height: 2.3rem;
     }
 
     &__description {
-      max-width: 390px;
+      max-width: 355px;
       font-size: 1.1rem;
       line-height: 1.2rem;
     }
@@ -148,7 +157,7 @@
       transition: .2s;
 
       &:hover {
-        @include hover-btn;
+        @include hover-banner-btn;
       }
     }
   }
@@ -161,9 +170,13 @@
     border-radius: 35px;
 
     &__title {
-      max-width: 400px;
+      max-width: 490px;
       font-size: 3.5rem;
       line-height: 3rem;
+    }
+
+    &__description {
+      max-width: 430px;
     }
 
     &__btn {
@@ -178,8 +191,9 @@
     border-radius: 45px;
 
     &__description {
+      margin: 20px 0 0 0;
       height: 90px;
-      max-width: 500px;
+      max-width: 545px;
       font-size: 1.4rem;
       line-height: 1.4rem;
     }
@@ -197,7 +211,7 @@
 @media(min-width: 1680px) {
   .promo {
     padding: 60px 75px;
-    height: 580px;
+    height: 535px;
 
     &__title {
       max-width: 480px;
@@ -206,9 +220,9 @@
     }
 
     &__description {
-      margin: 20px 0 0 0;
+      margin: 40px 0 0 0;
       height: 100px;
-      max-width: 540px;
+      max-width: 590px;
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
@@ -222,14 +236,16 @@
 @media(min-width: 1920px) {
   .promo {
     padding: 75px 100px;
-    height: 650px;
+    height: 680px;
 
     &__title {
+      max-width: 645px;
       font-size: 4.8rem;
       line-height: 4.2rem;
     }
 
     &__description {
+      max-width: 630px;
       height: 110px;
       max-width: 570px;
       font-size: 1.6rem;
