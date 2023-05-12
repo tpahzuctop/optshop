@@ -107,13 +107,15 @@
 
   .logo {
     margin-top: 7px;
+    width: 115px;
+    height: 32px;
   }
 
   .search {
     position: absolute;
     top: 30px;
     right: 0px;
-    width: 85%;
+    width: 79%;
 
     &__input {
       font-size: 1.1rem;
@@ -142,6 +144,8 @@
 
   .logo {
     margin-top: 0;
+    width: 115px;
+    height: 45px;
   }
 
   .header-desktop {
@@ -257,8 +261,8 @@
   }
 
   .logo {
-    width: 95px;
-    height: 40px;
+    margin-top: 1px;
+    width: 130px;
   }
 
   .search {
@@ -315,6 +319,11 @@
         background-size: 20px;
         background-position: 20% 50%;
       }
+    }
+
+    .logo {
+      margin-top: 2px;
+      width: 140px;
     }
   }
 
@@ -420,7 +429,7 @@
   }
 
   .logo {
-    width: 130px;
+    width: 165px;
     height: 50px;
   }
 
@@ -457,7 +466,8 @@
   }
 
   .logo {
-    width: 150px;
+    margin-top: 3px;
+    width: 170px;
     height: 55px;
   }
 
