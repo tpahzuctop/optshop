@@ -86,8 +86,8 @@
             <name locale="en_US">Logo</name>
             <name locale="ru_RU">Логотип</name>
         </setting>
-        <setting var="site-name" control_type="text">
-            <value>Китай товары,Китай производители, Китай поставщики, произведенные в Китае товары, Китай оптовики</value>
+        <setting var="site_name" control_type="text">
+            <value>Китай товары, Китай производители, Китай поставщики, произведенные в Китае товары, Китай оптовики</value>
             <name locale="ru_RU">
                 Описание о сайте коротко. Используется как текст-заглушка в логотипах, пустых описаниях и т.д.
             </name>

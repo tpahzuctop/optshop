@@ -66,4 +66,72 @@
         <script src="{$wa_theme_url}js/profile.js?v{$wa_theme_version}"></script>
     </body>
     </html>
+{/strip}{strip}
+
+    {include "{$wa->site->themePath(waRequest::getTheme())}/u-theme.html"}
+
+    <!DOCTYPE html>
+    <html lang="{call correct_lang}">
+    <head itemscope itemtype="http://schema.org/WPHeader">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title itemprop="headline">{$wa->title()|escape} {$wa->globals("globalHeader")}</title>
+
+        {* Ключевики мета и для разметки *}
+
+        {if !empty($wa->meta('keywords'))}
+            <meta name="keywords" content="{$wa->meta('keywords')|escape}">
+            <meta itemprop="keywords" content="{$wa->meta('keywords')|escape}">
+        {else}
+            <meta name="keywords" content="Китай товары,Китай производители, Китай поставщики, произведенные в Китае товары, Китай оптовики">
+            <meta itemprop="keywords" content="Китай товары,Китай производители, Китай поставщики, произведенные в Китае товары, Китай оптовики">
+        {/if}
+
+        {* META *}
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="keywords" content="{$wa->meta('keywords')|escape}" />
+        <meta name="description" content="{$wa->meta('description')|escape}" />
+
+        {if $wa->isMobile()}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        {else}
+        <meta name="viewport" content="height=device-height,width=720,user-scalable=yes" />
+        {/if}
+
+        {* FAVICON *}
+        {include file="favicon.html" inline}
+
+        {* CSS *}
+        <link href="{$wa_theme_url}css/style.min.css?v{$wa_theme_version}" rel="stylesheet" />
+        <!--plugins-css-->
+        {$wa->css()}
+        <!--end-plugins-css-->
+
+        {* JS *}
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js?v{$wa_theme_version}"></script>
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js?v{$wa_theme_version}"></script>
+        <!--plugins-js-->
+        {$wa->js()}
+        <!--end-plugins-js-->
+        {include file="`$wa_active_theme_path`/head.html" inline}
+        {$wa->head()}
+    </head>
+    <body>
+        <div class="wrapper">
+        {*HEADER*}
+                {include file="header.html" inline}
+        {*END HEADER*}
+        {* CONTENT AREA *}
+            <main itemscope itemtype="http://schema.org/WebPage" role="main">
+                {include file="`$wa_active_theme_path`/main.html" inline}
+            </main>
+        {* END CONTENT AREA *}
+        {*FOOTER*}
+                {include file="footer.html" inline}
+        {*END FOOTER*}
+        </div>
+        <script src="{$wa_theme_url}js/site.min.js?v{$wa_theme_version}"></script>
+        <script src="{$wa_theme_url}js/profile.js?v{$wa_theme_version}"></script>
+    </body>
+    </html>
 {/strip}
